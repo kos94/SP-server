@@ -12,93 +12,100 @@ public class DB {
 		return UserStatus.TEACHER;
 	}
 	
-	public String getTeacherSemesters(int teachId) {
+	public String[][] getTeacherSemesters(int teachId) {
 		// тут обращение к БД по поводу препода
-		String s = "<semesters>семестры препода</semesters>";
-		return s;
+		String[][] sems = new String[2][];
+		sems[0] = new String[]{ "100", "1", "2010" };
+		sems[1] = new String[]{ "200", "2", "2010" };
+		return sems;
 	}
 	
-	public String getCuratorSemesters(int curId) {
+	public String[][] getCuratorSemesters(int curId) {
 		// тут обращение к БД по поводу куратора
-		String s = "<semesters>семестры куратора</semesters>";
-		return s;
+		String[][] sems = new String[2][];
+		sems[0] = new String[]{ "300", "1", "2011" };
+		sems[1] = new String[]{ "400", "2", "2011" };
+		return sems;
 	}
 	
-	public String getDepSemesters(int depWorkerId) {
+	public String[][] getDepSemesters(int depWorkerId) {
 		// тут обращение к БД по поводу работника кафедры
-		String s = "<semesters>семестры кафедры</semesters>";
-		return s;
+		String[][] sems = new String[2][];
+		sems[0] = new String[]{ "500", "1", "2012" };
+		sems[1] = new String[]{ "600", "2", "2012" };
+		return sems;
 	}
 	
-	public String getGroupSemesters(int groupId) {
-		// тут обращение к БД по поводу группы
-		String s = "<semesters>семестры группы</semesters>";
-		return s;
+	public String[][] getGroupSemesters(int groupId) {
+		// обращение к БД по поводу группы
+		String[][] sems = new String[2][];
+		sems[0] = new String[]{ "700", "1", "2013" };
+		sems[1] = new String[]{ "800", "2", "2013" };
+		return sems;
 	}
 	
-	public String getStudentSemesters(int studId) {
+	public String[][] getStudentSemesters(int studId) {
 		// тут обращение к БД по поводу студента
-		String s = "<semesters>семестры студента</semesters>";
-		return s;
+		String[][] sems = new String[2][];
+		sems[0] = new String[]{ "900", "1", "2014" };
+		sems[1] = new String[]{ "1000", "2", "2014" };
+		return sems;
 	}
 	
-	public List<String> getTeacherGroups(int teachId, int semId, int subjId) {
-		List<String> groups = new ArrayList<>();
-		groups.add("teacher group 1");
-		groups.add("teacher group 2");
+	public String[][] getTeacherGroups(int teachId, int semId, int subjId) {
+		String[][] groups = new String[2][];
+		groups[0] = new String[]{ "1", "teacher group 1" };
+		groups[1] = new String[]{ "2", "teacher group 2" };
 		return groups;
 	}
 	
-	public List<String> getCuratorGroups(int curId, int semId) {
-		List<String> groups = new ArrayList<>();
-		groups.add("curator group 1");
-		groups.add("curator group 2");
+	public String[][] getCuratorGroups(int curId, int semId) {
+		String[][] groups = new String[2][];
+		groups[0] = new String[]{ "3", "curator group 1" };
+		groups[1] = new String[]{ "4", "curator group 2" };
 		return groups;
 	}
 	
-	public List<String> getDepGroups(int depWorkerId, int semId) {
-		List<String> groups = new ArrayList<>();
-		groups.add("dep group 1");
-		groups.add("dep group 2");
+	public String[][] getDepGroups(int depWorkerId, int semId) {
+		String[][] groups = new String[2][];
+		groups[0] = new String[]{ "5", "dep group 1" };
+		groups[1] = new String[]{ "6", "dep group 2" };
 		return groups;
 	}
 	
-	public List<String> getTeacherSubjects(int teachId, int semId) {
-		List<String> subjs = new ArrayList<>();
-		subjs.add("teacher subj 1");
-		subjs.add("teacher subj 2");
+	public String[][] getTeacherSubjects(int teachId, int semId) {
+		String[][] subjs = new String[2][];
+		subjs[0] = new String[]{ "1", "teacher subj 1" };
+		subjs[1] = new String[]{ "2", "teacher subj 2" };
 		return subjs;
 	}
 	
-	public List<String> getGroupSubjects(int groupId, int semId) {
-		List<String> subjs = new ArrayList<>();
-		subjs.add("group subj 1");
-		subjs.add("group subj 2");
+	public String[][] getGroupSubjects(int groupId, int semId) {
+		String[][] subjs = new String[2][];
+		subjs[0] = new String[]{ "3", "group subj 1" };
+		subjs[1] = new String[]{ "4", "group subj 2" };
 		return subjs;
 	}
 	
-	public String getSubjectMarks(int semId, int groupId, int subjId) {
-		String marks = "<subjmarks><studmarks><student>Иванов П.П.</student>"
-				+ "<first>45</first><second>40</second><res>85</res>"
-				+ "</studmarks><studmarks><student>Гончаренко П.С.</student>"
-				+ "<first>40</first><second>41</second><res>90</res>"
-				+ "</studmarks></subjmarks>";
+	public String[][] getSubjectMarks(int semId, int groupId, int subjId) {
+		String[][] marks = new String[2][];
+		marks[0] = new String[]{"Иванов П.П.", "45", "40", "85" };
+		marks[1] = new String[]{"Гончаренко П.С.", "40", "41", "90" };
 		return marks;
 	}
 	
-	public String getStageMarks(int semId, int groupId, int stageId) {
-		String marks ="<stagemarks><subjects><subj>ООП</subj><subj>Дискретная математика</subj>"
-				+ "</subjects><studmarks><student>Михайлов С.А.</student><mark>30</mark>"
-				+ "<mark>35</mark></studmarks><studmarks><student>Друзь A.А.</student>"
-				+ "<mark>50</mark><mark>50</mark></studmarks></stagemarks>";
+	public String[][] getStageMarks(int semId, int groupId, int stageId) {
+		String[][] marks = new String[3][];
+		marks[0] = new String[]{"Студент", "ООП", "Дискретная математика"};
+		marks[1] = new String[]{"Михайлов С.А.", "30", "35"};
+		marks[2] = new String[]{"Друзь А.А,", "50", "50"};
 		return marks;
 	}
 	
-	public String getStudentMarks(int semId, int studId) {
-		String marks = "<studentmarks><subjmarks><subj>Теория алгоритмов</subj><first>30</first>"
-				+ "<second>45</second><res>100</res></subjmarks><subjmarks><subj>"
-				+ "Теория вероятности</subj><first>35</first><second>35</second><res>70</res>"
-				+ "</subjmarks></studentmarks>";
+	public String[][] getStudentMarks(int semId, int studId) {
+		String[][] marks = new String[2][];
+		marks[0] = new String[]{"Теория алгоритмов", "30", "45", "100"};
+		marks[1] = new String[]{"Теория вероятности", "35", "35", "70"};
 		return marks;
 	}
 }

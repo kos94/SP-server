@@ -27,6 +27,19 @@ public class Semesters {
 		sems = new ArrayList<>();
 	}
 	
+	public Semesters(String[][] dbData) {
+		this();
+		if (dbData.length == 0) return;
+		// expects table with columns: id; index (1 or 2); startYear
+		int colNum = dbData[0].length;
+		assert (colNum == 3);
+		for(String[] row : dbData) {
+			int ind = Integer.parseInt(row[1]);
+			int startYear = Integer.parseInt(row[2]);
+			addSemester(ind, startYear);
+		}
+	}
+	
 	public void addSemester(int index, int startYear) {
 		sems.add(new Semester(index, startYear));
 	}

@@ -3,6 +3,8 @@ package sp_server;
 import java.util.ArrayList;
 import java.util.List;
 import javax.jws.WebService;
+import sp_entities.Semesters;
+import sp_entities.XMLSerializer;
 
 enum UserStatus { 
 	NONE ("NONE"), TEACHER("TEACHER"), CURATOR("CURATOR"),
@@ -27,46 +29,67 @@ public class Server {
 	
 	public String login(int univerID) {
 		//тут вызов login у DB
+		//тут создание сессии пользовател€
 		return db.login(univerID).toString();
 	}
 	
 	public String getSemesters() {
-		String s = "<semesters><sem index=\"1\" startYear=Ф2013Ф>"
-				+ "<sem index=Ф2Ф startYear=Ф2014Ф></semesters>";
 		// тут вз€тие с UserSession роли
-		UserStatus status = UserStatus.TEACHER;
+		UserStatus status = UserStatus.DEPWORKER;
 		// тут вз€тие с UserSession id пользовател€
 		int userId = 1;
-		String semesters;
-		// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! нужно в session сохранить semId | index. значит возврат не такой с Ѕƒ!!!!
+		String[][] semTable;
+		
 		switch (status) {
 		case TEACHER:
-			semesters = db.getTeacherSemesters(userId);
+			semTable = db.getTeacherSemesters(userId);
 			break;
 		case CURATOR:
-			semesters = db.getCuratorSemesters(userId);
+			semTable = db.getCuratorSemesters(userId);
 			break;
 		case DEPWORKER:
-			semesters = db.getDepSemesters(userId);
+			semTable = db.getDepSemesters(userId);
 			break;
 		case STUDENT:
-			semesters = db.getStudentSemesters(userId);
+			semTable = db.getStudentSemesters(userId);
 			break;
 		case NONE:
 		default:
-			semesters = "";
+			return "";
 		}
-		// тут вызов getSemesters у DB
-		return s;
+		// тут сохранение массива id в UserSession
+		Semesters semesters = new Semesters(semTable);
+		return XMLSerializer.objectToXML(semesters);
 	}
 	
 	public List<String> getSubjects() {
 		// тут проверка авторизации и вз€тие с UserSession данных
+		// вз€тие статуса с user session
+		UserStatus status = UserStatus.TEACHER;
+		// вз€тие id пользовател€ с user session
+		
+		String[][] subjTable;
+		switch(status) {
+		case TEACHER:
+			//вз€тие id с UserSession
+			int userId = 1000;
+			//вз€тие id семестра с UserSession
+			int semId = 10;
+			subjTable = db.getTeacherSubjects(userId, semId);
+			break;
+		case CURATOR:
+			break;
+		case DEPWORKER:
+			break;
+		default:
+			return null;
+		}
 		List<String> al = new ArrayList<>();
 		al.add("¬еб-сервисы");
 		al.add("ѕќ автоматизированных систем");
 		al.add("ѕолитологи€");
 		// тут вызов getSubjects у DB 
+		
 		return al;
 	}
 	
