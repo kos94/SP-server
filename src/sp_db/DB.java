@@ -17,27 +17,27 @@ public class DB {
 		//TODO initialization from xml files via JAXB 
 		users = new Users();
 		users.tempInit();
-		users.print();
+//		users.print();
 		
 		structure = new FacultyStructure();
 		structure.tempInit();
-		structure.print();
+//		structure.print();
 		
 		schedule = new Schedule();
 		schedule.tempInit();
-		schedule.print();
+//		schedule.print();
 		
 		curators = new Curators();
 		curators.tempInit();
-		curators.print();
+//		curators.print();
 		
 		marks = new Marks();
 		marks.tempInit();
-		marks.print();
+//		marks.print();
 	}
 	
-	public UserStatus login(int univerID) {
-		return UserStatus.TEACHER;
+	public User login(int id, String password) {
+		return users.login(id, password);
 	}
 	
 	public Semesters getTeacherSemesters(int idTeacher) {

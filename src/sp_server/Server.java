@@ -1,27 +1,34 @@
 package sp_server;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import javax.jws.WebService;
 
-import sp_db.DB;
-import sp_entities.GroupSubjectMarks;
-import sp_entities.Semester;
-import sp_entities.Semesters;
-import sp_entities.XMLSerializer;
-import sp_entities.UserStatus;
+import sp_db.*;
+import sp_entities.*;
 
 @WebService
 public class Server {
 	private DB db;
+	private Map<Integer, UserSession> sessions;
 	
 	public Server() {
 		db = new DB();
+		sessions = new HashMap<>();
+		tempTeacherScenario();
+		
+	}
+	
+	private void tempTeacherScenario() {
 		int idTeacher = 1;
+		
+		System.out.println("Login");
+		login(idTeacher, "aaa");
+		
 		System.out.println("Get teacher semesters: ");
-		Semesters sems = db.getTeacherSemesters(idTeacher);
-		sems.print();
+		String sems = getSemesters(idTeacher);
+		System.out.println(sems);
+		
 		Semester chosenSem = new Semester(1, 2014);
 		
 		List<String> subjects = db.getTeacherSubjects(idTeacher, chosenSem);
@@ -30,29 +37,41 @@ public class Server {
 			System.out.println(s);
 		}
 		String chosenSubj = subjects.get(0);
+		
 		System.out.println("Get teacher groups: ");
 		List<String> groups = db.getTeacherGroups(idTeacher, chosenSem, chosenSubj);
 		for(String g : groups) {
 			System.out.println(g);
 		}
 		String chosenGroup = groups.get(1);
+		
 		System.out.println("Get subject marks: ");
 		GroupSubjectMarks gsm = db.getSubjectMarks(chosenGroup, chosenSubj);
 		gsm.print();
 	}
+
 	
-	public String login(int univerID) {
-		//тут вызов login у DB
-		//тут создание сессии пользователя
-		return db.login(univerID).toString();
+	public String login(int univerID, String password) {
+		User user;
+		UserSession session = sessions.get(univerID);
+		if(session != null) {
+			user = session.getUserData();
+		} else {
+			user = db.login(univerID, password);
+			if(user == null) return "";
+			sessions.put(univerID, new UserSession(user));
+		}
+		return XMLSerializer.objectToXML(user);
 	}
 	
-	public String getSemesters() {
-		// тут взятие с UserSession роли
-		UserStatus status = UserStatus.DEPWORKER;
-		// тут взятие с UserSession id пользователя
-		int userId = 1;
-		Semesters sems;
+	public String getSemesters(int id) {
+		UserSession session = sessions.get(id);
+		if(session == null) return "";
+		UserStatus status = session.getUserData().getStatus();
+		int userId = id;
+		
+		Semesters sems = new Semesters();
+		System.out.println("STATUS: " + status);
 		switch (status) {
 		case TEACHER:
 			sems = db.getTeacherSemesters(userId);
@@ -67,16 +86,16 @@ public class Server {
 		default:
 			return "";
 		}
-		return "";
-//		if(sems == null) return "";
-//		return XMLSerializer.objectToXML(sems);
+		System.out.println("GET SEMESTERS RESULT");
+		sems.print();
+		return XMLSerializer.objectToXML(sems);
 	}
 	
-	public List<String> getSubjects() {
-		// тут проверка авторизации и взятие с UserSession данных
-		// взятие статуса с user session
-		UserStatus status = UserStatus.TEACHER;
-		// взятие id пользователя с user session
+	public List<String> getSubjects(int id) {
+		UserSession session = sessions.get(id);
+		if(session == null) return null;
+		UserStatus status = session.getUserData().getStatus();
+		int userId = id;
 		
 		switch(status) {
 		case TEACHER:

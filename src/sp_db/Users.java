@@ -14,10 +14,16 @@ public class Users {
 		users.put(id, user);
 	}
 	
+	public User login(int id, String pass) {
+		User user = users.get(id);
+		if(user == null || !user.isRightPass(pass)) return null;
+		return user;
+	}
+	
 	public String getUserName(int userId) {
 		User user = users.get(userId);
 		if(user == null) return "";
-		return user.name;
+		return user.getName();
 	}
 	
 	//TODO delete
