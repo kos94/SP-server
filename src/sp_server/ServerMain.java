@@ -12,7 +12,7 @@ public class ServerMain {
                 service = "server",
                 address = protocol + ip_dns + port + dir + service;
         Server server = new Server();
-        Endpoint.publish(address, server);
-        System.out.println("WSDL is published on\n" + address + "?wsdl");
+//        Endpoint.publish(address, server);
+//        System.out.println("WSDL is published on\n" + address + "?wsdl");
 	}
 }

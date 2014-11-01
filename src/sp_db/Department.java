@@ -1,16 +1,15 @@
 package sp_db;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Department {
-	protected String name;
-	protected List<Integer> idWorkers;
-	protected List<Group> groups;
+	private String name;
+	private List<Integer> idWorkers;
+	private Map<String, Set<Integer>> grStudents;
 	
 	public Department() {
 		idWorkers = new ArrayList<>();
-		groups = new ArrayList<>();
+		grStudents = new HashMap<>();
 	}
 	
 	public Department(String depName) {
@@ -22,19 +21,28 @@ public class Department {
 		idWorkers.add(idWorker);
 	}
 	
-	public void addGroup(Group g) {
-		groups.add(g);
+	public void addGroup(String groupName, Set<Integer> idStudents) {
+		grStudents.put(groupName, idStudents);
+	}
+	
+	public Set<Integer> findGroupStudents(String groupName) {
+		return grStudents.get(groupName);
 	}
 	
 	//TODO delete
 	public void print() {
-		System.out.println("========================\ndep name: " + name);
+		System.out.print("========================\ndep name: " + name + "\nWorkers: ");
 		for(Integer idW : idWorkers) {
 			System.out.print(idW + " ");
 		}
 		System.out.println("\nGroups: ");
-		for(Group g : groups) {
-			g.print();
+		System.out.println("===========\nGroups: ");
+		for (Map.Entry<String, Set<Integer>> group : grStudents.entrySet())
+		{
+			System.out.println("group: " + group.getKey());
+		    for(Integer idStudent : group.getValue()) {
+		    	System.out.print(idStudent + " ");
+		    }
 		}
 	}
 }

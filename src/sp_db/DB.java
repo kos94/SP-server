@@ -1,24 +1,47 @@
 package sp_db;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import sp_entities.GroupSubjectMarks;
+import sp_entities.Semesters;
 import sp_entities.UserStatus;
+import sp_entities.Semester;
 
 public class DB {
+	private Users users;
+	private FacultyStructure structure;
+	private Schedule schedule;
+	private Curators curators;
+	private Marks marks;
+	
 	public DB() {
-		// тут инициализация всей ереси с БД
+		//TODO initialization from xml files via JAXB 
+		users = new Users();
+		users.tempInit();
+		users.print();
+		
+		structure = new FacultyStructure();
+		structure.tempInit();
+		structure.print();
+		
+		schedule = new Schedule();
+		schedule.tempInit();
+		schedule.print();
+		
+		curators = new Curators();
+		curators.tempInit();
+		curators.print();
+		
+		marks = new Marks();
+		marks.tempInit();
+		marks.print();
 	}
 	
 	public UserStatus login(int univerID) {
 		return UserStatus.TEACHER;
 	}
 	
-	public String[][] getTeacherSemesters(int teachId) {
-		// тут обращение к БД по поводу препода
-		String[][] sems = new String[2][];
-		sems[0] = new String[]{ "100", "1", "2010" };
-		sems[1] = new String[]{ "200", "2", "2010" };
-		return sems;
+	public Semesters getTeacherSemesters(int idTeacher) {
+		return schedule.getTeacherSemesters(idTeacher);
 	}
 	
 	public String[][] getCuratorSemesters(int curId) {
@@ -53,11 +76,8 @@ public class DB {
 		return sems;
 	}
 	
-	public String[][] getTeacherGroups(int teachId, int semId, int subjId) {
-		String[][] groups = new String[2][];
-		groups[0] = new String[]{ "1", "teacher group 1" };
-		groups[1] = new String[]{ "2", "teacher group 2" };
-		return groups;
+	public List<String> getTeacherGroups(int idTeacher, Semester semester, String subj) {
+		return schedule.getTeacherGroups(idTeacher, semester, subj);
 	}
 	
 	public String[][] getCuratorGroups(int curId, int semId) {
@@ -74,11 +94,8 @@ public class DB {
 		return groups;
 	}
 	
-	public String[][] getTeacherSubjects(int teachId, int semId) {
-		String[][] subjs = new String[2][];
-		subjs[0] = new String[]{ "1", "teacher subj 1" };
-		subjs[1] = new String[]{ "2", "teacher subj 2" };
-		return subjs;
+	public List<String> getTeacherSubjects(int idTeacher, Semester semester) {
+		return schedule.getTeacherSubjects(idTeacher, semester);
 	}
 	
 	public String[][] getGroupSubjects(int groupId, int semId) {
@@ -88,11 +105,20 @@ public class DB {
 		return subjs;
 	}
 	
-	public String[][] getSubjectMarks(int semId, int groupId, int subjId) {
-		String[][] marks = new String[2][];
-		marks[0] = new String[]{"Иванов П.П.", "45", "40", "85" };
-		marks[1] = new String[]{"Гончаренко П.С.", "40", "41", "90" };
-		return marks;
+	public GroupSubjectMarks getSubjectMarks(String group, String subject) {
+		Set<Integer> idStudents = structure.getGroupStudents(group);
+		System.out.println("ids for group " + group + ":");
+		for(Integer id : idStudents) {
+			System.out.print(id + " ");
+		}
+		System.out.println();
+		
+		Map<Integer, String> students = new HashMap<>();
+		for(Integer id : idStudents) {
+			students.put(id, users.getUserName(id));
+		}
+		
+		return marks.getGroupSubjectMarks(students, subject);
 	}
 	
 	public String[][] getStageMarks(int semId, int groupId, int stageId) {

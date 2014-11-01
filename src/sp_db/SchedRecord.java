@@ -19,7 +19,7 @@ public class SchedRecord {
 	
 	//TODO delete 
 	public void print() {
-		System.out.println("id teacher: " + idTeacher +", sem: " + semester);
-		System.out.println(">subj: " + subj + ", group: " + group);
+		System.out.println("teacher: " + idTeacher +", sem: " + semester);
+		System.out.println("  subj: " + subj + ", group: " + group);
 	}
 }

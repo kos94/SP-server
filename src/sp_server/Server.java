@@ -6,6 +6,8 @@ import java.util.List;
 import javax.jws.WebService;
 
 import sp_db.DB;
+import sp_entities.GroupSubjectMarks;
+import sp_entities.Semester;
 import sp_entities.Semesters;
 import sp_entities.XMLSerializer;
 import sp_entities.UserStatus;
@@ -16,6 +18,27 @@ public class Server {
 	
 	public Server() {
 		db = new DB();
+		int idTeacher = 1;
+		System.out.println("Get teacher semesters: ");
+		Semesters sems = db.getTeacherSemesters(idTeacher);
+		sems.print();
+		Semester chosenSem = new Semester(1, 2014);
+		
+		List<String> subjects = db.getTeacherSubjects(idTeacher, chosenSem);
+		System.out.println("Get teacher subjects: ");
+		for(String s : subjects) {
+			System.out.println(s);
+		}
+		String chosenSubj = subjects.get(0);
+		System.out.println("Get teacher groups: ");
+		List<String> groups = db.getTeacherGroups(idTeacher, chosenSem, chosenSubj);
+		for(String g : groups) {
+			System.out.println(g);
+		}
+		String chosenGroup = groups.get(1);
+		System.out.println("Get subject marks: ");
+		GroupSubjectMarks gsm = db.getSubjectMarks(chosenGroup, chosenSubj);
+		gsm.print();
 	}
 	
 	public String login(int univerID) {
@@ -29,28 +52,24 @@ public class Server {
 		UserStatus status = UserStatus.DEPWORKER;
 		// тут взятие с UserSession id пользователя
 		int userId = 1;
-		String[][] semTable;
-		
+		Semesters sems;
 		switch (status) {
 		case TEACHER:
-			semTable = db.getTeacherSemesters(userId);
+			sems = db.getTeacherSemesters(userId);
 			break;
 		case CURATOR:
-			semTable = db.getCuratorSemesters(userId);
 			break;
 		case DEPWORKER:
-			semTable = db.getDepSemesters(userId);
 			break;
 		case STUDENT:
-			semTable = db.getStudentSemesters(userId);
 			break;
 		case NONE:
 		default:
 			return "";
 		}
-		// тут сохранение массива id в UserSession
-		Semesters semesters = new Semesters(semTable);
-		return XMLSerializer.objectToXML(semesters);
+		return "";
+//		if(sems == null) return "";
+//		return XMLSerializer.objectToXML(sems);
 	}
 	
 	public List<String> getSubjects() {
@@ -59,14 +78,8 @@ public class Server {
 		UserStatus status = UserStatus.TEACHER;
 		// взятие id пользователя с user session
 		
-		String[][] subjTable;
 		switch(status) {
 		case TEACHER:
-			//взятие id с UserSession
-			int userId = 1000;
-			//взятие id семестра с UserSession
-			int semId = 10;
-			subjTable = db.getTeacherSubjects(userId, semId);
 			break;
 		case CURATOR:
 			break;
@@ -97,17 +110,17 @@ public class Server {
 	
 	public String getSubjectMarks() {
 		// тут проверка авторизации и взятие с UserSession данных
-		return db.getSubjectMarks(0, 0, 0);
+		return "";
 	}
 	
 	public String getStageMarks() {
 		// тут проверка авторизации и взятие с UserSession данных
-		return db.getStageMarks(0, 0, 0);
+		return "";
 	}
 	
 	public String getStudentMarks() {
 		// тут проверка авторизации и взятие с UserSession данныx
-		return db.getStudentMarks(0, 0);
+		return "";
 	}
 	
 	public boolean setGroup(int index) {
