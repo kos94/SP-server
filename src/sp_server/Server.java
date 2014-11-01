@@ -2,22 +2,13 @@ package sp_server;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.jws.WebService;
+
+import sp_db.DB;
 import sp_entities.Semesters;
 import sp_entities.XMLSerializer;
-
-enum UserStatus { 
-	NONE ("NONE"), TEACHER("TEACHER"), CURATOR("CURATOR"),
-	DEPWORKER("DEPWORKER"), STUDENT("STUDENT");
-	private String name;
-	private UserStatus(String enName) {
-		name = enName;
-	}
-	@Override
-	public String toString() {
-		return name;
-	}
-};
+import sp_entities.UserStatus;
 
 @WebService
 public class Server {
