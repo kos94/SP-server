@@ -13,8 +13,8 @@ public class GroupSubjectMarks {
 	}
 
 	public void addMark(String student, int m1, int m2, int m3) {
-		ArrayList<Integer> l = new ArrayList<>();
-		l.add(m1); l.add(m2); l.add(m3); 
+		ArrayList<Byte> l = new ArrayList<>();
+		l.add((byte)m1); l.add((byte)m2); l.add((byte)m3); 
 		studMarks.add(new StudentMarks(student, l));
 	}
 	
@@ -22,7 +22,7 @@ public class GroupSubjectMarks {
 	public void print() {
 		for(StudentMarks ssm : studMarks) {
 			System.out.println(ssm.student);
-			for(Integer m : ssm.marks) {
+			for(Byte m : ssm.marks) {
 				System.out.print(m + " ");
 			}
 			System.out.println("");

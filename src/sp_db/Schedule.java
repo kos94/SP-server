@@ -3,6 +3,7 @@ package sp_db;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashSet;
+import java.util.Set;
 
 import sp_entities.Semester;
 import sp_entities.Semesters;
@@ -50,6 +51,16 @@ public class Schedule {
 			}
 		}
 		return groups;
+	}
+	
+	public List<String> getGroupSubjects(String group, Semester sem) {
+		List<String> subjects = new ArrayList<>();
+		for(SchedRecord r : records) {
+			if(r.semester.equals(sem) && r.group.equals(group)) {
+				subjects.add(r.subj);
+			}
+		}
+		return subjects;
 	}
 	
 	//TODO delete

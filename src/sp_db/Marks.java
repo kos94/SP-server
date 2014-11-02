@@ -1,10 +1,6 @@
 package sp_db;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import sp_entities.GroupStageMarks;
 import sp_entities.GroupSubjectMarks;
@@ -22,22 +18,42 @@ public class Marks {
 		marks.add(m);
 	}
 	
-	
-	//TODO do
 	public GroupSubjectMarks getGroupSubjectMarks(Map<Integer, String> students, String subject) {
 		GroupSubjectMarks groupMarks = new GroupSubjectMarks();
 		for(StudentSubjMark m : marks) {
 			String studName = students.get(m.idStudent);
 			if(m.subj.equals(subject) && studName != null) {
-				groupMarks.addMark(studName, m.mark1, m.mark2, m.mark3);
+				groupMarks.addMark(studName, m.marks[0], m.marks[1], m.marks[2]);
 			}
 		}
 		return groupMarks;
 	}
 	
-	//TODO do
-	public GroupStageMarks getGroupStageMarks(Semester sem, String group, byte stage) {
-		return null;
+	public GroupStageMarks getGroupStageMarks(List<String> subjList, Map<Integer, String> students, int stage) {
+		GroupStageMarks groupMarks = new GroupStageMarks();
+		Map<String, List<Byte>> studMarks = new HashMap<>();
+		List<Byte> emptyMarks = new ArrayList<>();
+		for(int i=0; i<subjList.size(); i++) {
+			emptyMarks.add(null);
+		}
+		
+		for(Map.Entry<Integer, String> s : students.entrySet()) {
+			studMarks.put(s.getValue(), new ArrayList<Byte>(emptyMarks));
+		}
+		
+		for(StudentSubjMark m : marks) {
+			String studName = students.get(m.idStudent);
+			int subjIndex = subjList.indexOf(m.subj);
+			if(subjIndex != -1 && studName != null) {
+				studMarks.get(studName).set(subjIndex, m.marks[stage-1]);
+			}
+		}
+		
+		groupMarks.setSubjects(subjList);
+		for(Map.Entry<String, List<Byte>> sm : studMarks.entrySet()) {
+			groupMarks.addMark(sm.getKey(), sm.getValue());
+		}
+		return groupMarks;
 	}
 	
 	//TODO do

@@ -1,6 +1,7 @@
 package sp_entities;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.bind.annotation.*;
 
@@ -8,13 +9,13 @@ import javax.xml.bind.annotation.*;
 class StudentMarks {
 	public String student;
 	@XmlElement(name="mark")
-	public ArrayList<Integer> marks;
+	public List<Byte> marks;
 	
 	public StudentMarks() {
 		marks = new ArrayList<>();
 	}
 	
-	public StudentMarks(String student, ArrayList<Integer> marks) {
+	public StudentMarks(String student, List<Byte> marks) {
 		this.student = student;
 		this.marks = marks;
 	}

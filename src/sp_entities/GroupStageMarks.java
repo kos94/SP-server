@@ -1,5 +1,6 @@
 package sp_entities;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.bind.annotation.*;
 
@@ -8,8 +9,8 @@ import javax.xml.bind.annotation.*;
 public class GroupStageMarks {
 	@XmlElementWrapper
 	@XmlElement(name="subj")
-	private ArrayList<String> subjects;
-	private ArrayList<StudentMarks> studMarks;
+	private List<String> subjects;
+	private List<StudentMarks> studMarks;
 	
 	public GroupStageMarks() {
 		subjects = new ArrayList<>();
@@ -20,10 +21,13 @@ public class GroupStageMarks {
 		subjects.add(subj);
 	}
 	
-	public void addMark(String student, ArrayList<Integer> marks) {
+	public void addMark(String student, List<Byte> marks) {
 		studMarks.add(new StudentMarks(student, marks));
 	}
 	
+	public void setSubjects(List<String> subjs) {
+		subjects = subjs;
+	}
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE IN FUTURE
 	public void print() {
 		for(String subj : subjects) {
@@ -33,7 +37,7 @@ public class GroupStageMarks {
 		
 		for(StudentMarks ssm : studMarks) {
 			System.out.println(ssm.student);
-			for(Integer m : ssm.marks) {
+			for(Byte m : ssm.marks) {
 				System.out.print(m + " ");
 			}
 			System.out.println();

@@ -1,6 +1,7 @@
 package sp_db;
 
 import java.util.*;
+
 import sp_entities.UserStatus;
 
 public class Users {
@@ -26,12 +27,20 @@ public class Users {
 		return user.getName();
 	}
 	
+	Map<Integer, String> getUsersNames(Set<Integer> idUsers) {
+		Map<Integer, String> userNames = new HashMap<>();
+		for(Integer id : idUsers) {
+			userNames.put(id, getUserName(id));
+		}
+		return userNames;
+	}
+	
 	//TODO delete
 	public void tempInit() {
 		int c = 0;
 		addUser(++c, new User("aaa", "Пригожев А.С.", UserStatus.TEACHER));
 		addUser(++c, new User("bbb", "Кунгурцев А.Б.", UserStatus.TEACHER));
-		addUser(++c, new User("ссс", "Кавицкая В.С.", UserStatus.CURATOR));
+		addUser(++c, new User("ccc", "Кавицкая В.С.", UserStatus.CURATOR));
 		addUser(++c, new User("ddd", "Паулин О.Н.", UserStatus.CURATOR));
 		addUser(++c, new User("eee", "Иванов И.И.", UserStatus.DEPWORKER));
 		

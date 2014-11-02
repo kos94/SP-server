@@ -15,49 +15,97 @@ public class Server {
 	public Server() {
 		db = new DB();
 		sessions = new HashMap<>();
-		tempTeacherScenario();
-
+//		tempTeacherScenario();
+		tempCuratorScenario();
 	}
 
 	private void tempTeacherScenario() {
-		int idTeacher = 1;
+		int idUser = 2;
 
 		System.out.println("--- Login");
-		login(idTeacher, "aaa");
+		System.out.println( login(idUser, "bbb") );
 
 		System.out.println("--- Get teacher semesters: ");
-		String sems = getSemesters(idTeacher);
+		String sems = getSemesters(idUser);
 		// System.out.println(sems);
 
 		System.out.println("--- Set semester: ");
-		Semester chosenSem = new Semester(1, 2014);
-		setSemester(idTeacher, XMLSerializer.objectToXML(chosenSem));
+		Semester chosenSem = new Semester(2, 2012);
+		setSemester(idUser, XMLSerializer.objectToXML(chosenSem));
 
 		System.out.println("--- Get teacher subjects: ");
-		List<String> subjects = getSubjects(idTeacher);
+		List<String> subjects = getSubjects(idUser);
 		for (String s : subjects) {
 			System.out.println(s);
 		}
 
 		System.out.println("--- Set subject: ");
-		String chosenSubj = subjects.get(1);
-		setSubject(idTeacher, chosenSubj);
+		String chosenSubj = subjects.get(0);
+		setSubject(idUser, chosenSubj);
 
 		System.out.println("--- Get teacher groups: ");
-		List<String> groups = getGroups(idTeacher);
+		List<String> groups = getGroups(idUser);
 		for (String g : groups) {
 			System.out.println(g);
 		}
 
 		System.out.println("--- Set group: ");
 		String chosenGroup = groups.get(0);
-		setGroup(idTeacher, chosenGroup);
+		setGroup(idUser, chosenGroup);
 		
 		System.out.println("--- Get subject marks: ");
-		String marks = getSubjectMarks(idTeacher);
+		String marks = getSubjectMarks(idUser);
 		System.out.println(marks);
 	}
 
+	private void tempCuratorScenario() {
+		int idUser = 3;
+		
+		System.out.println("--- Login");
+		System.out.println( login(idUser, "ccc") );
+		
+		System.out.println("--- Get curator semesters: ");
+		String sems = getSemesters(idUser);
+		
+		System.out.println("--- Set semester: ");
+		Semester chosenSem = new Semester(2, 2012);
+		setSemester(idUser, XMLSerializer.objectToXML(chosenSem));
+		
+		System.out.println("--- Get curator groups: ");
+		List<String> groups = getGroups(idUser);
+		for (String g : groups) {
+			System.out.println(g);
+		}
+		
+		System.out.println("--- Set group: ");
+		String chosenGroup = groups.get(0);
+		setGroup(idUser, chosenGroup);
+//		/* <var1> */
+//		System.out.println("--- Set stage: ");
+//		setStage(idUser, 3);
+//		
+//		System.out.println("--- Get stage marks: ");
+//		String stageMarks = getStageMarks(idUser);
+//		System.out.println(stageMarks);
+//		/* </var1> */
+		
+		/* <var2> */
+		System.out.println("--- Get group subjects: ");
+		List<String> subjects = getSubjects(idUser);
+		for (String s : subjects) {
+			System.out.println(s);
+		}
+		
+		System.out.println("--- Set subject: ");
+		String chosenSubj = subjects.get(1);
+		setSubject(idUser, chosenSubj);
+		
+		System.out.println("--- Get subject marks: ");
+		String marks = getSubjectMarks(idUser);
+		System.out.println(marks);
+		/* </var2> */
+	}
+	
 	public String login(int univerID, String password) {
 		User user;
 		UserSession session = sessions.get(univerID);
@@ -85,6 +133,7 @@ public class Server {
 			sems = db.getTeacherSemesters(idUser);
 			break;
 		case CURATOR:
+			sems = db.getCuratorSemesters(idUser);
 			break;
 		case DEPWORKER:
 			break;
@@ -113,6 +162,7 @@ public class Server {
 			subjects = db.getTeacherSubjects(idUser, session.getSemester());
 			break;
 		case CURATOR:
+			subjects = db.getGroupSubjects(session.getGroup(), session.getSemester());
 			break;
 		case DEPWORKER:
 			break;
@@ -134,6 +184,9 @@ public class Server {
 					session.getSubject());
 			break;
 		case CURATOR:
+			String g = db.getCuratorGroup(idUser, session.getSemester());
+			groups = new ArrayList<>();
+			groups.add(g);
 			break;
 		case DEPWORKER:
 			break;
@@ -148,7 +201,7 @@ public class Server {
 
 	public String getSubjectMarks(int idUser) {
 		UserSession session = sessions.get(idUser);
-		if (session == null) return null;
+		if (session == null) return "";
 		String subj = session.getSubject();
 		String group = session.getGroup();
 		// need to check rights? 
@@ -158,9 +211,16 @@ public class Server {
 		return XMLSerializer.objectToXML(marks);
 	}
 
-	public String getStageMarks() {
-		// тут проверка авторизации и взятие с UserSession данных
-		return "";
+	public String getStageMarks(int idUser) {
+		UserSession session = sessions.get(idUser);
+		if (session == null) return "";
+		Semester sem = session.getSemester();
+		String group = session.getGroup();
+		byte stage = session.getStage();
+		// need to check rights? 
+		GroupStageMarks marks = db.getStageMarks(sem, group, stage);
+		marks.print();
+		return XMLSerializer.objectToXML(marks);
 	}
 
 	public String getStudentMarks() {
@@ -177,10 +237,11 @@ public class Server {
 		return true;
 	}
 
-	public boolean setStage(int index) {
-		// проверка в сессии наличия этого индекса
-		// тут внесение в UserSession этапа
-		// тут возврат true если правильный вариант
+	public boolean setStage(int idUser, int stage) {
+		UserSession session = sessions.get(idUser);
+		if (session == null) return false;
+		System.out.println(idUser + " SET STAGE " + stage);
+		session.setStage((byte)stage);
 		return true;
 	}
 
