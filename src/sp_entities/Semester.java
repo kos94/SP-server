@@ -1,7 +1,8 @@
 package sp_entities;
 
-import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.*;
 
+@XmlRootElement
 public class Semester {
 	@XmlAttribute
 	public byte index;

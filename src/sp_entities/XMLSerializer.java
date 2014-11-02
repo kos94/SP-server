@@ -110,7 +110,6 @@ public class XMLSerializer {
 			mar.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			mar.marshal(obj, strWriter);
 			String xmlString = strWriter.toString();
-			System.out.println( xmlString );
 			return xmlString;
 		} catch (Exception e) {
 			e.printStackTrace();
