@@ -29,6 +29,18 @@ public class Department {
 		return grStudents.get(groupName);
 	}
 	
+	public Set<String> getGroups() {
+		return grStudents.keySet();
+	}
+	
+	public boolean hasWorker(int idWorker) {
+		return idWorkers.contains(idWorker);
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
 	//TODO delete
 	public void print() {
 		System.out.print("========================\ndep name: " + name + "\nWorkers: ");

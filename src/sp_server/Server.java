@@ -16,7 +16,8 @@ public class Server {
 		db = new DB();
 		sessions = new HashMap<>();
 //		tempTeacherScenario();
-		tempCuratorScenario();
+//		tempCuratorScenario();
+		tempDepWorkerScenario();
 	}
 
 	private void tempTeacherScenario() {
@@ -97,13 +98,67 @@ public class Server {
 		}
 		
 		System.out.println("--- Set subject: ");
-		String chosenSubj = subjects.get(1);
+		String chosenSubj = subjects.get(0);
 		setSubject(idUser, chosenSubj);
 		
 		System.out.println("--- Get subject marks: ");
 		String marks = getSubjectMarks(idUser);
 		System.out.println(marks);
 		/* </var2> */
+	}
+	
+	private void tempDepWorkerScenario() {
+		int idUser = 5;
+		
+		System.out.println("--- Login");
+		System.out.println( login(idUser, "eee") );
+		
+		System.out.println("--- Set department");
+		setDepartment(idUser);
+		
+		System.out.println("--- Get dep worker semesters: ");
+		String sems = getSemesters(idUser);
+		
+		System.out.println("--- Set semester: ");
+		Semester chosenSem = ((Semesters)XMLSerializer.xmlToObject(sems, Semesters.class))
+				.getSemesters().get(2);
+		
+		setSemester(idUser, XMLSerializer.objectToXML(chosenSem));
+		
+		System.out.println("--- Get dep worker groups: ");
+		List<String> groups = getGroups(idUser);
+		for (String g : groups) {
+			System.out.println(g);
+		}
+		
+		System.out.println("--- Set group: ");
+		String chosenGroup = groups.get(1);
+		setGroup(idUser, chosenGroup);
+		
+		/* <var1> */
+		System.out.println("--- Set stage: ");
+		setStage(idUser, 3);
+		
+		System.out.println("--- Get stage marks: ");
+		String stageMarks = getStageMarks(idUser);
+		System.out.println(stageMarks);
+		/* </var1> */
+		
+//		/* <var2> */
+//		System.out.println("--- Get group subjects: ");
+//		List<String> subjects = getSubjects(idUser);
+//		for (String s : subjects) {
+//			System.out.println(s);
+//		}
+//		
+//		System.out.println("--- Set subject: ");
+//		String chosenSubj = subjects.get(0);
+//		setSubject(idUser, chosenSubj);
+//		
+//		System.out.println("--- Get subject marks: ");
+//		String marks = getSubjectMarks(idUser);
+//		System.out.println(marks);
+//		/* </var2> */
 	}
 	
 	public String login(int univerID, String password) {
@@ -136,6 +191,7 @@ public class Server {
 			sems = db.getCuratorSemesters(idUser);
 			break;
 		case DEPWORKER:
+			sems = db.getDepSemesters(session.getDepartment());
 			break;
 		case STUDENT:
 			break;
@@ -162,9 +218,8 @@ public class Server {
 			subjects = db.getTeacherSubjects(idUser, session.getSemester());
 			break;
 		case CURATOR:
-			subjects = db.getGroupSubjects(session.getGroup(), session.getSemester());
-			break;
 		case DEPWORKER:
+			subjects = db.getGroupSubjects(session.getGroup(), session.getSemester());
 			break;
 		default:
 			return null;
@@ -189,6 +244,8 @@ public class Server {
 			groups.add(g);
 			break;
 		case DEPWORKER:
+			groups = db.getDepGroups(session.getDepartment(), 
+					session.getSemester());
 			break;
 		case NONE:
 			break;
@@ -262,6 +319,16 @@ public class Server {
 		// how to check if subject value correct and available?
 		System.out.println(idUser + " SET SUBJECT " + subj);
 		session.setSubject(subj);
+		return true;
+	}
+	
+	public boolean setDepartment(int idUser) {
+		UserSession session = sessions.get(idUser);
+		if (session == null) return false;
+		UserStatus status = session.getUserData().getStatus();
+		if(status != UserStatus.DEPWORKER) return false;
+		String dep = db.getWorkerDepartment(idUser);
+		session.setDepartment(dep);
 		return true;
 	}
 }

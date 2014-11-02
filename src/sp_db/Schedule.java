@@ -63,6 +63,26 @@ public class Schedule {
 		return subjects;
 	}
 	
+	public Semesters getGroupsSemesters(Set<String> groups) {
+		Set<Semester> semesters = new HashSet<>();
+		for(SchedRecord r : records) {
+			if(groups.contains(r.group)) {
+				semesters.add(r.semester);
+			}
+		}
+		return new Semesters(semesters);
+	}
+	
+	public List<String> getSemesterGroups(Set<String> groupsSet, Semester sem) {
+		List<String> groupsList = new ArrayList<>();
+		for(SchedRecord r : records) {
+			if(groupsSet.contains(r.group) && r.semester.equals(sem)) {
+				groupsList.add(r.group);
+			}
+		}
+		return groupsList;
+	}
+	
 	//TODO delete
 	public void tempInit() {
 		Semester sem1_2012 = new Semester(1, 2012);

@@ -26,6 +26,24 @@ public class FacultyStructure {
 		return null;
 	}
 	
+	public String getWorkerDepartment(int idWorker) {
+		for(Department d : deps) {
+			if(d.hasWorker(idWorker)) {
+				return d.getName();
+			}
+		}
+		return null;
+	}
+	
+	public Set<String> getDepGroups(String department) {
+		for(Department d : deps) {
+			if(d.getName().equals(department)) {
+				return d.getGroups();
+			}
+		}
+		return null;
+	}
+	
 	//TODO delete
 	public void tempInit() {
 		
