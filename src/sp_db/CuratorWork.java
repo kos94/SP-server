@@ -1,7 +1,10 @@
 package sp_db;
 
+import javax.xml.bind.annotation.*;
+
 import sp_entities.Semester;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CuratorWork {
 	protected Semester sem;
 	protected String group;

@@ -1,11 +1,10 @@
 package sp_db;
 
 import javax.xml.bind.annotation.*;
-
 import sp_entities.UserStatus;
 
 @XmlRootElement
-@XmlAccessorType(XmlAccessType.PUBLIC_MEMBER)
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User {
 	private String pass;
 	private String name;
@@ -13,8 +12,12 @@ public class User {
 	
 	public User() {}
 	
-	public User(String password, String fullName, UserStatus status) {
+	public User(String fullName, UserStatus status, String password) {
+		this(fullName, status);
 		pass = password;
+	}
+	
+	public User(String fullName, UserStatus status) {
 		name = fullName;
 		this.status = status;
 	}

@@ -1,8 +1,33 @@
 package sp_db;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+class ByteArrayAdapter extends XmlAdapter<int[], byte[]> {
+	@Override
+	public int[] marshal(byte[] arg0) throws Exception {
+		int[] arr = new int[arg0.length];
+		for(int i=0; i<arg0.length; i++)
+			arr[i] = arg0[i];
+		return arr;
+	}
+
+	@Override
+	public byte[] unmarshal(int[] arg0) throws Exception {
+		byte[] arr = new byte[arg0.length];
+		for(int i=0; i<arg0.length; i++)
+			arr[i] = (byte)arg0[i];
+		return arr;
+	}
+}
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class StudentSubjMark {
 	protected int idStudent;
 	protected String subj;
+	@XmlJavaTypeAdapter(ByteArrayAdapter.class)
 	protected byte [] marks;
 	
 	public StudentSubjMark() { marks = new byte[3]; }

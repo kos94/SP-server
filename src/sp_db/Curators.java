@@ -2,10 +2,16 @@ package sp_db;
 
 import java.util.*;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 import sp_entities.Semester;
 import sp_entities.Semesters;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Curators {
+	@XmlJavaTypeAdapter(CuratorsMapAdapter.class)
 	private Map<Integer, List<CuratorWork>> curators;
 	
 	public Curators() {

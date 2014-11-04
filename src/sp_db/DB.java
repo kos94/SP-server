@@ -2,11 +2,7 @@ package sp_db;
 
 import java.util.*;
 
-import sp_entities.GroupStageMarks;
-import sp_entities.GroupSubjectMarks;
-import sp_entities.Semesters;
-import sp_entities.UserStatus;
-import sp_entities.Semester;
+import sp_entities.*;
 
 public class DB {
 	private Users users;
@@ -15,27 +11,51 @@ public class DB {
 	private Curators curators;
 	private Marks marks;
 	
+	//TODO delete (need only to generate DB
+	private void saveToXML() {
+		XMLSerializer.saveObject(users, "C:\\ws\\users.xml");
+		XMLSerializer.saveObject(structure, "C:\\ws\\structure.xml");
+		XMLSerializer.saveObject(schedule, "C:\\ws\\schedule.xml");
+		XMLSerializer.saveObject(curators, "C:\\ws\\curators.xml");
+		XMLSerializer.saveObject(marks, "C:\\ws\\marks.xml");
+	}
+
+	private void loadFromXML() {
+		users = (Users) XMLSerializer
+				.loadObject("C:\\ws\\users.xml", Users.class);
+		structure = (FacultyStructure) XMLSerializer
+				.loadObject("C:\\ws\\structure.xml", FacultyStructure.class);
+		schedule = (Schedule) XMLSerializer
+				.loadObject("C:\\ws\\schedule.xml", Schedule.class);
+		curators = (Curators) XMLSerializer
+				.loadObject("C:\\ws\\curators.xml", Curators.class);
+		marks = (Marks) XMLSerializer
+				.loadObject("C:\\ws\\marks.xml", Marks.class);
+	}
+	
 	public DB() {
-		//TODO initialization from xml files via JAXB 
-		users = new Users();
-		users.tempInit();
-//		users.print();
+//		users = new Users();
+//		users.tempInit();
+//		
+//		structure = new FacultyStructure();
+//		structure.tempInit();
+//		
+//		schedule = new Schedule();
+//		schedule.tempInit();
+//		
+//		curators = new Curators();
+//		curators.tempInit();
+//		
+//		marks = new Marks();
+//		marks.tempInit();
+
+		loadFromXML();
 		
-		structure = new FacultyStructure();
-		structure.tempInit();
-//		structure.print();
-		
-		schedule = new Schedule();
-		schedule.tempInit();
-//		schedule.print();
-		
-		curators = new Curators();
-		curators.tempInit();
-//		curators.print();
-		
-		marks = new Marks();
-		marks.tempInit();
-//		marks.print();
+		users.print();
+		structure.print();
+		schedule.print();
+		curators.print();
+		marks.print();
 	}
 	
 	public User login(int id, String password) {

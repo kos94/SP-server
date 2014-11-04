@@ -1,10 +1,13 @@
 package sp_db;
 
 import java.util.*;
-
+import javax.xml.bind.annotation.*;
 import sp_entities.UserStatus;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Users {
+	@XmlElement(name="user")
 	private Map<Integer, User> users;
 	
 	public Users() {
@@ -38,23 +41,23 @@ public class Users {
 	//TODO delete
 	public void tempInit() {
 		int c = 0;
-		addUser(++c, new User("aaa", "Пригожев А.С.", UserStatus.TEACHER));
-		addUser(++c, new User("bbb", "Кунгурцев А.Б.", UserStatus.TEACHER));
-		addUser(++c, new User("ccc", "Кавицкая В.С.", UserStatus.CURATOR));
-		addUser(++c, new User("ddd", "Паулин О.Н.", UserStatus.CURATOR));
-		addUser(++c, new User("eee", "Иванов И.И.", UserStatus.DEPWORKER));
+		addUser(++c, new User("Пригожев А.С.", UserStatus.TEACHER, "aaa"));
+		addUser(++c, new User("Кунгурцев А.Б.", UserStatus.TEACHER, "bbb"));
+		addUser(++c, new User("Кавицкая В.С.", UserStatus.CURATOR, "ccc"));
+		addUser(++c, new User("Паулин О.Н.", UserStatus.CURATOR, "ddd"));
+		addUser(++c, new User("Иванов И.И.", UserStatus.DEPWORKER, "eee"));
 		
-		addUser(++c, new User("fff", "Михайлов С.В.", UserStatus.DEPWORKER));
-		addUser(++c, new User("ggg", "Чебан К.В.", UserStatus.STUDENT));
-		addUser(++c, new User("hhh", "Берлизов Е.В.", UserStatus.STUDENT));
-		addUser(++c, new User("iii", "Беловзоров А.А.", UserStatus.STUDENT));
-		addUser(++c, new User("jjj", "Гапяк В.М.", UserStatus.STUDENT));
+		addUser(++c, new User("Михайлов С.В.", UserStatus.DEPWORKER, "fff"));
+		addUser(++c, new User("Чебан К.В.", UserStatus.STUDENT, "ggg"));
+		addUser(++c, new User("Берлизов Е.В.", UserStatus.STUDENT, "hhh"));
+		addUser(++c, new User("Беловзоров А.А.", UserStatus.STUDENT, "iii"));
+		addUser(++c, new User("Гапяк В.М.", UserStatus.STUDENT, "jjj"));
 		
-		addUser(++c, new User("kkk", "Малярозов П.А.", UserStatus.STUDENT));
-		addUser(++c, new User("lll", "Садовый Д.Д.", UserStatus.STUDENT));
+		addUser(++c, new User("Малярозов П.А.", UserStatus.STUDENT, "kkk"));
+		addUser(++c, new User("Садовый Д.Д.", UserStatus.STUDENT, "lll"));
 		
-		addUser(++c, new User("mmm", "Иванов 131", UserStatus.STUDENT));
-		addUser(++c, new User("nnn", "Петров 132", UserStatus.STUDENT));
+		addUser(++c, new User("Иванов 131", UserStatus.STUDENT, "mmm"));
+		addUser(++c, new User("Петров 132", UserStatus.STUDENT, "nnn"));
 	}
 	
 	//TODO delete

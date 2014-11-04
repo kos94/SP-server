@@ -1,13 +1,14 @@
 package sp_db;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
+
+import javax.xml.bind.annotation.*;
 
 import sp_entities.Semester;
 import sp_entities.Semesters;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Schedule {
 	List<SchedRecord> records;
 	

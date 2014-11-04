@@ -2,9 +2,18 @@ package sp_db;
 
 import java.util.*;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Department {
 	private String name;
+	@XmlElementWrapper
+	@XmlElement(name="idW")
 	private List<Integer> idWorkers;
+	@XmlJavaTypeAdapter(GroupsMapAdapter.class)
+	@XmlElement(name="groups")
 	private Map<String, Set<Integer>> grStudents;
 	
 	public Department() {
@@ -48,13 +57,13 @@ public class Department {
 			System.out.print(idW + " ");
 		}
 		System.out.println("\nGroups: ");
-		System.out.println("===========\nGroups: ");
 		for (Map.Entry<String, Set<Integer>> group : grStudents.entrySet())
 		{
 			System.out.println("group: " + group.getKey());
 		    for(Integer idStudent : group.getValue()) {
 		    	System.out.print(idStudent + " ");
 		    }
+		    System.out.println();
 		}
 	}
 }

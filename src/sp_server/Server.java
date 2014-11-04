@@ -15,9 +15,9 @@ public class Server {
 	public Server() {
 		db = new DB();
 		sessions = new HashMap<>();
-//		tempTeacherScenario();
+		tempTeacherScenario();
 //		tempCuratorScenario();
-		tempDepWorkerScenario();
+//		tempDepWorkerScenario();
 	}
 
 	private void tempTeacherScenario() {
@@ -135,30 +135,30 @@ public class Server {
 		String chosenGroup = groups.get(1);
 		setGroup(idUser, chosenGroup);
 		
-		/* <var1> */
-		System.out.println("--- Set stage: ");
-		setStage(idUser, 3);
-		
-		System.out.println("--- Get stage marks: ");
-		String stageMarks = getStageMarks(idUser);
-		System.out.println(stageMarks);
-		/* </var1> */
-		
-//		/* <var2> */
-//		System.out.println("--- Get group subjects: ");
-//		List<String> subjects = getSubjects(idUser);
-//		for (String s : subjects) {
-//			System.out.println(s);
-//		}
+//		/* <var1> */
+//		System.out.println("--- Set stage: ");
+//		setStage(idUser, 3);
 //		
-//		System.out.println("--- Set subject: ");
-//		String chosenSubj = subjects.get(0);
-//		setSubject(idUser, chosenSubj);
-//		
-//		System.out.println("--- Get subject marks: ");
-//		String marks = getSubjectMarks(idUser);
-//		System.out.println(marks);
-//		/* </var2> */
+//		System.out.println("--- Get stage marks: ");
+//		String stageMarks = getStageMarks(idUser);
+//		System.out.println(stageMarks);
+//		/* </var1> */
+		
+		/* <var2> */
+		System.out.println("--- Get group subjects: ");
+		List<String> subjects = getSubjects(idUser);
+		for (String s : subjects) {
+			System.out.println(s);
+		}
+		
+		System.out.println("--- Set subject: ");
+		String chosenSubj = subjects.get(0);
+		setSubject(idUser, chosenSubj);
+		
+		System.out.println("--- Get subject marks: ");
+		String marks = getSubjectMarks(idUser);
+		System.out.println(marks);
+		/* </var2> */
 	}
 	
 	public String login(int univerID, String password) {
@@ -172,7 +172,8 @@ public class Server {
 				return "";
 			sessions.put(univerID, new UserSession(user));
 		}
-		return XMLSerializer.objectToXML(user);
+		User userNoPass = new User(user.getName(), user.getStatus());
+		return XMLSerializer.objectToXML(userNoPass);
 	}
 
 	public String getSemesters(int idUser) {

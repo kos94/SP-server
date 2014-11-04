@@ -1,7 +1,7 @@
 package sp_server;
 
-import sp_db.User;
 import sp_entities.Semester;
+import sp_db.User;
 
 public class UserSession {
 	private User userData;
