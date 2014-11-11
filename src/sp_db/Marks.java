@@ -55,9 +55,14 @@ public class Marks {
 		return groupMarks;
 	}
 	
-	//TODO do
-	public StudentSemMarks getStudentMarks(Semester sem, int idStudent) {
-		return null;
+	public StudentSemMarks getStudentMarks(int idStudent, Set<String> subjects) {
+		StudentSemMarks studentMarks = new StudentSemMarks();
+		for(StudentSubjMark m : ssMarks) {
+			if(m.idStudent == idStudent && subjects.contains(m.subj)) {
+				studentMarks.addMark(m.subj, m.marks[0], m.marks[1], m.marks[2]);
+			}
+		}
+		return studentMarks;
 	}
 
 	//TODO delete 

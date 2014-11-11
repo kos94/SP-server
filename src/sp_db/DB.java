@@ -11,7 +11,7 @@ public class DB {
 	private Curators curators;
 	private Marks marks;
 	
-	//TODO delete (need only to generate DB
+	//TODO delete (need only to generate DB)
 	private void saveToXML() {
 		XMLSerializer.saveObject(users, "C:\\ws\\users.xml");
 		XMLSerializer.saveObject(structure, "C:\\ws\\structure.xml");
@@ -51,11 +51,11 @@ public class DB {
 
 		loadFromXML();
 		
-		users.print();
-		structure.print();
-		schedule.print();
-		curators.print();
-		marks.print();
+//		users.print();
+//		structure.print();
+//		schedule.print();
+//		curators.print();
+//		marks.print();
 	}
 	
 	public User login(int id, String password) {
@@ -75,24 +75,17 @@ public class DB {
 		return schedule.getGroupsSemesters(groups);
 	}
 	
-	public String[][] getGroupSemesters(int groupId) {
-		// обращение к БД по поводу группы
-		String[][] sems = new String[2][];
-		sems[0] = new String[]{ "700", "1", "2013" };
-		sems[1] = new String[]{ "800", "2", "2013" };
-		return sems;
+	public Semesters getStudentSemesters(int idStudent) {
+		String group = getStudentGroup(idStudent);
+		return schedule.getGroupSemesters(group);
 	}
 	
-	public String[][] getStudentSemesters(int studId) {
-		// тут обращение к БД по поводу студента
-		String[][] sems = new String[2][];
-		sems[0] = new String[]{ "900", "1", "2014" };
-		sems[1] = new String[]{ "1000", "2", "2014" };
-		return sems;
+	public String getStudentGroup(int idStudent) {
+		return structure.getStudentGroup(idStudent);
 	}
 	
-	public String getWorkerDepartment(int workerId) {
-		return structure.getWorkerDepartment(workerId);
+	public String getWorkerDepartment(int idWorker) {
+		return structure.getWorkerDepartment(idWorker);
 	}
 	
 	public List<String> getTeacherGroups(int idTeacher, Semester semester, String subj) {
@@ -118,40 +111,22 @@ public class DB {
 	
 	public GroupSubjectMarks getSubjectMarks(String group, String subject) {
 		Set<Integer> idStudents = structure.getGroupStudents(group);
-//		System.out.println("ids for group " + group + ":");
-//		for(Integer id : idStudents) {
-//			System.out.print(id + " ");
-//		}
-//		System.out.println();
-		
 		Map<Integer, String> students = users.getUsersNames(idStudents);
 		
 		return marks.getGroupSubjectMarks(students, subject);
 	}
 	
-	public GroupStageMarks getStageMarks(Semester sem, String group, int stage) {
+	public GroupStageMarks getStageMarks(String group, Semester sem, int stage) {
 		List<String> subjects = schedule.getGroupSubjects(group, sem);
-//		System.out.println("subjects for group " + group + ":");
-//		for(String s : subjects) {
-//			System.out.print(s + " ");
-//		}
-		
 		Set<Integer> idStudents = structure.getGroupStudents(group);
-//		System.out.println("ids for group " + group + ":");
-//		for(Integer id : idStudents) {
-//			System.out.print(id + " ");
-//		}
-//		System.out.println();
-		
 		Map<Integer, String> students = users.getUsersNames(idStudents);
 		
 		return marks.getGroupStageMarks(subjects, students, stage);
 	}
 	
-	public String[][] getStudentMarks(int semId, int studId) {
-		String[][] marks = new String[2][];
-		marks[0] = new String[]{"Теория алгоритмов", "30", "45", "100"};
-		marks[1] = new String[]{"Теория вероятности", "35", "35", "70"};
-		return marks;
+	public StudentSemMarks getStudentMarks(int idStudent, Semester sem) {
+		String group = structure.getStudentGroup(idStudent);
+		Set<String> subjects = schedule.getGroupSubjectsInSemester(group, sem);
+		return marks.getStudentMarks(idStudent, subjects);
 	}
 }

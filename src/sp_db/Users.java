@@ -30,6 +30,10 @@ public class Users {
 		return user.getName();
 	}
 	
+	public User getUser(int userId) {
+		return users.get(userId);
+	}
+	
 	Map<Integer, String> getUsersNames(Set<Integer> idUsers) {
 		Map<Integer, String> userNames = new HashMap<>();
 		for(Integer id : idUsers) {

@@ -10,14 +10,15 @@ import sp_entities.*;
 @WebService
 public class Server {
 	private DB db;
-	private Map<Integer, UserSession> sessions;
+	private Users sessions;
 
 	public Server() {
 		db = new DB();
-		sessions = new HashMap<>();
-		tempTeacherScenario();
+		sessions = new Users();
+//		tempTeacherScenario();
 //		tempCuratorScenario();
 //		tempDepWorkerScenario();
+		tempStudentScenario();
 	}
 
 	private void tempTeacherScenario() {
@@ -27,36 +28,33 @@ public class Server {
 		System.out.println( login(idUser, "bbb") );
 
 		System.out.println("--- Get teacher semesters: ");
-		String sems = getSemesters(idUser);
-		// System.out.println(sems);
+		String sems = getTeacherSemesters(idUser);
+		System.out.println(sems);
 
-		System.out.println("--- Set semester: ");
-		Semester chosenSem = new Semester(2, 2012);
-		setSemester(idUser, XMLSerializer.objectToXML(chosenSem));
+		String chosenSem = XMLSerializer.objectToXML(new Semester(2, 2012));
 
 		System.out.println("--- Get teacher subjects: ");
-		List<String> subjects = getSubjects(idUser);
+		List<String> subjects = getTeacherSubjects(idUser, chosenSem);
 		for (String s : subjects) {
 			System.out.println(s);
 		}
 
-		System.out.println("--- Set subject: ");
 		String chosenSubj = subjects.get(0);
-		setSubject(idUser, chosenSubj);
 
 		System.out.println("--- Get teacher groups: ");
-		List<String> groups = getGroups(idUser);
+		List<String> groups = getTeacherGroups(idUser, chosenSem, chosenSubj);
 		for (String g : groups) {
 			System.out.println(g);
 		}
 
-		System.out.println("--- Set group: ");
 		String chosenGroup = groups.get(0);
-		setGroup(idUser, chosenGroup);
 		
 		System.out.println("--- Get subject marks: ");
-		String marks = getSubjectMarks(idUser);
+		String marks = getSubjectMarks(idUser, chosenGroup, chosenSubj);
 		System.out.println(marks);
+		GroupSubjectMarks gsm = (GroupSubjectMarks)XMLSerializer
+				.xmlToObject(marks, GroupSubjectMarks.class);
+		gsm.print();
 	}
 
 	private void tempCuratorScenario() {
@@ -66,45 +64,42 @@ public class Server {
 		System.out.println( login(idUser, "ccc") );
 		
 		System.out.println("--- Get curator semesters: ");
-		String sems = getSemesters(idUser);
+		String sems = getCuratorSemesters(idUser);
+		System.out.println(sems);
 		
-		System.out.println("--- Set semester: ");
-		Semester chosenSem = new Semester(2, 2012);
-		setSemester(idUser, XMLSerializer.objectToXML(chosenSem));
+		String chosenSem = XMLSerializer.objectToXML(new Semester(2, 2012));
 		
 		System.out.println("--- Get curator groups: ");
-		List<String> groups = getGroups(idUser);
-		for (String g : groups) {
-			System.out.println(g);
-		}
+		String group = getCuratorGroup(idUser, chosenSem);
+		System.out.println(group);
+
+		/* <var1> */
+		int chosenStage = 3;
 		
-		System.out.println("--- Set group: ");
-		String chosenGroup = groups.get(0);
-		setGroup(idUser, chosenGroup);
-//		/* <var1> */
-//		System.out.println("--- Set stage: ");
-//		setStage(idUser, 3);
+		System.out.println("--- Get stage marks: ");
+		String stageMarks = getStageMarks(idUser, group, chosenSem, chosenStage);
+		System.out.println(stageMarks);
+		GroupStageMarks gstm =  (GroupStageMarks)XMLSerializer
+				.xmlToObject(stageMarks, GroupStageMarks.class);
+		gstm.print();
+		/* </var1> */
+		
+//		/* <var2> */
+//		System.out.println("--- Get group subjects: ");
+//		List<String> subjects = getGroupSubjects(idUser, chosenSem, group);
+//		for (String s : subjects) {
+//			System.out.println(s);
+//		}
 //		
-//		System.out.println("--- Get stage marks: ");
-//		String stageMarks = getStageMarks(idUser);
-//		System.out.println(stageMarks);
-//		/* </var1> */
-		
-		/* <var2> */
-		System.out.println("--- Get group subjects: ");
-		List<String> subjects = getSubjects(idUser);
-		for (String s : subjects) {
-			System.out.println(s);
-		}
-		
-		System.out.println("--- Set subject: ");
-		String chosenSubj = subjects.get(0);
-		setSubject(idUser, chosenSubj);
-		
-		System.out.println("--- Get subject marks: ");
-		String marks = getSubjectMarks(idUser);
-		System.out.println(marks);
-		/* </var2> */
+//		String chosenSubj = subjects.get(0);
+//		
+//		System.out.println("--- Get subject marks: ");
+//		String subjMarks = getSubjectMarks(idUser, group, chosenSubj);
+//		System.out.println(subjMarks);
+//		GroupSubjectMarks gsm = (GroupSubjectMarks)XMLSerializer
+//				.xmlToObject(subjMarks, GroupSubjectMarks.class);
+//		gsm.print();
+//		/* </var2> */
 	}
 	
 	private void tempDepWorkerScenario() {
@@ -112,224 +107,195 @@ public class Server {
 		
 		System.out.println("--- Login");
 		System.out.println( login(idUser, "eee") );
-		
-		System.out.println("--- Set department");
-		setDepartment(idUser);
+
+		System.out.println( getDepWorkerDepartment(idUser) );
 		
 		System.out.println("--- Get dep worker semesters: ");
-		String sems = getSemesters(idUser);
+		String sems = getDepSemesters(idUser);
+		System.out.println(sems);
 		
-		System.out.println("--- Set semester: ");
-		Semester chosenSem = ((Semesters)XMLSerializer.xmlToObject(sems, Semesters.class))
+		Semester sem = ((Semesters)XMLSerializer.xmlToObject(sems, Semesters.class))
 				.getSemesters().get(2);
-		
-		setSemester(idUser, XMLSerializer.objectToXML(chosenSem));
-		
+		String chosenSem = XMLSerializer.objectToXML(sem);
+
 		System.out.println("--- Get dep worker groups: ");
-		List<String> groups = getGroups(idUser);
+		List<String> groups = getDepGroups(idUser, chosenSem);
 		for (String g : groups) {
 			System.out.println(g);
 		}
 		
-		System.out.println("--- Set group: ");
 		String chosenGroup = groups.get(1);
-		setGroup(idUser, chosenGroup);
+
+		/* <var1> */
+		int chosenStage = 3;
 		
-//		/* <var1> */
-//		System.out.println("--- Set stage: ");
-//		setStage(idUser, 3);
+		System.out.println("--- Get stage marks: ");
+		String stageMarks = getStageMarks(idUser, chosenGroup, chosenSem, chosenStage);
+		System.out.println(stageMarks);
+		GroupStageMarks gstm =  (GroupStageMarks)XMLSerializer
+				.xmlToObject(stageMarks, GroupStageMarks.class);
+		gstm.print();
+		/* </var1> */
+		
+//		/* <var2> */
+//		System.out.println("--- Get group subjects: ");
+//		List<String> subjects = getGroupSubjects(idUser, chosenSem, chosenGroup);
+//		for (String s : subjects) {
+//			System.out.println(s);
+//		}
 //		
-//		System.out.println("--- Get stage marks: ");
-//		String stageMarks = getStageMarks(idUser);
-//		System.out.println(stageMarks);
-//		/* </var1> */
+//		String chosenSubj = subjects.get(0);
+//		
+//		System.out.println("--- Get subject marks: ");
+//		String subjMarks = getSubjectMarks(idUser, chosenGroup, chosenSubj);
+//		System.out.println(subjMarks);
+//		GroupSubjectMarks gsm = (GroupSubjectMarks)XMLSerializer
+//				.xmlToObject(subjMarks, GroupSubjectMarks.class);
+//		gsm.print();
+//		/* </var2> */
+	}
+	
+	private void tempStudentScenario() {
+		int idUser = 7;
 		
-		/* <var2> */
-		System.out.println("--- Get group subjects: ");
-		List<String> subjects = getSubjects(idUser);
-		for (String s : subjects) {
-			System.out.println(s);
-		}
+		System.out.println("--- Login");
+		System.out.println( login(idUser, "ggg") );
 		
-		System.out.println("--- Set subject: ");
-		String chosenSubj = subjects.get(0);
-		setSubject(idUser, chosenSubj);
+		System.out.println("--- Get student semesters: ");
+		String sems = getStudentSemesters(idUser);
+		System.out.println(sems);
 		
-		System.out.println("--- Get subject marks: ");
-		String marks = getSubjectMarks(idUser);
+		Semester sem = ((Semesters)XMLSerializer.xmlToObject(sems, Semesters.class))
+				.getSemesters().get(0);
+		String chosenSem = XMLSerializer.objectToXML(sem);
+		
+		String marks = getStudentMarks(idUser, chosenSem);
 		System.out.println(marks);
-		/* </var2> */
+		StudentSemMarks ssm = (StudentSemMarks) XMLSerializer
+				.xmlToObject(marks, StudentSemMarks.class);
+		ssm.print();
 	}
 	
 	public String login(int univerID, String password) {
-		User user;
-		UserSession session = sessions.get(univerID);
-		if (session != null) {
-			user = session.getUserData();
-		} else {
+		User user = sessions.getUser(univerID);
+		if (user == null) {
 			user = db.login(univerID, password);
-			if (user == null)
-				return "";
-			sessions.put(univerID, new UserSession(user));
+			if (user == null) return null;
+			sessions.addUser(univerID, user);
 		}
 		User userNoPass = new User(user.getName(), user.getStatus());
 		return XMLSerializer.objectToXML(userNoPass);
 	}
 
-	public String getSemesters(int idUser) {
-		UserSession session = sessions.get(idUser);
-		if (session == null)
-			return "";
-		Semesters sems = null;
-
-		UserStatus status = session.getUserData().getStatus();
-		System.out.println("STATUS: " + status);
-		switch (status) {
-		case TEACHER:
-			sems = db.getTeacherSemesters(idUser);
-			break;
-		case CURATOR:
-			sems = db.getCuratorSemesters(idUser);
-			break;
-		case DEPWORKER:
-			sems = db.getDepSemesters(session.getDepartment());
-			break;
-		case STUDENT:
-			break;
-		case NONE:
-		default:
-			return "";
-		}
-		System.out.println("GET SEMESTERS RESULT");
-		if (sems == null)
-			return "";
-		sems.print();
-		return XMLSerializer.objectToXML(sems);
-	}
-
-	public List<String> getSubjects(int idUser) {
-		UserSession session = sessions.get(idUser);
-		if (session == null)
+	private User getUserIfAuthorized(int idUser, UserStatus status) {
+		User user = sessions.getUser(idUser);
+		if(user == null || user.getStatus() != status) 
 			return null;
-		List<String> subjects = null;
-
-		UserStatus status = session.getUserData().getStatus();
-		switch (status) {
-		case TEACHER:
-			subjects = db.getTeacherSubjects(idUser, session.getSemester());
-			break;
-		case CURATOR:
-		case DEPWORKER:
-			subjects = db.getGroupSubjects(session.getGroup(), session.getSemester());
-			break;
-		default:
-			return null;
-		}
-		return subjects;
-	}
-
-	public List<String> getGroups(int idUser) {
-		UserSession session = sessions.get(idUser);
-		if (session == null) return null;
-		List<String> groups = null;
-
-		UserStatus status = session.getUserData().getStatus();
-		switch (status) {
-		case TEACHER:
-			groups = db.getTeacherGroups(idUser, session.getSemester(),
-					session.getSubject());
-			break;
-		case CURATOR:
-			String g = db.getCuratorGroup(idUser, session.getSemester());
-			groups = new ArrayList<>();
-			groups.add(g);
-			break;
-		case DEPWORKER:
-			groups = db.getDepGroups(session.getDepartment(), 
-					session.getSemester());
-			break;
-		case NONE:
-			break;
-		case STUDENT:
-		default:
-			return null;
-		}
-		return groups;
-	}
-
-	public String getSubjectMarks(int idUser) {
-		UserSession session = sessions.get(idUser);
-		if (session == null) return "";
-		String subj = session.getSubject();
-		String group = session.getGroup();
-		// need to check rights? 
-		GroupSubjectMarks marks = db.getSubjectMarks(group, subj);
-		System.out.println(idUser + " GET SUBJECT MARKS: ");
-		marks.print();
-		return XMLSerializer.objectToXML(marks);
-	}
-
-	public String getStageMarks(int idUser) {
-		UserSession session = sessions.get(idUser);
-		if (session == null) return "";
-		Semester sem = session.getSemester();
-		String group = session.getGroup();
-		byte stage = session.getStage();
-		// need to check rights? 
-		GroupStageMarks marks = db.getStageMarks(sem, group, stage);
-		marks.print();
-		return XMLSerializer.objectToXML(marks);
-	}
-
-	public String getStudentMarks() {
-		// тут проверка авторизации и взятие с UserSession данныx
-		return "";
-	}
-
-	public boolean setGroup(int idUser, String group) {
-		UserSession session = sessions.get(idUser);
-		if (session == null) return false;
-		// how to check if group value correct and available?
-		session.setGroup(group);
-		System.out.println(idUser + " SET GROUP " + group);
-		return true;
-	}
-
-	public boolean setStage(int idUser, int stage) {
-		UserSession session = sessions.get(idUser);
-		if (session == null) return false;
-		System.out.println(idUser + " SET STAGE " + stage);
-		session.setStage((byte)stage);
-		return true;
-	}
-
-	public boolean setSemester(int idUser, String semester) {
-		UserSession session = sessions.get(idUser);
-		if (session == null) return false;
-		// how to check if semester value correct and available?
-		Semester sem = (Semester) XMLSerializer.xmlToObject(semester,
-				Semester.class);
-		System.out.println(idUser + " SET SEMESTER " + sem);
-		session.setSemester(sem);
-		return true;
-	}
-
-	public boolean setSubject(int idUser, String subj) {
-		UserSession session = sessions.get(idUser);
-		if (session == null) return false;
-		// how to check if subject value correct and available?
-		System.out.println(idUser + " SET SUBJECT " + subj);
-		session.setSubject(subj);
-		return true;
+		return user;
 	}
 	
-	public boolean setDepartment(int idUser) {
-		UserSession session = sessions.get(idUser);
-		if (session == null) return false;
-		UserStatus status = session.getUserData().getStatus();
-		if(status != UserStatus.DEPWORKER) return false;
-		String dep = db.getWorkerDepartment(idUser);
-		session.setDepartment(dep);
-		return true;
+	public String getTeacherSemesters(int idUser) {
+		User user = getUserIfAuthorized(idUser, UserStatus.TEACHER);
+		if(user == null) return null;
+		Semesters sems = db.getTeacherSemesters(idUser);
+		return XMLSerializer.objectToXML(sems);
 	}
+	
+	public List<String> getTeacherSubjects(int idUser, String semester) {
+		User user = getUserIfAuthorized(idUser, UserStatus.TEACHER);
+		if(user == null) return null;
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		return db.getTeacherSubjects(idUser, sem);
+	}
+	
+	public List<String> getTeacherGroups(int idUser, String semester, String subject) {
+		User user = getUserIfAuthorized(idUser, UserStatus.TEACHER);
+		if(user == null) return null;
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		return db.getTeacherGroups(idUser, sem, subject);
+	}
+	
+	public String getCuratorSemesters(int idUser) {
+		User user = getUserIfAuthorized(idUser, UserStatus.CURATOR);
+		if(user == null) return null;
+		Semesters sems = db.getCuratorSemesters(idUser);
+		return XMLSerializer.objectToXML(sems);
+	}
+	
+	public String getCuratorGroup(int idUser, String semester) {
+		User user = getUserIfAuthorized(idUser, UserStatus.CURATOR);
+		if(user == null) return null;
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		return db.getCuratorGroup(idUser, sem);
+	}
+	
+	public List<String> getGroupSubjects(int idUser, String semester, String group) {
+		User user = sessions.getUser(idUser);
+		if(user == null) return null;
+		//TODO check rights for group somehow
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		return db.getGroupSubjects(group, sem);
+	}
+	
+	public String getDepWorkerDepartment(int idUser) {
+		User user = getUserIfAuthorized(idUser, UserStatus.DEPWORKER);
+		if(user == null) return null;
+		return db.getWorkerDepartment(idUser);
+	}
+	
+	public String getDepSemesters(int idUser) {
+		User user = getUserIfAuthorized(idUser, UserStatus.DEPWORKER);
+		if(user == null) return null;
+		String dep = db.getWorkerDepartment(idUser);
+		Semesters sems = db.getDepSemesters(dep);
+		return XMLSerializer.objectToXML(sems);
+	}
+	
+	public List<String> getDepGroups(int idUser, String semester) {
+		User user = getUserIfAuthorized(idUser, UserStatus.DEPWORKER);
+		if(user == null) return null;
+		String dep = db.getWorkerDepartment(idUser);
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		return db.getDepGroups(dep, sem);
+	}
+	
+	public String getStudentSemesters(int idUser) {
+		User user = getUserIfAuthorized(idUser, UserStatus.STUDENT);
+		if(user == null) return null;
+		Semesters sems = db.getStudentSemesters(idUser);
+		return XMLSerializer.objectToXML(sems);
+	}
+	
+	public String getSubjectMarks(int idUser, String group, String subject) {
+		User user = sessions.getUser(idUser);
+		if(user == null) return "";
+		//TODO check user`s rights to get this group marks. HOW???
+		GroupSubjectMarks marks = db.getSubjectMarks(group, subject);
+		return XMLSerializer.objectToXML(marks);
+	}
+	
+	public String getStageMarks(int idUser, String group, String semester, int stage) {
+		User user = sessions.getUser(idUser);
+		if(user == null) return "";
+		//TODO check user`s rights to get this group marks. HOW???
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		GroupStageMarks marks = db.getStageMarks(group, sem, stage);
+		return XMLSerializer.objectToXML(marks);
+	}
+
+	public String getStudentMarks(int idUser, String semester) {
+		User user = getUserIfAuthorized(idUser, UserStatus.STUDENT);
+		if(user == null) return null;
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		StudentSemMarks marks = db.getStudentMarks(idUser, sem);
+		return XMLSerializer.objectToXML(marks);
+	}
+
 }

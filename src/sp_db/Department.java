@@ -42,6 +42,16 @@ public class Department {
 		return grStudents.keySet();
 	}
 	
+	public String getStudentGroup(int idStudent) {
+		for (Map.Entry<String, Set<Integer>> group : grStudents.entrySet()) {
+			Set<Integer> idStudents = group.getValue();
+			if(idStudents.contains(idStudent)) {
+				return group.getKey();
+			}
+		}
+		return null;
+	}
+	
 	public boolean hasWorker(int idWorker) {
 		return idWorkers.contains(idWorker);
 	}
@@ -57,8 +67,7 @@ public class Department {
 			System.out.print(idW + " ");
 		}
 		System.out.println("\nGroups: ");
-		for (Map.Entry<String, Set<Integer>> group : grStudents.entrySet())
-		{
+		for (Map.Entry<String, Set<Integer>> group : grStudents.entrySet()) {
 			System.out.println("group: " + group.getKey());
 		    for(Integer idStudent : group.getValue()) {
 		    	System.out.print(idStudent + " ");

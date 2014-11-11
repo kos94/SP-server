@@ -48,7 +48,24 @@ public class FacultyStructure {
 		}
 		return null;
 	}
-
+	
+	public String getStudentDep(int idStudent) {
+		for (Department d : deps) {
+			if(d.getStudentGroup(idStudent) != null) {
+				return d.getName();
+			}
+		}
+		return null;
+	}
+	
+	public String getStudentGroup(int idStudent) {
+		for (Department d : deps) {
+			String group = d.getStudentGroup(idStudent);
+			if(group != null) return group;
+		}
+		return null;
+	}
+	
 	// TODO delete
 	public void tempInit() {
 

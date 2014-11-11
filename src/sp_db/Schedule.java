@@ -74,6 +74,16 @@ public class Schedule {
 		return new Semesters(semesters);
 	}
 	
+	public Semesters getGroupSemesters(String group) {
+		Set<Semester> semesters = new HashSet<>();
+		for(SchedRecord r : records) {
+			if(group.equals(r.group)) {
+				semesters.add(r.semester);
+			}
+		}
+		return new Semesters(semesters);
+	}
+	
 	public List<String> getSemesterGroups(Set<String> groupsSet, Semester sem) {
 		List<String> groupsList = new ArrayList<>();
 		for(SchedRecord r : records) {
@@ -82,6 +92,16 @@ public class Schedule {
 			}
 		}
 		return groupsList;
+	}
+	
+	public Set<String> getGroupSubjectsInSemester(String group, Semester sem) {
+		HashSet<String> subjects = new HashSet<>();
+		for(SchedRecord r : records) {
+			if(r.group.equals(group) && r.semester.equals(sem)) {
+				subjects.add(r.subj);
+			}
+		}
+		return subjects;
 	}
 	
 	//TODO delete
