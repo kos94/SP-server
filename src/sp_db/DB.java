@@ -67,21 +67,21 @@ public class DB {
 	}
 	
 	public Semesters getTeacherSemesters(int idTeacher) {
-		return schedule.getTeacherSemesters(idTeacher);
+		return new Semesters(schedule.getTeacherSemesters(idTeacher));
 	}
 	
 	public Semesters getCuratorSemesters(int curId) {
-		return curators.getCuratorSemesters(curId);
+		return new Semesters(curators.getCuratorSemesters(curId));
 	}
 	
 	public Semesters getDepSemesters(String dep) {
 		Set<String> groups = structure.getDepGroups(dep);
-		return schedule.getGroupsSemesters(groups);
+		return new Semesters(schedule.getGroupsSemesters(groups));
 	}
 	
 	public Semesters getStudentSemesters(int idStudent) {
 		String group = getStudentGroup(idStudent);
-		return schedule.getGroupSemesters(group);
+		return new Semesters(schedule.getGroupSemesters(group));
 	}
 	
 	public String getStudentGroup(int idStudent) {
@@ -89,7 +89,7 @@ public class DB {
 	}
 	
 	public String getWorkerDepartment(int idWorker) {
-		return structure.getWorkerDepartment(idWorker);
+		return structure.getWorkerDepartment(idWorker).getName();
 	}
 	
 	public List<String> getTeacherGroups(int idTeacher, Semester semester, String subj) {
@@ -102,7 +102,7 @@ public class DB {
 	
 	public List<String> getDepGroups(String dep, Semester sem) {
 		Set<String> depGroups = structure.getDepGroups(dep);
-		Set<String> semesterGroups = schedule.getSemesterGroups(depGroups, sem);
+		Set<String> semesterGroups = schedule.filterGroupsBySemester(depGroups, sem);
 		return new ArrayList<String>(semesterGroups);
 	}
 	
@@ -112,6 +112,26 @@ public class DB {
 	
 	public List<String> getGroupSubjects(String group, Semester semester) {
 		return schedule.getGroupSubjects(group, semester);
+	}
+	
+	public boolean checkTeacherSubjectRights(int id, String subj, String group) {
+		return schedule.checkTeacherSubjectRights(id, subj, group);
+	}
+	
+	public boolean checkCuratorSubjectRights(int id, String subject, String group) {
+		Semester sem = schedule.getSubjectSemester(subject, group);
+		String actualGroup = curators.getCuratorGroup(id, sem);
+		return (group.equals(actualGroup));
+	}
+	
+	public boolean checkCuratorGroupRights(int id, String group, Semester sem) {
+		String actualGroup = curators.getCuratorGroup(id, sem);
+		return (group.equals(actualGroup));
+	}
+	
+	public boolean checkDepWorkerGroupRights(int id, String group) {
+		Department d = structure.getWorkerDepartment(id);
+		return d.getGroups().contains(group);
 	}
 	
 	public GroupSubjectMarks getSubjectMarks(String group, String subject) {

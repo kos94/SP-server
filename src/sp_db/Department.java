@@ -12,7 +12,7 @@ public class Department {
 	@XmlElementWrapper
 	@XmlElement(name="idW")
 	private List<Integer> idWorkers;
-	@XmlJavaTypeAdapter(GroupsMapAdapter.class)
+	@XmlJavaTypeAdapter(DepartmentMapAdapter.class)
 	@XmlElement(name="groups")
 	private Map<String, Set<Integer>> grStudents;
 	
@@ -25,11 +25,11 @@ public class Department {
 		this();
 		name = depName;
 	}
-	
+	//TODO DELETE
 	public void addWorker(int idWorker) {
 		idWorkers.add(idWorker);
 	}
-	
+	//TODO DELETE
 	public void addGroup(String groupName, Set<Integer> idStudents) {
 		grStudents.put(groupName, idStudents);
 	}

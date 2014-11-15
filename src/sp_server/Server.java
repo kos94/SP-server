@@ -19,8 +19,8 @@ public class Server {
 		db = new DB();
 		secureRandom = new SecureRandom();
 		sessions = new HashMap<>();
-		tempTeacherScenario();
-//		tempCuratorScenario();
+//		tempTeacherScenario();
+		tempCuratorScenario();
 //		tempDepWorkerScenario();
 //		tempStudentScenario();
 	}
@@ -230,17 +230,12 @@ public class Server {
 	}
 
 	private UserInfo getUserIfAuthorized(String idSession, UserStatus status) {
-		UserInfo user = /*TODO*/ sessions.get(idSession);
+		UserInfo user = sessions.get(idSession);
 		if(user == null || user.getStatus() != status) 
 			return null;
 		return user;
 	}
-	
-	//TODO DELETE THIS STUB FOR COMPILING
-	private UserInfo getUserIfAuthorized(int i, UserStatus s) {
-		return null;
-	}
-	
+
 	public String getTeacherSemesters(String idSession) {
 		UserInfo user = getUserIfAuthorized(idSession, UserStatus.TEACHER);
 		if(user == null) return null;
@@ -280,9 +275,8 @@ public class Server {
 	}
 	
 	public List<String> getGroupSubjects(String idSession, String semester, String group) {
-		UserInfo user = /*TODO*/ sessions.get(idSession);
+		UserInfo user = sessions.get(idSession);
 		if(user == null) return null;
-		//TODO check rights for group somehow
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
 		return db.getGroupSubjects(group, sem);
@@ -313,19 +307,46 @@ public class Server {
 	}
 	
 	public String getSubjectMarks(String idSession, String group, String subject) {
-		UserInfo user = /*TODO*/ sessions.get(idSession);
+		UserInfo user = sessions.get(idSession);
 		if(user == null) return null;
-		//TODO check user`s rights to get this group marks. HOW???
+		switch(user.getStatus()) {
+		case TEACHER:
+			if(!db.checkTeacherSubjectRights(user.getId(), subject, group))
+				return null;
+			break;
+		case CURATOR:
+			if(!db.checkCuratorSubjectRights(user.getId(), subject, group))
+				return null;
+			break;
+		case DEPWORKER:
+			if(!db.checkDepWorkerGroupRights(user.getId(), group))
+				return null;
+			break;
+		default:
+			return null;
+		}
+		
 		GroupSubjectMarks marks = db.getSubjectMarks(group, subject);
 		return XMLSerializer.objectToXML(marks);
 	}
 	
 	public String getStageMarks(String idSession, String group, String semester, int stage) {
-		UserInfo user = /*TODO*/ sessions.get(idSession);
+		UserInfo user = sessions.get(idSession);
 		if(user == null) return null;
-		//TODO check user`s rights to get this group marks. HOW???
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
+		switch(user.getStatus()) {
+		case CURATOR:
+			if(!db.checkCuratorGroupRights(user.getId(), group, sem))
+				return null;
+			break;
+		case DEPWORKER:
+			if(!db.checkDepWorkerGroupRights(user.getId(), group))
+				return null;
+		default:
+			return null;
+		}
+		
 		GroupStageMarks marks = db.getStageMarks(group, sem, stage);
 		return XMLSerializer.objectToXML(marks);
 	}
@@ -338,5 +359,4 @@ public class Server {
 		StudentSemMarks marks = db.getStudentMarks(user.getId(), sem);
 		return XMLSerializer.objectToXML(marks);
 	}
-
 }

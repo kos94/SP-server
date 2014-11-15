@@ -31,10 +31,10 @@ public class FacultyStructure {
 		return null;
 	}
 
-	public String getWorkerDepartment(int idWorker) {
+	protected Department getWorkerDepartment(int idWorker) {
 		for (Department d : deps) {
 			if (d.hasWorker(idWorker)) {
-				return d.getName();
+				return d;
 			}
 		}
 		return null;
@@ -44,15 +44,6 @@ public class FacultyStructure {
 		for (Department d : deps) {
 			if (d.getName().equals(department)) {
 				return d.getGroups();
-			}
-		}
-		return null;
-	}
-	
-	public String getStudentDep(int idStudent) {
-		for (Department d : deps) {
-			if(d.getStudentGroup(idStudent) != null) {
-				return d.getName();
 			}
 		}
 		return null;

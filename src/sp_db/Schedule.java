@@ -1,11 +1,8 @@
 package sp_db;
 
 import java.util.*;
-
 import javax.xml.bind.annotation.*;
-
 import sp_entities.Semester;
-import sp_entities.Semesters;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -20,15 +17,13 @@ public class Schedule {
 		records.add(rec);
 	}
 	
-	public Semesters getTeacherSemesters(int idTeacher) {
-		HashSet<Semester> semSet = new HashSet<>();
-		List<Semester> semList = new ArrayList<>();
+	public Set<Semester> getTeacherSemesters(int idTeacher) {
+		Set<Semester> semSet = new HashSet<>();
 		for(SchedRecord r : records) {
 			if(r.idTeacher == idTeacher) 
 				semSet.add(r.semester);
 		}
-		semList.addAll(semSet);
-		return new Semesters(semList);
+		return semSet;
 	}
 	
 	public List<String> getTeacherSubjects(int idTeacher, Semester semester) {
@@ -64,27 +59,27 @@ public class Schedule {
 		return subjects;
 	}
 	
-	public Semesters getGroupsSemesters(Set<String> groups) {
+	public Set<Semester> getGroupsSemesters(Set<String> groups) {
 		Set<Semester> semesters = new HashSet<>();
 		for(SchedRecord r : records) {
 			if(groups.contains(r.group)) {
 				semesters.add(r.semester);
 			}
 		}
-		return new Semesters(semesters);
+		return semesters;
 	}
 	
-	public Semesters getGroupSemesters(String group) {
+	public Set<Semester> getGroupSemesters(String group) {
 		Set<Semester> semesters = new HashSet<>();
 		for(SchedRecord r : records) {
 			if(group.equals(r.group)) {
 				semesters.add(r.semester);
 			}
 		}
-		return new Semesters(semesters);
+		return semesters;
 	}
 	
-	public Set<String> getSemesterGroups(Set<String> groupsSet, Semester sem) {
+	public Set<String> filterGroupsBySemester(Set<String> groupsSet, Semester sem) {
 		Set<String> semGroups = new HashSet<>();
 		for(SchedRecord r : records) {
 			if(groupsSet.contains(r.group) && r.semester.equals(sem)) {
@@ -102,6 +97,25 @@ public class Schedule {
 			}
 		}
 		return subjects;
+	}
+	
+	public Semester getSubjectSemester(String subject, String group) {
+		for(SchedRecord r : records) {
+			if(r.group.equals(group) && r.subj.equals(subject)) {
+				return r.semester;
+			}
+		}
+		return null;
+	}
+	
+	public boolean checkTeacherSubjectRights(int idTeacher, String subj, String group) {
+		for(SchedRecord r : records) {
+			if(r.idTeacher == idTeacher && r.group.equals(group) 
+					&& r.subj.equals(subj) ) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	//TODO delete
@@ -136,4 +150,5 @@ public class Schedule {
 			r.print();
 		}
 	}
+
 }

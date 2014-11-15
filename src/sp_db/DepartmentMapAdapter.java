@@ -18,7 +18,7 @@ class GroupsMapType  {
 	public List<GroupsMapEntry> entries = new ArrayList<>();
 }
 
-public class GroupsMapAdapter extends XmlAdapter< GroupsMapType,Map<String, Set<Integer>> > {
+public class DepartmentMapAdapter extends XmlAdapter< GroupsMapType,Map<String, Set<Integer>> > {
 	@Override
 	public GroupsMapType marshal(Map<String, Set<Integer>> arg0)
 			throws Exception {

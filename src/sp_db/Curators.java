@@ -22,14 +22,14 @@ public class Curators {
 		curators.put(idCur, works);
 	}
 	
-	public Semesters getCuratorSemesters(int idCur) {
+	public Set<Semester> getCuratorSemesters(int idCur) {
 		List<CuratorWork> works = curators.get(idCur);
 		if(works == null) return null;
-		List<Semester> sems = new ArrayList<>();
+		Set<Semester> sems = new HashSet<>();
 		for(CuratorWork w : works) {
 			sems.add(w.sem);
 		}
-		return new Semesters(sems);
+		return sems;
 	}
 	
 	public String getCuratorGroup(int idCur, Semester semester) {
@@ -40,7 +40,7 @@ public class Curators {
 				return w.group;
 			}
 		}
-		return "";
+		return null;
 	}
 	
 	//TODO delete
