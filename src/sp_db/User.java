@@ -22,6 +22,12 @@ public class User {
 		this.status = status;
 	}
 	
+	public User(User user) {
+		pass = user.pass;
+		name = user.name;
+		status = user.status;
+	}
+	
 	public void print() {
 		System.out.println("user status: " + status);
 		System.out.println("  pass: " + pass + ", name: " + name);

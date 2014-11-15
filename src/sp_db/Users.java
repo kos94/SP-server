@@ -24,14 +24,14 @@ public class Users {
 		return user;
 	}
 	
-	public String getUserName(int userId) {
-		User user = users.get(userId);
+	public String getUserName(int idUser) {
+		User user = users.get(idUser);
 		if(user == null) return "";
 		return user.getName();
 	}
 	
-	public User getUser(int userId) {
-		return users.get(userId);
+	public User getUser(int idUser) {
+		return users.get(idUser);
 	}
 	
 	Map<Integer, String> getUsersNames(Set<Integer> idUsers) {

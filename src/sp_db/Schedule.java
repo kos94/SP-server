@@ -84,14 +84,14 @@ public class Schedule {
 		return new Semesters(semesters);
 	}
 	
-	public List<String> getSemesterGroups(Set<String> groupsSet, Semester sem) {
-		List<String> groupsList = new ArrayList<>();
+	public Set<String> getSemesterGroups(Set<String> groupsSet, Semester sem) {
+		Set<String> semGroups = new HashSet<>();
 		for(SchedRecord r : records) {
 			if(groupsSet.contains(r.group) && r.semester.equals(sem)) {
-				groupsList.add(r.group);
+				semGroups.add(r.group);
 			}
 		}
-		return groupsList;
+		return semGroups;
 	}
 	
 	public Set<String> getGroupSubjectsInSemester(String group, Semester sem) {

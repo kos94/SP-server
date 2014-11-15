@@ -62,6 +62,10 @@ public class DB {
 		return users.login(id, password);
 	}
 	
+	public String getUserName(int idUser) {
+		return users.getUserName(idUser);
+	}
+	
 	public Semesters getTeacherSemesters(int idTeacher) {
 		return schedule.getTeacherSemesters(idTeacher);
 	}
@@ -98,7 +102,8 @@ public class DB {
 	
 	public List<String> getDepGroups(String dep, Semester sem) {
 		Set<String> depGroups = structure.getDepGroups(dep);
-		return schedule.getSemesterGroups(depGroups, sem);
+		Set<String> semesterGroups = schedule.getSemesterGroups(depGroups, sem);
+		return new ArrayList<String>(semesterGroups);
 	}
 	
 	public List<String> getTeacherSubjects(int idTeacher, Semester semester) {
