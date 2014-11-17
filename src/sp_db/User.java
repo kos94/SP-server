@@ -1,23 +1,23 @@
 package sp_db;
 
 import javax.xml.bind.annotation.*;
-import sp_entities.UserStatus;
+import sp_entities.UserRole;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class User {
 	private String pass;
 	private String name;
-	private UserStatus status;
+	private UserRole status;
 	
 	public User() {}
 	
-	public User(String fullName, UserStatus status, String password) {
+	public User(String fullName, UserRole status, String password) {
 		this(fullName, status);
 		pass = password;
 	}
 	
-	public User(String fullName, UserStatus status) {
+	public User(String fullName, UserRole status) {
 		name = fullName;
 		this.status = status;
 	}
@@ -41,15 +41,16 @@ public class User {
 		this.name = name;
 	}
 	
-	public UserStatus getStatus() {
+	public UserRole getStatus() {
 		return status;
 	}
 
-	public void setStatus(UserStatus status) {
+	public void setStatus(UserRole status) {
 		this.status = status;
 	}
 	
 	public boolean isRightPass(String password) {
+		System.out.println("pass: " + pass + " password: " + password);
 		return (pass.equals(password));
 	}
 }

@@ -189,7 +189,7 @@ public class Server {
 		int id = info.getId();
 		String userName = db.getUserName(id);
 		AuthData data = new AuthData(idSession, userName, info.getStatus());
-		UserStatus status = data.getStatus();
+		UserRole status = data.getStatus();
 		switch(status) {
 		case DEPWORKER:
 			String dep = db.getWorkerDepartment(id);
@@ -207,6 +207,9 @@ public class Server {
 		UserInfo userInfo = null;
 		String idSession = null;
 		
+		User user = db.login(univerID, password);
+		if (user == null) return null;
+		
 		for (Map.Entry<String, UserInfo> session : sessions.entrySet()) {
 			UserInfo info = session.getValue();
 			if(info.getId() == univerID ) {
@@ -217,8 +220,6 @@ public class Server {
 		}
 		
 		if (userInfo == null) {
-			User user = db.login(univerID, password);
-			if (user == null) return null;
 			userInfo = new UserInfo(univerID, user.getStatus());
 			idSession = new BigInteger(130, secureRandom).toString(32);
 			sessions.put(idSession, userInfo);
@@ -229,7 +230,7 @@ public class Server {
 		return XMLSerializer.objectToXML(authData);
 	}
 
-	private UserInfo getUserIfAuthorized(String idSession, UserStatus status) {
+	private UserInfo getUserIfAuthorized(String idSession, UserRole status) {
 		UserInfo user = sessions.get(idSession);
 		if(user == null || user.getStatus() != status) 
 			return null;
@@ -237,14 +238,14 @@ public class Server {
 	}
 
 	public String getTeacherSemesters(String idSession) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.TEACHER);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.TEACHER);
 		if(user == null) return null;
 		Semesters sems = db.getTeacherSemesters(user.getId());
 		return XMLSerializer.objectToXML(sems);
 	}
 	
 	public List<String> getTeacherSubjects(String idSession, String semester) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.TEACHER);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.TEACHER);
 		if(user == null) return null;
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
@@ -252,7 +253,7 @@ public class Server {
 	}
 	
 	public List<String> getTeacherGroups(String idSession, String semester, String subject) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.TEACHER);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.TEACHER);
 		if(user == null) return null;
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
@@ -260,14 +261,14 @@ public class Server {
 	}
 	
 	public String getCuratorSemesters(String idSession) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.CURATOR);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.CURATOR);
 		if(user == null) return null;
 		Semesters sems = db.getCuratorSemesters(user.getId());
 		return XMLSerializer.objectToXML(sems);
 	}
 	
 	public String getCuratorGroup(String idSession, String semester) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.CURATOR);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.CURATOR);
 		if(user == null) return null;
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
@@ -283,7 +284,7 @@ public class Server {
 	}
 	
 	public String getDepSemesters(String idSession) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.DEPWORKER);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.DEPWORKER);
 		if(user == null) return null;
 		String dep = db.getWorkerDepartment(user.getId());
 		Semesters sems = db.getDepSemesters(dep);
@@ -291,7 +292,7 @@ public class Server {
 	}
 	
 	public List<String> getDepGroups(String idSession, String semester) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.DEPWORKER);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.DEPWORKER);
 		if(user == null) return null;
 		String dep = db.getWorkerDepartment(user.getId());
 		Semester sem = (Semester)
@@ -300,7 +301,7 @@ public class Server {
 	}
 	
 	public String getStudentSemesters(String idSession) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.STUDENT);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.STUDENT);
 		if(user == null) return null;
 		Semesters sems = db.getStudentSemesters(user.getId());
 		return XMLSerializer.objectToXML(sems);
@@ -352,7 +353,7 @@ public class Server {
 	}
 
 	public String getStudentMarks(String idSession, String semester) {
-		UserInfo user = getUserIfAuthorized(idSession, UserStatus.STUDENT);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.STUDENT);
 		if(user == null) return null;
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);

@@ -7,7 +7,7 @@ public class ServerMain {
 		System.out.println("Server main");
 		String address = "http://localhost:8181/spkurs/server";
 		Server server = new Server();
-//		Endpoint.publish(address, server);
-//		System.out.println("WSDL is published on\n" + address + "?wsdl");
+		Endpoint.publish(address, server);
+		System.out.println("WSDL is published on\n" + address + "?wsdl");
 	}
 }

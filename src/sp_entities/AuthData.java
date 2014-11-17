@@ -13,7 +13,7 @@ public class AuthData extends User {
 	private String group;
 	
 	public AuthData() {}
-	public AuthData(String idSession, String name, UserStatus status) {
+	public AuthData(String idSession, String name, UserRole status) {
 		super(name, status);
 		this.idSession = idSession;
 	}

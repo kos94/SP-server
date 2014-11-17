@@ -2,7 +2,7 @@ package sp_db;
 
 import java.util.*;
 import javax.xml.bind.annotation.*;
-import sp_entities.UserStatus;
+import sp_entities.UserRole;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -20,6 +20,7 @@ public class Users {
 	
 	public User login(int id, String pass) {
 		User user = users.get(id);
+		System.out.println("login" + id + " " + pass);
 		if(user == null || !user.isRightPass(pass)) return null;
 		return user;
 	}
@@ -45,23 +46,23 @@ public class Users {
 	//TODO delete
 	public void tempInit() {
 		int c = 0;
-		addUser(++c, new User("Пригожев А.С.", UserStatus.TEACHER, "aaa"));
-		addUser(++c, new User("Кунгурцев А.Б.", UserStatus.TEACHER, "bbb"));
-		addUser(++c, new User("Кавицкая В.С.", UserStatus.CURATOR, "ccc"));
-		addUser(++c, new User("Паулин О.Н.", UserStatus.CURATOR, "ddd"));
-		addUser(++c, new User("Иванов И.И.", UserStatus.DEPWORKER, "eee"));
+		addUser(++c, new User("Пригожев А.С.", UserRole.TEACHER, "aaa"));
+		addUser(++c, new User("Кунгурцев А.Б.", UserRole.TEACHER, "bbb"));
+		addUser(++c, new User("Кавицкая В.С.", UserRole.CURATOR, "ccc"));
+		addUser(++c, new User("Паулин О.Н.", UserRole.CURATOR, "ddd"));
+		addUser(++c, new User("Иванов И.И.", UserRole.DEPWORKER, "eee"));
 		
-		addUser(++c, new User("Михайлов С.В.", UserStatus.DEPWORKER, "fff"));
-		addUser(++c, new User("Чебан К.В.", UserStatus.STUDENT, "ggg"));
-		addUser(++c, new User("Берлизов Е.В.", UserStatus.STUDENT, "hhh"));
-		addUser(++c, new User("Беловзоров А.А.", UserStatus.STUDENT, "iii"));
-		addUser(++c, new User("Гапяк В.М.", UserStatus.STUDENT, "jjj"));
+		addUser(++c, new User("Михайлов С.В.", UserRole.DEPWORKER, "fff"));
+		addUser(++c, new User("Чебан К.В.", UserRole.STUDENT, "ggg"));
+		addUser(++c, new User("Берлизов Е.В.", UserRole.STUDENT, "hhh"));
+		addUser(++c, new User("Беловзоров А.А.", UserRole.STUDENT, "iii"));
+		addUser(++c, new User("Гапяк В.М.", UserRole.STUDENT, "jjj"));
 		
-		addUser(++c, new User("Малярозов П.А.", UserStatus.STUDENT, "kkk"));
-		addUser(++c, new User("Садовый Д.Д.", UserStatus.STUDENT, "lll"));
+		addUser(++c, new User("Малярозов П.А.", UserRole.STUDENT, "kkk"));
+		addUser(++c, new User("Садовый Д.Д.", UserRole.STUDENT, "lll"));
 		
-		addUser(++c, new User("Иванов 131", UserStatus.STUDENT, "mmm"));
-		addUser(++c, new User("Петров 132", UserStatus.STUDENT, "nnn"));
+		addUser(++c, new User("Иванов 131", UserRole.STUDENT, "mmm"));
+		addUser(++c, new User("Петров 132", UserRole.STUDENT, "nnn"));
 	}
 	
 	//TODO delete

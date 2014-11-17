@@ -1,15 +1,15 @@
 package sp_server;
-import sp_entities.UserStatus;
+import sp_entities.UserRole;
 
 public class UserInfo {
 	private int id;
-	private UserStatus status;
+	private UserRole status;
 	
-	public UserInfo(int id, UserStatus status) {
+	public UserInfo(int id, UserRole status) {
 		this.id = id;
 		this.status = status;
 	}
 	
 	public int getId() { return id; }
-	public UserStatus getStatus() { return status; }
+	public UserRole getStatus() { return status; }
 }
