@@ -232,9 +232,11 @@ public class Server {
 
 	private UserInfo getUserIfAuthorized(String idSession, UserRole status) {
 		UserInfo user = sessions.get(idSession);
-		if(user == null || user.getStatus() != status) 
-			return null;
-		return user;
+		if(user == null) return null;
+		if(user.getStatus() == status || 
+		 (status == UserRole.TEACHER && user.getStatus() == UserRole.CURATOR))
+			return user;
+		return null;
 	}
 
 	public String getTeacherSemesters(String idSession) {

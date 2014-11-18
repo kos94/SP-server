@@ -17,7 +17,7 @@ public class Semester {
 	
 	@Override
 	public String toString() {
-		return index + " " + startYear + "/" + (startYear+1);
+		return index + " сем. " + startYear + "/" + (startYear+1);
 	}
 	
 	@Override

@@ -6,7 +6,7 @@ import java.util.List;
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-class StudentMarks {
+public class StudentMarks {
 	public String student;
 	@XmlElement(name="mark")
 	public List<Byte> marks;

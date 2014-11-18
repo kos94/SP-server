@@ -1,5 +1,7 @@
 package sp_entities;
 import java.util.ArrayList;
+import java.util.List;
+
 import javax.xml.bind.annotation.*;
 
 
@@ -16,6 +18,12 @@ public class GroupSubjectMarks {
 		ArrayList<Byte> l = new ArrayList<>();
 		l.add((byte)m1); l.add((byte)m2); l.add((byte)m3); 
 		studMarks.add(new StudentMarks(student, l));
+	}
+	
+	public int getMarksNumber() { return studMarks.size(); }
+	public StudentMarks getStudentMark(int i) { 
+		if(i < 0 || i >= studMarks.size()) return null;
+		return studMarks.get(i);
 	}
 	
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE IN FUTURE

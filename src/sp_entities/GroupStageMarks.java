@@ -43,4 +43,10 @@ public class GroupStageMarks {
 			System.out.println();
 		}
 	}
+	public int getStudentsNumber() { return studMarks.size(); }
+	public List<String> getSubjects() { return subjects; }
+	public StudentMarks getStudentMark(int i) { 
+		if(i < 0 || i >= studMarks.size()) return null;
+		return studMarks.get(i);
+	}
 }
