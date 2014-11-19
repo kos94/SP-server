@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name="subjMarks")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class GroupSubjectMarks {
+public class GroupSubjectMarks implements IMarks {
 	private ArrayList<StudentMarks> studMarks;
 	
 	public GroupSubjectMarks() {

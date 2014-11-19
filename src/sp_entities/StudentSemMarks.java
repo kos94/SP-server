@@ -1,27 +1,11 @@
 package sp_entities;
 
 import java.util.ArrayList;
-
 import javax.xml.bind.annotation.*;
-
-class SubjectMarks {
-	public String subj;
-	@XmlElement(name="mark")
-	public ArrayList<Integer> marks;
-	
-	public SubjectMarks() {
-		marks = new ArrayList<>();
-	}
-	
-	public SubjectMarks(String subject, ArrayList<Integer> marks) {
-		subj = subject;
-		this.marks = marks;
-	}
-}
 
 @XmlRootElement(name="studentMarks")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class StudentSemMarks {
+public class StudentSemMarks implements IMarks {
 	private ArrayList<SubjectMarks> subjMarks;
 	
 	public StudentSemMarks() {
@@ -32,6 +16,15 @@ public class StudentSemMarks {
 		ArrayList<Integer> l = new ArrayList<>();
 		l.add(m1); l.add(m2); l.add(m3); 
 		subjMarks.add(new SubjectMarks(subj, l));
+	}
+	
+	public int getSubjectsNumber() { 
+		return subjMarks.size();
+	}
+	
+	public SubjectMarks getSubjectMarks(int i) {
+		if(i < 0 || i >= subjMarks.size()) return null;
+		return subjMarks.get(i);
 	}
 	
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE IN FUTURE

@@ -16,11 +16,12 @@ public class Server {
 	private Map<String, UserInfo> sessions;
 
 	public Server() {
+		XMLSerializer.saveObject(new Users(), "azaza.xml");
 		db = new DB();
 		secureRandom = new SecureRandom();
 		sessions = new HashMap<>();
 //		tempTeacherScenario();
-		tempCuratorScenario();
+//		tempCuratorScenario();
 //		tempDepWorkerScenario();
 //		tempStudentScenario();
 	}
@@ -340,13 +341,14 @@ public class Server {
 				XMLSerializer.xmlToObject(semester, Semester.class);
 		switch(user.getStatus()) {
 		case CURATOR:
-			if(!db.checkCuratorGroupRights(user.getId(), group, sem))
-				return null;
+			boolean hasRights = db.checkCuratorGroupRights(user.getId(), group, sem);
+			if(!hasRights) return null;
 			break;
 		case DEPWORKER:
-			if(!db.checkDepWorkerGroupRights(user.getId(), group))
-				return null;
-		default:
+			hasRights = db.checkDepWorkerGroupRights(user.getId(), group);
+			if(!hasRights) return null;
+			break;
+		default: 
 			return null;
 		}
 		

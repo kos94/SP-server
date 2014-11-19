@@ -1,0 +1,20 @@
+<users>
+<user>
+	<name surname="Иванов" firstname="Иван" patronim="Петрович" />
+	<address city="Одесса" street="Дерибасовская" department="78" />
+	<phone type="work">7000000</phone>
+	<phone type="mobile">0631234567</phone>
+	<phone type="home">7123535</phone>
+	<email type="work">ivanov@gmail.com</email>
+	<email type="home">ivanov@mail.ru</email>
+</user>
+<user>
+	<name surname="Михайлов" firstname="Стас" patronim="Владимирович" />
+	<address city="Киев" street="ул. Героев Днепра" department="100" />
+	<phone type="work">101010</phone>
+	<phone type="mobile">0633333333</phone>
+	<phone type="home">7009999</phone>
+	<email type="work">mihailov@gmail.com</email>
+	<email type="work">stassss@mail.ru</email>
+</user>
+</users>

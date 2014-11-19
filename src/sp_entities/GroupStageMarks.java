@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name="stageMarks")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class GroupStageMarks {
+public class GroupStageMarks implements IMarks {
 	@XmlElementWrapper
 	@XmlElement(name="subj")
 	private List<String> subjects;

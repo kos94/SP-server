@@ -5,6 +5,7 @@ import java.util.*;
 import sp_entities.*;
 
 public class DB {
+	private static final String DB_PATH = ".\\db\\";
 	private Users users;
 	private FacultyStructure structure;
 	private Schedule schedule;
@@ -13,24 +14,24 @@ public class DB {
 	
 	//TODO delete (need only to generate DB)
 	private void saveToXML() {
-		XMLSerializer.saveObject(users, "C:\\ws\\users.xml");
-		XMLSerializer.saveObject(structure, "C:\\ws\\structure.xml");
-		XMLSerializer.saveObject(schedule, "C:\\ws\\schedule.xml");
-		XMLSerializer.saveObject(curators, "C:\\ws\\curators.xml");
-		XMLSerializer.saveObject(marks, "C:\\ws\\marks.xml");
+		XMLSerializer.saveObject(users, DB_PATH + "users.xml");
+		XMLSerializer.saveObject(structure,DB_PATH + "structure.xml");
+		XMLSerializer.saveObject(schedule, DB_PATH + "schedule.xml");
+		XMLSerializer.saveObject(curators, DB_PATH + "curators.xml");
+		XMLSerializer.saveObject(marks, DB_PATH + "marks.xml");
 	}
 
 	private void loadFromXML() {
 		users = (Users) XMLSerializer
-				.loadObject("C:\\ws\\users.xml", Users.class);
+				.loadObject( DB_PATH + "users.xml", Users.class);
 		structure = (FacultyStructure) XMLSerializer
-				.loadObject("C:\\ws\\structure.xml", FacultyStructure.class);
+				.loadObject(DB_PATH + "structure.xml", FacultyStructure.class);
 		schedule = (Schedule) XMLSerializer
-				.loadObject("C:\\ws\\schedule.xml", Schedule.class);
+				.loadObject(DB_PATH + "schedule.xml", Schedule.class);
 		curators = (Curators) XMLSerializer
-				.loadObject("C:\\ws\\curators.xml", Curators.class);
+				.loadObject(DB_PATH + "curators.xml", Curators.class);
 		marks = (Marks) XMLSerializer
-				.loadObject("C:\\ws\\marks.xml", Marks.class);
+				.loadObject(DB_PATH + "marks.xml", Marks.class);
 	}
 	
 	public DB() {

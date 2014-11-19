@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<curators>
+    <curators>
+        <entry>
+            <key>3</key>
+            <work>
+                <sem index="1" startYear="2012"/>
+                <group>АС-111</group>
+            </work>
+            <work>
+                <sem index="2" startYear="2012"/>
+                <group>АС-111</group>
+            </work>
+            <work>
+                <sem index="1" startYear="2013"/>
+                <group>АС-111</group>
+            </work>
+            <work>
+                <sem index="2" startYear="2013"/>
+                <group>АС-111</group>
+            </work>
+        </entry>
+        <entry>
+            <key>4</key>
+            <work>
+                <sem index="1" startYear="2014"/>
+                <group>АС-111</group>
+            </work>
+            <work>
+                <sem index="2" startYear="2014"/>
+                <group>АС-111</group>
+            </work>
+        </entry>
+    </curators>
+</curators>

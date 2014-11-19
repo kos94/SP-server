@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schedule>
+    <records>
+        <idTeacher>1</idTeacher>
+        <semester index="1" startYear="2012"/>
+        <subj>Дискретная математика</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>1</idTeacher>
+        <semester index="1" startYear="2012"/>
+        <subj>Дискретная математика</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>1</idTeacher>
+        <semester index="2" startYear="2012"/>
+        <subj>Дискретные структуры</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>1</idTeacher>
+        <semester index="2" startYear="2012"/>
+        <subj>Дискретные структуры</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>2</idTeacher>
+        <semester index="2" startYear="2012"/>
+        <subj>ООП</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>2</idTeacher>
+        <semester index="2" startYear="2012"/>
+        <subj>ООП</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>2</idTeacher>
+        <semester index="1" startYear="2013"/>
+        <subj>Конструирование ПО</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>2</idTeacher>
+        <semester index="1" startYear="2013"/>
+        <subj>Конструирование ПО</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>1</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Качество ПО</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>1</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Качество ПО</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>2</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Конструирование ПО</subj>
+        <group>АС-121</group>
+    </records>
+    <records>
+        <idTeacher>2</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Конструирование ПО</subj>
+        <group>АС-122</group>
+    </records>
+    <records>
+        <idTeacher>1</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Дискретная математика</subj>
+        <group>АС-131</group>
+    </records>
+    <records>
+        <idTeacher>1</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Дискретная математика</subj>
+        <group>АС-132</group>
+    </records>
+</schedule>

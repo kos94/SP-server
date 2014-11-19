@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <users>
+        <entry>
+            <key>1</key>
+            <value>
+                <pass>aaa</pass>
+                <name>Пригожев А.С.</name>
+                <status>TEACHER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>2</key>
+            <value>
+                <pass>bbb</pass>
+                <name>Кунгурцев А.Б.</name>
+                <status>TEACHER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>3</key>
+            <value>
+                <pass>ccc</pass>
+                <name>Кавицкая В.С.</name>
+                <status>CURATOR</status>
+            </value>
+        </entry>
+        <entry>
+            <key>4</key>
+            <value>
+                <pass>ddd</pass>
+                <name>Паулин О.Н.</name>
+                <status>CURATOR</status>
+            </value>
+        </entry>
+        <entry>
+            <key>5</key>
+            <value>
+                <pass>eee</pass>
+                <name>Иванов И.И.</name>
+                <status>DEPWORKER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>6</key>
+            <value>
+                <pass>fff</pass>
+                <name>Михайлов С.В.</name>
+                <status>DEPWORKER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>7</key>
+            <value>
+                <pass>ggg</pass>
+                <name>Чебан Константин Викторович</name>
+                <status>STUDENT</status>
+            </value>
+        </entry>
+        <entry>
+            <key>8</key>
+            <value>
+                <pass>hhh</pass>
+                <name>Берлизов Е.В.</name>
+                <status>STUDENT</status>
+            </value>
+        </entry>
+        <entry>
+            <key>9</key>
+            <value>
+                <pass>iii</pass>
+                <name>Беловзоров А.А.</name>
+                <status>STUDENT</status>
+            </value>
+        </entry>
+        <entry>
+            <key>10</key>
+            <value>
+                <pass>jjj</pass>
+                <name>Гапяк В.М.</name>
+                <status>STUDENT</status>
+            </value>
+        </entry>
+        <entry>
+            <key>11</key>
+            <value>
+                <pass>kkk</pass>
+                <name>Малярозов П.А.</name>
+                <status>STUDENT</status>
+            </value>
+        </entry>
+        <entry>
+            <key>12</key>
+            <value>
+                <pass>lll</pass>
+                <name>Садовый Д.Д.</name>
+                <status>STUDENT</status>
+            </value>
+        </entry>
+        <entry>
+            <key>13</key>
+            <value>
+                <pass>mmm</pass>
+                <name>Иванов 131</name>
+                <status>STUDENT</status>
+            </value>
+        </entry>
+        <entry>
+            <key>14</key>
+            <value>
+                <pass>nnn</pass>
+                <name>Петров 132</name>
+                <status>STUDENT</status>
+            </value>
+        </entry>
+    </users>
+</users>
