@@ -1,11 +1,12 @@
 package sp_db;
 
+import java.io.IOException;
 import java.util.*;
 
 import sp_entities.*;
 
 public class DB {
-	private static final String DB_PATH = ".\\db\\";
+	static final String DB_PATH = ".\\db\\";
 	private Users users;
 	private FacultyStructure structure;
 	private Schedule schedule;
@@ -21,6 +22,15 @@ public class DB {
 		XMLSerializer.saveObject(marks, DB_PATH + "marks.xml");
 	}
 
+	//TODO delete 
+	private void generateDB() throws IOException {
+		users = new Users(); users.tempInit();
+		structure = new FacultyStructure(); structure.tempInit();
+		schedule = new Schedule(); schedule.tempInit();
+		curators = new Curators(); curators.tempInit();
+		marks = new Marks(); marks.tempInit();
+		saveToXML();
+	}
 	private void loadFromXML() {
 		users = (Users) XMLSerializer
 				.loadObject( DB_PATH + "users.xml", Users.class);
@@ -32,31 +42,21 @@ public class DB {
 				.loadObject(DB_PATH + "curators.xml", Curators.class);
 		marks = (Marks) XMLSerializer
 				.loadObject(DB_PATH + "marks.xml", Marks.class);
+		
+		users.print();
+		structure.print();
+		schedule.print();
+		curators.print();
+		marks.print();
 	}
 	
 	public DB() {
-//		users = new Users();
-//		users.tempInit();
-//		
-//		structure = new FacultyStructure();
-//		structure.tempInit();
-//		
-//		schedule = new Schedule();
-//		schedule.tempInit();
-//		
-//		curators = new Curators();
-//		curators.tempInit();
-//		
-//		marks = new Marks();
-//		marks.tempInit();
-
 		loadFromXML();
-		
-//		users.print();
-//		structure.print();
-//		schedule.print();
-//		curators.print();
-//		marks.print();
+//		try {
+//			generateDB();
+//		} catch(IOException e) {
+//			e.printStackTrace();
+//		}	
 	}
 	
 	public User login(int id, String password) {

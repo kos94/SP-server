@@ -1,8 +1,15 @@
 package sp_db;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
+
 import javax.xml.bind.annotation.*;
+
 import sp_entities.Semester;
+import sp_entities.UserRole;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -118,30 +125,49 @@ public class Schedule {
 		return false;
 	}
 	
-	//TODO delete
-	public void tempInit() {
-		Semester sem1_2012 = new Semester(1, 2012);
-		Semester sem2_2012 = new Semester(2, 2012);
-		Semester sem1_2013 = new Semester(1, 2013);
-		Semester sem1_2014 = new Semester(1, 2014);
-		
-		records.add(new SchedRecord(1, sem1_2012, "Дискретная математика", "АС-111"));
-		records.add(new SchedRecord(1, sem1_2012, "Дискретная математика", "АС-112"));
-		records.add(new SchedRecord(1, sem2_2012, "Дискретные структуры", "АС-111"));
-		records.add(new SchedRecord(1, sem2_2012, "Дискретные структуры", "АС-112"));
-		records.add(new SchedRecord(2, sem2_2012, "ООП", "АС-111"));
-		
-		records.add(new SchedRecord(2, sem2_2012, "ООП", "АС-112"));
-		records.add(new SchedRecord(2, sem1_2013, "Конструирование ПО", "АС-111"));
-		records.add(new SchedRecord(2, sem1_2013, "Конструирование ПО", "АС-112"));
-		records.add(new SchedRecord(1, sem1_2014, "Качество ПО", "АС-111"));
-		records.add(new SchedRecord(1, sem1_2014, "Качество ПО", "АС-112"));
-		
-		records.add(new SchedRecord(2, sem1_2014, "Конструирование ПО", "АС-121"));
-		records.add(new SchedRecord(2, sem1_2014, "Конструирование ПО", "АС-122"));
-		records.add(new SchedRecord(1, sem1_2014, "Дискретная математика", "АС-131"));
-		records.add(new SchedRecord(1, sem1_2014, "Дискретная математика", "АС-132"));
+	// TODO delete
+	public void tempInit() throws IOException {
+		FileInputStream in = new FileInputStream(DB.DB_PATH + "schedule.txt");
+		BufferedReader br = new BufferedReader(
+				new InputStreamReader(in, "utf8"));
+
+		String strLine;
+
+		while ((strLine = br.readLine()) != null) {
+			if(strLine.equals("")) continue;
+			String[] a = strLine.split(",");
+			int id = Integer.parseInt(a[0]);
+			String[] sem = a[1].trim().split(" ");
+			int sInd = Integer.parseInt(sem[0]);
+			int sYear = Integer.parseInt(sem[1]);
+			String group = a[2].trim(), subj = a[3].trim();
+			records.add(new SchedRecord(id, new Semester(sInd, sYear), subj, group));
+		}
+		in.close();
 	}
+//	public void tempInit() {
+//		Semester sem1_2012 = new Semester(1, 2012);
+//		Semester sem2_2012 = new Semester(2, 2012);
+//		Semester sem1_2013 = new Semester(1, 2013);
+//		Semester sem1_2014 = new Semester(1, 2014);
+//		
+//		records.add(new SchedRecord(1, sem1_2012, "Дискретная математика", "АС-111"));
+//		records.add(new SchedRecord(1, sem1_2012, "Дискретная математика", "АС-112"));
+//		records.add(new SchedRecord(1, sem2_2012, "Дискретные структуры", "АС-111"));
+//		records.add(new SchedRecord(1, sem2_2012, "Дискретные структуры", "АС-112"));
+//		records.add(new SchedRecord(2, sem2_2012, "ООП", "АС-111"));
+//		
+//		records.add(new SchedRecord(2, sem2_2012, "ООП", "АС-112"));
+//		records.add(new SchedRecord(2, sem1_2013, "Конструирование ПО", "АС-111"));
+//		records.add(new SchedRecord(2, sem1_2013, "Конструирование ПО", "АС-112"));
+//		records.add(new SchedRecord(1, sem1_2014, "Качество ПО", "АС-111"));
+//		records.add(new SchedRecord(1, sem1_2014, "Качество ПО", "АС-112"));
+//		
+//		records.add(new SchedRecord(2, sem1_2014, "Конструирование ПО", "АС-121"));
+//		records.add(new SchedRecord(2, sem1_2014, "Конструирование ПО", "АС-122"));
+//		records.add(new SchedRecord(1, sem1_2014, "Дискретная математика", "АС-131"));
+//		records.add(new SchedRecord(1, sem1_2014, "Дискретная математика", "АС-132"));
+//	}
 	
 	//TODO delete
 	public void print() {

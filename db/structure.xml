@@ -9,47 +9,68 @@
         <groups>
             <entry>
                 <key>АС-111</key>
+                <idStud>17</idStud>
+                <idStud>16</idStud>
+                <idStud>19</idStud>
+                <idStud>18</idStud>
                 <idStud>7</idStud>
                 <idStud>8</idStud>
+                <idStud>9</idStud>
+                <idStud>10</idStud>
+                <idStud>11</idStud>
+                <idStud>12</idStud>
+                <idStud>13</idStud>
+                <idStud>14</idStud>
+                <idStud>15</idStud>
             </entry>
             <entry>
                 <key>АС-121</key>
-                <idStud>11</idStud>
-                <idStud>12</idStud>
+                <idStud>32</idStud>
+                <idStud>33</idStud>
             </entry>
             <entry>
                 <key>АС-112</key>
-                <idStud>9</idStud>
-                <idStud>10</idStud>
+                <idStud>21</idStud>
+                <idStud>20</idStud>
+                <idStud>23</idStud>
+                <idStud>22</idStud>
+                <idStud>25</idStud>
+                <idStud>24</idStud>
+                <idStud>27</idStud>
+                <idStud>26</idStud>
+                <idStud>29</idStud>
+                <idStud>28</idStud>
+                <idStud>31</idStud>
+                <idStud>30</idStud>
             </entry>
             <entry>
                 <key>АС-132</key>
-                <idStud>14</idStud>
+                <idStud>35</idStud>
             </entry>
             <entry>
                 <key>АС-131</key>
-                <idStud>13</idStud>
+                <idStud>34</idStud>
             </entry>
         </groups>
     </department>
     <department>
-        <name>AT</name>
+        <name>АТ</name>
         <idWorkers>
-            <idW>15</idW>
-            <idW>16</idW>
+            <idW>36</idW>
+            <idW>37</idW>
         </idWorkers>
         <groups>
             <entry>
-                <key>AT-111</key>
-                <idStud>17</idStud>
-                <idStud>18</idStud>
+                <key>АТ-112</key>
+                <idStud>42</idStud>
+                <idStud>43</idStud>
+                <idStud>40</idStud>
+                <idStud>41</idStud>
             </entry>
             <entry>
-                <key>AT-112</key>
-                <idStud>19</idStud>
-                <idStud>21</idStud>
-                <idStud>20</idStud>
-                <idStud>22</idStud>
+                <key>АТ-111</key>
+                <idStud>38</idStud>
+                <idStud>39</idStud>
             </entry>
         </groups>
     </department>

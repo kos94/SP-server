@@ -1,7 +1,13 @@
 package sp_db;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
+
 import javax.xml.bind.annotation.*;
+
 import sp_entities.UserRole;
 
 @XmlRootElement
@@ -44,25 +50,24 @@ public class Users {
 	}
 	
 	//TODO delete
-	public void tempInit() {
-		int c = 0;
-		addUser(++c, new User("Пригожев А.С.", UserRole.TEACHER, "aaa"));
-		addUser(++c, new User("Кунгурцев А.Б.", UserRole.TEACHER, "bbb"));
-		addUser(++c, new User("Кавицкая В.С.", UserRole.CURATOR, "ccc"));
-		addUser(++c, new User("Паулин О.Н.", UserRole.CURATOR, "ddd"));
-		addUser(++c, new User("Иванов И.И.", UserRole.DEPWORKER, "eee"));
-		
-		addUser(++c, new User("Михайлов С.В.", UserRole.DEPWORKER, "fff"));
-		addUser(++c, new User("Чебан К.В.", UserRole.STUDENT, "ggg"));
-		addUser(++c, new User("Берлизов Е.В.", UserRole.STUDENT, "hhh"));
-		addUser(++c, new User("Беловзоров А.А.", UserRole.STUDENT, "iii"));
-		addUser(++c, new User("Гапяк В.М.", UserRole.STUDENT, "jjj"));
-		
-		addUser(++c, new User("Малярозов П.А.", UserRole.STUDENT, "kkk"));
-		addUser(++c, new User("Садовый Д.Д.", UserRole.STUDENT, "lll"));
-		
-		addUser(++c, new User("Иванов 131", UserRole.STUDENT, "mmm"));
-		addUser(++c, new User("Петров 132", UserRole.STUDENT, "nnn"));
+	public void tempInit() throws IOException{
+		FileInputStream in = new FileInputStream(DB.DB_PATH + "users.txt");
+	    BufferedReader br = new BufferedReader(new InputStreamReader(in, "utf8"));
+
+	    String strLine;
+	    UserRole role = null;
+	    int c = 0;
+
+	    while ((strLine = br.readLine()) != null) {
+	    	strLine = strLine.trim();
+	    	try {
+	    		role = UserRole.valueOf(strLine);
+	    	} catch(Exception e) {
+	    		String pass = UUID.randomUUID().toString().substring(0, 4);
+	    		addUser(++c, new User(strLine, role, pass));
+	    	}
+	    }
+	    in.close();
 	}
 	
 	//TODO delete
