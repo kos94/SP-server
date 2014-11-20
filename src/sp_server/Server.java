@@ -155,7 +155,8 @@ public class Server {
 				return null;
 			break;
 		case CURATOR:
-			if(!db.checkCuratorSubjectRights(user.getId(), subject, group))
+			if(!db.checkCuratorSubjectRights(user.getId(), subject, group) &&
+			   !db.checkTeacherSubjectRights(user.getId(), subject, group))
 				return null;
 			break;
 		case DEPWORKER:

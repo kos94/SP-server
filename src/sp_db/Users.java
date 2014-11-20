@@ -56,7 +56,6 @@ public class Users {
 
 	    String strLine;
 	    UserRole role = null;
-	    int c = 0;
 
 	    while ((strLine = br.readLine()) != null) {
 	    	strLine = strLine.trim();
@@ -64,7 +63,10 @@ public class Users {
 	    		role = UserRole.valueOf(strLine);
 	    	} catch(Exception e) {
 	    		String pass = UUID.randomUUID().toString().substring(0, 4);
-	    		addUser(++c, new User(strLine, role, pass));
+	    		String a[] = strLine.trim().split(",");
+	    		int id = Integer.parseInt(a[0]);
+	    		String name = a[1].trim();
+	    		addUser(id, new User(name, role, pass));
 	    	}
 	    }
 	    in.close();

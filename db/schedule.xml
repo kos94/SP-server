@@ -84,4 +84,112 @@
         <subj>Дискретная математика</subj>
         <group>АС-132</group>
     </records>
+    <records>
+        <idTeacher>4</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Распределенные вычисления</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>4</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Распределенные вычисления</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>44</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Менеджмент проектов ПО</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>44</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Менеджмент проектов ПО</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>45</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Безопасность программ и данных</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>45</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Безопасность программ и данных</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>46</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Программное обеспечение АС</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>46</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Программное обеспечение АС</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>47</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Веб-сервисы</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>47</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Веб-сервисы</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>48</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Политология</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>48</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Политология</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>49</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Безопасность жизнедеятельности</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>49</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Безопасность жизнедеятельности</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>44</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>44</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <group>АС-112</group>
+    </records>
+    <records>
+        <idTeacher>47</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <group>АС-111</group>
+    </records>
+    <records>
+        <idTeacher>47</idTeacher>
+        <semester index="1" startYear="2014"/>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <group>АС-112</group>
+    </records>
 </schedule>

@@ -144,7 +144,16 @@ public class DB {
 	
 	public GroupStageMarks getStageMarks(String group, Semester sem, int stage) {
 		List<String> subjects = schedule.getGroupSubjects(group, sem);
+		System.out.println("subjects of " + group + " : ");
+		for(String s : subjects) {
+			System.out.println(s);
+		}
 		Set<Integer> idStudents = structure.getGroupStudents(group);
+		System.out.println("students of " + group + " : ");
+		for(Integer id : idStudents) {
+			System.out.print(" " + id + " ");
+		}
+		System.out.println();
 		Map<Integer, String> students = users.getUsersNames(idStudents);
 		
 		return marks.getGroupStageMarks(subjects, students, stage);

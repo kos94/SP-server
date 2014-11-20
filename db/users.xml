@@ -4,7 +4,7 @@
         <entry>
             <key>1</key>
             <value>
-                <pass>b56e</pass>
+                <pass>3b08</pass>
                 <name>Пригожев А.С.</name>
                 <status>TEACHER</status>
             </value>
@@ -12,7 +12,7 @@
         <entry>
             <key>2</key>
             <value>
-                <pass>88bd</pass>
+                <pass>82c3</pass>
                 <name>Кунгурцев А.Б.</name>
                 <status>TEACHER</status>
             </value>
@@ -20,7 +20,7 @@
         <entry>
             <key>3</key>
             <value>
-                <pass>b464</pass>
+                <pass>7947</pass>
                 <name>Кавицкая В.С.</name>
                 <status>CURATOR</status>
             </value>
@@ -28,7 +28,7 @@
         <entry>
             <key>4</key>
             <value>
-                <pass>2912</pass>
+                <pass>c956</pass>
                 <name>Паулин О.Н.</name>
                 <status>CURATOR</status>
             </value>
@@ -36,7 +36,7 @@
         <entry>
             <key>5</key>
             <value>
-                <pass>e5f5</pass>
+                <pass>ce7d</pass>
                 <name>Иванов И.И.</name>
                 <status>DEPWORKER</status>
             </value>
@@ -44,7 +44,7 @@
         <entry>
             <key>6</key>
             <value>
-                <pass>261f</pass>
+                <pass>fa23</pass>
                 <name>Михайлов С.В.</name>
                 <status>DEPWORKER</status>
             </value>
@@ -52,7 +52,7 @@
         <entry>
             <key>7</key>
             <value>
-                <pass>d40e</pass>
+                <pass>6e4c</pass>
                 <name>Берлизов Е.В.</name>
                 <status>STUDENT</status>
             </value>
@@ -60,7 +60,7 @@
         <entry>
             <key>8</key>
             <value>
-                <pass>23bc</pass>
+                <pass>2ced</pass>
                 <name>Волохов П.</name>
                 <status>STUDENT</status>
             </value>
@@ -68,7 +68,7 @@
         <entry>
             <key>9</key>
             <value>
-                <pass>bd29</pass>
+                <pass>5686</pass>
                 <name>Григоренко А.</name>
                 <status>STUDENT</status>
             </value>
@@ -76,7 +76,7 @@
         <entry>
             <key>10</key>
             <value>
-                <pass>e4e6</pass>
+                <pass>da41</pass>
                 <name>Желев А.</name>
                 <status>STUDENT</status>
             </value>
@@ -84,7 +84,7 @@
         <entry>
             <key>11</key>
             <value>
-                <pass>e344</pass>
+                <pass>8be2</pass>
                 <name>Костенко В.</name>
                 <status>STUDENT</status>
             </value>
@@ -92,7 +92,7 @@
         <entry>
             <key>12</key>
             <value>
-                <pass>92c6</pass>
+                <pass>79ad</pass>
                 <name>Крицкий М.</name>
                 <status>STUDENT</status>
             </value>
@@ -100,7 +100,7 @@
         <entry>
             <key>13</key>
             <value>
-                <pass>e8e4</pass>
+                <pass>5c48</pass>
                 <name>Кучеренко К.</name>
                 <status>STUDENT</status>
             </value>
@@ -108,7 +108,7 @@
         <entry>
             <key>14</key>
             <value>
-                <pass>95e6</pass>
+                <pass>ce39</pass>
                 <name>Миркин К.</name>
                 <status>STUDENT</status>
             </value>
@@ -116,7 +116,7 @@
         <entry>
             <key>15</key>
             <value>
-                <pass>b827</pass>
+                <pass>78ee</pass>
                 <name>Репно Л.</name>
                 <status>STUDENT</status>
             </value>
@@ -124,7 +124,7 @@
         <entry>
             <key>17</key>
             <value>
-                <pass>d95a</pass>
+                <pass>5e21</pass>
                 <name>Филипчук О.</name>
                 <status>STUDENT</status>
             </value>
@@ -132,7 +132,7 @@
         <entry>
             <key>16</key>
             <value>
-                <pass>7021</pass>
+                <pass>c148</pass>
                 <name>Сибошвили Э.</name>
                 <status>STUDENT</status>
             </value>
@@ -140,7 +140,7 @@
         <entry>
             <key>19</key>
             <value>
-                <pass>df3c</pass>
+                <pass>bb50</pass>
                 <name>Черевкова Н.</name>
                 <status>STUDENT</status>
             </value>
@@ -148,7 +148,7 @@
         <entry>
             <key>18</key>
             <value>
-                <pass>7046</pass>
+                <pass>367a</pass>
                 <name>Чебан К.</name>
                 <status>STUDENT</status>
             </value>
@@ -156,7 +156,7 @@
         <entry>
             <key>21</key>
             <value>
-                <pass>d82c</pass>
+                <pass>204e</pass>
                 <name>Богомолов Б.</name>
                 <status>STUDENT</status>
             </value>
@@ -164,7 +164,7 @@
         <entry>
             <key>20</key>
             <value>
-                <pass>e4d2</pass>
+                <pass>c5be</pass>
                 <name>Беловзоров А.</name>
                 <status>STUDENT</status>
             </value>
@@ -172,7 +172,7 @@
         <entry>
             <key>23</key>
             <value>
-                <pass>4079</pass>
+                <pass>0f03</pass>
                 <name>Долт М.</name>
                 <status>STUDENT</status>
             </value>
@@ -180,7 +180,7 @@
         <entry>
             <key>22</key>
             <value>
-                <pass>3d65</pass>
+                <pass>1c21</pass>
                 <name>Гапяк В.</name>
                 <status>STUDENT</status>
             </value>
@@ -188,7 +188,7 @@
         <entry>
             <key>25</key>
             <value>
-                <pass>31d4</pass>
+                <pass>c616</pass>
                 <name>Крыжановский А.</name>
                 <status>STUDENT</status>
             </value>
@@ -196,7 +196,7 @@
         <entry>
             <key>24</key>
             <value>
-                <pass>4e98</pass>
+                <pass>334c</pass>
                 <name>Колесникова Д.</name>
                 <status>STUDENT</status>
             </value>
@@ -204,7 +204,7 @@
         <entry>
             <key>27</key>
             <value>
-                <pass>a284</pass>
+                <pass>9546</pass>
                 <name>Николаенко А.</name>
                 <status>STUDENT</status>
             </value>
@@ -212,7 +212,7 @@
         <entry>
             <key>26</key>
             <value>
-                <pass>82c6</pass>
+                <pass>e27c</pass>
                 <name>Литвиненко А.</name>
                 <status>STUDENT</status>
             </value>
@@ -220,7 +220,7 @@
         <entry>
             <key>29</key>
             <value>
-                <pass>9707</pass>
+                <pass>acd6</pass>
                 <name>Скрипкин М.</name>
                 <status>STUDENT</status>
             </value>
@@ -228,7 +228,7 @@
         <entry>
             <key>28</key>
             <value>
-                <pass>9533</pass>
+                <pass>551e</pass>
                 <name>Серженко А.</name>
                 <status>STUDENT</status>
             </value>
@@ -236,7 +236,7 @@
         <entry>
             <key>31</key>
             <value>
-                <pass>f927</pass>
+                <pass>dab3</pass>
                 <name>Шкуренко В.</name>
                 <status>STUDENT</status>
             </value>
@@ -244,7 +244,7 @@
         <entry>
             <key>30</key>
             <value>
-                <pass>d623</pass>
+                <pass>4403</pass>
                 <name>Швец О.</name>
                 <status>STUDENT</status>
             </value>
@@ -252,7 +252,7 @@
         <entry>
             <key>34</key>
             <value>
-                <pass>09ce</pass>
+                <pass>8258</pass>
                 <name>Иванов 131</name>
                 <status>STUDENT</status>
             </value>
@@ -260,7 +260,7 @@
         <entry>
             <key>35</key>
             <value>
-                <pass>6304</pass>
+                <pass>d0aa</pass>
                 <name>Петров 132</name>
                 <status>STUDENT</status>
             </value>
@@ -268,7 +268,7 @@
         <entry>
             <key>32</key>
             <value>
-                <pass>acd6</pass>
+                <pass>bb5f</pass>
                 <name>Малярозов П.А.</name>
                 <status>STUDENT</status>
             </value>
@@ -276,7 +276,7 @@
         <entry>
             <key>33</key>
             <value>
-                <pass>75cc</pass>
+                <pass>f411</pass>
                 <name>Садовый Д.Д.</name>
                 <status>STUDENT</status>
             </value>
@@ -284,7 +284,7 @@
         <entry>
             <key>38</key>
             <value>
-                <pass>d929</pass>
+                <pass>e8f9</pass>
                 <name>Кержаков АТ111</name>
                 <status>STUDENT</status>
             </value>
@@ -292,7 +292,7 @@
         <entry>
             <key>39</key>
             <value>
-                <pass>371e</pass>
+                <pass>6778</pass>
                 <name>Павлюченко АТ111</name>
                 <status>STUDENT</status>
             </value>
@@ -300,7 +300,7 @@
         <entry>
             <key>36</key>
             <value>
-                <pass>bddb</pass>
+                <pass>3ecb</pass>
                 <name>Розенбаум АТ</name>
                 <status>DEPWORKER</status>
             </value>
@@ -308,7 +308,7 @@
         <entry>
             <key>37</key>
             <value>
-                <pass>4909</pass>
+                <pass>769a</pass>
                 <name>Шуфутинский АТ</name>
                 <status>DEPWORKER</status>
             </value>
@@ -316,7 +316,7 @@
         <entry>
             <key>42</key>
             <value>
-                <pass>0d05</pass>
+                <pass>966b</pass>
                 <name>Исинбаева АТ112</name>
                 <status>STUDENT</status>
             </value>
@@ -324,7 +324,7 @@
         <entry>
             <key>43</key>
             <value>
-                <pass>1097</pass>
+                <pass>98b9</pass>
                 <name>Шарапова АТ112</name>
                 <status>STUDENT</status>
             </value>
@@ -332,7 +332,7 @@
         <entry>
             <key>40</key>
             <value>
-                <pass>43fe</pass>
+                <pass>90d5</pass>
                 <name>Романов АТ112</name>
                 <status>STUDENT</status>
             </value>
@@ -340,9 +340,57 @@
         <entry>
             <key>41</key>
             <value>
-                <pass>2c26</pass>
+                <pass>0a5e</pass>
                 <name>Плющенко АТ112</name>
                 <status>STUDENT</status>
+            </value>
+        </entry>
+        <entry>
+            <key>46</key>
+            <value>
+                <pass>4dd1</pass>
+                <name>Шапо Ф.С.</name>
+                <status>TEACHER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>47</key>
+            <value>
+                <pass>fc5c</pass>
+                <name>Чепелев Д.В.</name>
+                <status>TEACHER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>44</key>
+            <value>
+                <pass>bf3b</pass>
+                <name>Любченко В.В.</name>
+                <status>TEACHER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>45</key>
+            <value>
+                <pass>fc73</pass>
+                <name>Блажко А.А.</name>
+                <status>TEACHER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>49</key>
+            <value>
+                <pass>6ddd</pass>
+                <name>Озернюк О.Т.</name>
+                <status>TEACHER</status>
+            </value>
+        </entry>
+        <entry>
+            <key>48</key>
+            <value>
+                <pass>9f6a</pass>
+                <name>Шановская А.В.</name>
+                <status>TEACHER</status>
             </value>
         </entry>
     </users>

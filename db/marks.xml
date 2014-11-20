@@ -4,1179 +4,3204 @@
         <idStudent>7</idStudent>
         <subj>Дискретная математика</subj>
         <marks>
-            <item>47</item>
-            <item>48</item>
-            <item>100</item>
+            <item>30</item>
+            <item>33</item>
+            <item>95</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>8</idStudent>
         <subj>Дискретная математика</subj>
         <marks>
-            <item>34</item>
-            <item>35</item>
-            <item>86</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>9</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>44</item>
-            <item>37</item>
-            <item>63</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>10</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>43</item>
-            <item>36</item>
-            <item>96</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>11</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>33</item>
-            <item>33</item>
-            <item>94</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>12</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>47</item>
-            <item>40</item>
-            <item>65</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>13</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>30</item>
-            <item>38</item>
-            <item>78</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>14</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>42</item>
-            <item>47</item>
-            <item>62</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>15</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>43</item>
-            <item>34</item>
-            <item>74</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>16</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>37</item>
-            <item>45</item>
-            <item>96</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>17</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>45</item>
-            <item>37</item>
-            <item>88</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>18</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>36</item>
-            <item>44</item>
-            <item>95</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>19</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>30</item>
-            <item>41</item>
-            <item>89</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>20</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>39</item>
-            <item>38</item>
-            <item>95</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>21</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>44</item>
-            <item>39</item>
-            <item>68</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>22</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>43</item>
-            <item>43</item>
-            <item>88</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>23</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>48</item>
             <item>50</item>
-            <item>85</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>24</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>32</item>
-            <item>44</item>
-            <item>100</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>25</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>33</item>
-            <item>42</item>
-            <item>91</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>26</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>47</item>
-            <item>49</item>
-            <item>85</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>27</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>30</item>
-            <item>38</item>
-            <item>61</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>28</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>31</item>
-            <item>46</item>
-            <item>83</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>29</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>33</item>
-            <item>33</item>
-            <item>83</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>30</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>45</item>
-            <item>30</item>
-            <item>64</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>31</idStudent>
-        <subj>Дискретная математика</subj>
-        <marks>
-            <item>42</item>
-            <item>40</item>
-            <item>91</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>7</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>40</item>
-            <item>32</item>
-            <item>61</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>8</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>50</item>
-            <item>48</item>
-            <item>86</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>9</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>40</item>
-            <item>47</item>
-            <item>75</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>10</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>46</item>
-            <item>47</item>
-            <item>96</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>11</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>36</item>
-            <item>30</item>
-            <item>68</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>12</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>40</item>
-            <item>37</item>
-            <item>74</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>13</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>31</item>
-            <item>35</item>
-            <item>97</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>14</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>43</item>
-            <item>36</item>
-            <item>68</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>15</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>30</item>
-            <item>41</item>
-            <item>65</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>16</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
             <item>39</item>
-            <item>40</item>
-            <item>62</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>17</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>37</item>
-            <item>48</item>
             <item>90</item>
         </marks>
     </ssMarks>
     <ssMarks>
-        <idStudent>18</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>33</item>
-            <item>34</item>
-            <item>72</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>19</idStudent>
-        <subj>Дискретные структуры</subj>
+        <idStudent>9</idStudent>
+        <subj>Дискретная математика</subj>
         <marks>
             <item>37</item>
-            <item>40</item>
-            <item>72</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>20</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>50</item>
-            <item>43</item>
+            <item>44</item>
             <item>93</item>
         </marks>
     </ssMarks>
     <ssMarks>
-        <idStudent>21</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>45</item>
-            <item>40</item>
-            <item>94</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>22</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>46</item>
-            <item>37</item>
-            <item>84</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>23</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>34</item>
-            <item>47</item>
-            <item>60</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>24</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>41</item>
-            <item>36</item>
-            <item>65</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>25</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>38</item>
-            <item>50</item>
-            <item>76</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>26</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>31</item>
-            <item>39</item>
-            <item>64</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>27</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>49</item>
-            <item>45</item>
-            <item>78</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>28</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>30</item>
-            <item>45</item>
-            <item>66</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>29</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>48</item>
-            <item>32</item>
-            <item>76</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>30</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>32</item>
-            <item>30</item>
-            <item>77</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>31</idStudent>
-        <subj>Дискретные структуры</subj>
-        <marks>
-            <item>50</item>
-            <item>37</item>
-            <item>96</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>7</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>33</item>
-            <item>35</item>
-            <item>96</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>8</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>50</item>
-            <item>37</item>
-            <item>95</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>9</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>44</item>
-            <item>30</item>
-            <item>86</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
         <idStudent>10</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
+            <item>30</item>
             <item>44</item>
-            <item>48</item>
-            <item>78</item>
+            <item>70</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>11</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>42</item>
-            <item>42</item>
-            <item>73</item>
+            <item>44</item>
+            <item>47</item>
+            <item>76</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>12</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
+            <item>38</item>
             <item>45</item>
-            <item>50</item>
-            <item>83</item>
+            <item>71</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>13</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>43</item>
-            <item>32</item>
+            <item>31</item>
+            <item>34</item>
             <item>71</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>14</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>32</item>
-            <item>39</item>
-            <item>80</item>
+            <item>49</item>
+            <item>44</item>
+            <item>67</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>15</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>48</item>
-            <item>37</item>
-            <item>70</item>
+            <item>43</item>
+            <item>40</item>
+            <item>75</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>16</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>38</item>
-            <item>34</item>
-            <item>84</item>
+            <item>40</item>
+            <item>33</item>
+            <item>89</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>17</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>50</item>
-            <item>45</item>
-            <item>80</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>18</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>40</item>
-            <item>43</item>
-            <item>99</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>19</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>30</item>
-            <item>36</item>
-            <item>91</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>20</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>42</item>
-            <item>38</item>
-            <item>72</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>21</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>44</item>
-            <item>49</item>
-            <item>73</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>22</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>49</item>
-            <item>32</item>
-            <item>78</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>23</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>41</item>
-            <item>45</item>
-            <item>68</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>24</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>41</item>
-            <item>41</item>
-            <item>69</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>25</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>35</item>
+            <item>34</item>
             <item>31</item>
             <item>81</item>
         </marks>
     </ssMarks>
     <ssMarks>
-        <idStudent>26</idStudent>
-        <subj>ООП</subj>
+        <idStudent>18</idStudent>
+        <subj>Дискретная математика</subj>
+        <marks>
+            <item>31</item>
+            <item>37</item>
+            <item>71</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Дискретная математика</subj>
+        <marks>
+            <item>49</item>
+            <item>36</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Дискретная математика</subj>
+        <marks>
+            <item>48</item>
+            <item>42</item>
+            <item>90</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Дискретная математика</subj>
+        <marks>
+            <item>38</item>
+            <item>43</item>
+            <item>70</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Дискретная математика</subj>
+        <marks>
+            <item>34</item>
+            <item>32</item>
+            <item>61</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Дискретная математика</subj>
         <marks>
             <item>32</item>
-            <item>37</item>
-            <item>69</item>
+            <item>31</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Дискретная математика</subj>
+        <marks>
+            <item>32</item>
+            <item>45</item>
+            <item>73</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Дискретная математика</subj>
+        <marks>
+            <item>41</item>
+            <item>44</item>
+            <item>97</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Дискретная математика</subj>
+        <marks>
+            <item>46</item>
+            <item>41</item>
+            <item>89</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>27</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>36</item>
-            <item>41</item>
-            <item>74</item>
+            <item>45</item>
+            <item>48</item>
+            <item>99</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>28</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>35</item>
             <item>40</item>
-            <item>72</item>
+            <item>45</item>
+            <item>68</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>29</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>30</item>
-            <item>48</item>
-            <item>85</item>
+            <item>35</item>
+            <item>43</item>
+            <item>60</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>30</idStudent>
-        <subj>ООП</subj>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>47</item>
-            <item>43</item>
-            <item>96</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>31</idStudent>
-        <subj>ООП</subj>
-        <marks>
-            <item>50</item>
-            <item>50</item>
-            <item>72</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>7</idStudent>
-        <subj>Конструирование ПО</subj>
-        <marks>
+            <item>35</item>
             <item>33</item>
-            <item>45</item>
-            <item>79</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>8</idStudent>
-        <subj>Конструирование ПО</subj>
-        <marks>
-            <item>31</item>
-            <item>44</item>
-            <item>63</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>9</idStudent>
-        <subj>Конструирование ПО</subj>
-        <marks>
-            <item>48</item>
-            <item>36</item>
-            <item>91</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>10</idStudent>
-        <subj>Конструирование ПО</subj>
-        <marks>
-            <item>30</item>
-            <item>34</item>
-            <item>77</item>
-        </marks>
-    </ssMarks>
-    <ssMarks>
-        <idStudent>11</idStudent>
-        <subj>Конструирование ПО</subj>
-        <marks>
-            <item>43</item>
-            <item>48</item>
             <item>64</item>
         </marks>
     </ssMarks>
     <ssMarks>
-        <idStudent>12</idStudent>
-        <subj>Конструирование ПО</subj>
+        <idStudent>31</idStudent>
+        <subj>Дискретная математика</subj>
         <marks>
-            <item>43</item>
+            <item>31</item>
+            <item>33</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>40</item>
+            <item>44</item>
+            <item>65</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>50</item>
+            <item>46</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>45</item>
             <item>45</item>
             <item>99</item>
         </marks>
     </ssMarks>
     <ssMarks>
-        <idStudent>13</idStudent>
-        <subj>Конструирование ПО</subj>
+        <idStudent>10</idStudent>
+        <subj>Дискретные структуры</subj>
         <marks>
-            <item>46</item>
-            <item>32</item>
-            <item>72</item>
+            <item>43</item>
+            <item>33</item>
+            <item>61</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>49</item>
+            <item>39</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>41</item>
+            <item>38</item>
+            <item>80</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>35</item>
+            <item>50</item>
+            <item>94</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>14</idStudent>
-        <subj>Конструирование ПО</subj>
+        <subj>Дискретные структуры</subj>
         <marks>
-            <item>43</item>
-            <item>50</item>
+            <item>32</item>
+            <item>44</item>
             <item>63</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>15</idStudent>
-        <subj>Конструирование ПО</subj>
+        <subj>Дискретные структуры</subj>
         <marks>
             <item>30</item>
-            <item>50</item>
-            <item>98</item>
+            <item>35</item>
+            <item>65</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>16</idStudent>
-        <subj>Конструирование ПО</subj>
+        <subj>Дискретные структуры</subj>
         <marks>
-            <item>44</item>
-            <item>39</item>
-            <item>85</item>
+            <item>41</item>
+            <item>33</item>
+            <item>79</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>17</idStudent>
-        <subj>Конструирование ПО</subj>
+        <subj>Дискретные структуры</subj>
         <marks>
-            <item>30</item>
-            <item>35</item>
-            <item>99</item>
+            <item>44</item>
+            <item>37</item>
+            <item>78</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>18</idStudent>
-        <subj>Конструирование ПО</subj>
+        <subj>Дискретные структуры</subj>
         <marks>
-            <item>34</item>
-            <item>36</item>
-            <item>95</item>
+            <item>48</item>
+            <item>48</item>
+            <item>71</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>19</idStudent>
-        <subj>Конструирование ПО</subj>
+        <subj>Дискретные структуры</subj>
         <marks>
-            <item>44</item>
-            <item>42</item>
-            <item>95</item>
+            <item>39</item>
+            <item>30</item>
+            <item>86</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>20</idStudent>
-        <subj>Конструирование ПО</subj>
+        <subj>Дискретные структуры</subj>
         <marks>
-            <item>31</item>
-            <item>37</item>
+            <item>42</item>
+            <item>47</item>
             <item>82</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>21</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>44</item>
+            <item>41</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>37</item>
+            <item>37</item>
+            <item>70</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>44</item>
+            <item>36</item>
+            <item>71</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>43</item>
+            <item>39</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>46</item>
+            <item>40</item>
+            <item>81</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>37</item>
+            <item>30</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>40</item>
+            <item>36</item>
+            <item>67</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>45</item>
+            <item>43</item>
+            <item>60</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>46</item>
+            <item>43</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>36</item>
+            <item>50</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Дискретные структуры</subj>
+        <marks>
+            <item>36</item>
+            <item>46</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>44</item>
+            <item>45</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>48</item>
+            <item>41</item>
+            <item>73</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>30</item>
+            <item>41</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>45</item>
+            <item>35</item>
+            <item>75</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>41</item>
+            <item>37</item>
+            <item>96</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>38</item>
+            <item>47</item>
+            <item>74</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>46</item>
+            <item>49</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>34</item>
+            <item>40</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>36</item>
+            <item>40</item>
+            <item>67</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>41</item>
+            <item>36</item>
+            <item>68</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>30</item>
+            <item>47</item>
+            <item>90</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>42</item>
+            <item>41</item>
+            <item>61</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>50</item>
+            <item>42</item>
+            <item>91</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>45</item>
+            <item>46</item>
+            <item>94</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>40</item>
+            <item>49</item>
+            <item>98</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>36</item>
+            <item>30</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>33</item>
+            <item>30</item>
+            <item>68</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>35</item>
+            <item>32</item>
+            <item>69</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>37</item>
+            <item>34</item>
+            <item>94</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>45</item>
+            <item>36</item>
+            <item>92</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>49</item>
+            <item>40</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>43</item>
+            <item>34</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>42</item>
+            <item>40</item>
+            <item>98</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>33</item>
+            <item>34</item>
+            <item>94</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>ООП</subj>
+        <marks>
+            <item>46</item>
+            <item>43</item>
+            <item>64</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>31</item>
+            <item>43</item>
+            <item>42</item>
+            <item>92</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>41</item>
+            <item>48</item>
+            <item>79</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>40</item>
+            <item>33</item>
+            <item>62</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>48</item>
+            <item>45</item>
+            <item>99</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>45</item>
+            <item>49</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>46</item>
+            <item>30</item>
+            <item>61</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>40</item>
+            <item>42</item>
+            <item>96</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>48</item>
+            <item>37</item>
+            <item>69</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>47</item>
+            <item>43</item>
+            <item>69</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>42</item>
+            <item>37</item>
+            <item>63</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>49</item>
+            <item>30</item>
+            <item>92</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>37</item>
+            <item>35</item>
+            <item>73</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
             <item>50</item>
-            <item>93</item>
+            <item>49</item>
+            <item>67</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>36</item>
+            <item>30</item>
+            <item>81</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>32</item>
+            <item>48</item>
+            <item>62</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>22</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>44</item>
-            <item>40</item>
-            <item>99</item>
+            <item>46</item>
+            <item>38</item>
+            <item>94</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>23</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>50</item>
-            <item>37</item>
-            <item>72</item>
+            <item>48</item>
+            <item>36</item>
+            <item>65</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>24</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>40</item>
             <item>33</item>
-            <item>70</item>
+            <item>39</item>
+            <item>65</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>25</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>48</item>
-            <item>43</item>
-            <item>79</item>
+            <item>31</item>
+            <item>35</item>
+            <item>81</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>26</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>46</item>
-            <item>44</item>
-            <item>91</item>
+            <item>48</item>
+            <item>34</item>
+            <item>83</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>27</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>44</item>
-            <item>46</item>
-            <item>96</item>
+            <item>49</item>
+            <item>34</item>
+            <item>63</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>28</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>37</item>
-            <item>35</item>
-            <item>86</item>
+            <item>39</item>
+            <item>39</item>
+            <item>67</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>29</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
+            <item>42</item>
             <item>45</item>
-            <item>43</item>
-            <item>83</item>
+            <item>87</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>30</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>44</item>
-            <item>34</item>
-            <item>77</item>
+            <item>41</item>
+            <item>50</item>
+            <item>94</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>31</idStudent>
         <subj>Конструирование ПО</subj>
         <marks>
-            <item>50</item>
-            <item>47</item>
-            <item>61</item>
+            <item>37</item>
+            <item>49</item>
+            <item>85</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>7</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>37</item>
-            <item>40</item>
-            <item>86</item>
+            <item>49</item>
+            <item>50</item>
+            <item>63</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>8</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>44</item>
-            <item>36</item>
-            <item>67</item>
+            <item>45</item>
+            <item>41</item>
+            <item>71</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>9</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>40</item>
-            <item>43</item>
-            <item>94</item>
+            <item>50</item>
+            <item>44</item>
+            <item>79</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>10</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>41</item>
-            <item>35</item>
-            <item>95</item>
+            <item>34</item>
+            <item>31</item>
+            <item>93</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>11</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>31</item>
-            <item>41</item>
-            <item>63</item>
+            <item>49</item>
+            <item>36</item>
+            <item>80</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>12</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>33</item>
-            <item>40</item>
-            <item>91</item>
+            <item>34</item>
+            <item>39</item>
+            <item>72</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>13</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>33</item>
-            <item>37</item>
-            <item>98</item>
+            <item>48</item>
+            <item>40</item>
+            <item>88</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>14</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>32</item>
-            <item>42</item>
-            <item>100</item>
+            <item>33</item>
+            <item>35</item>
+            <item>99</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>15</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>48</item>
-            <item>35</item>
-            <item>62</item>
+            <item>38</item>
+            <item>47</item>
+            <item>96</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>16</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>44</item>
-            <item>37</item>
-            <item>91</item>
+            <item>43</item>
+            <item>31</item>
+            <item>92</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>17</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>50</item>
-            <item>36</item>
-            <item>94</item>
+            <item>46</item>
+            <item>34</item>
+            <item>85</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>18</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>31</item>
-            <item>42</item>
-            <item>99</item>
+            <item>36</item>
+            <item>32</item>
+            <item>88</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>19</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>37</item>
-            <item>33</item>
-            <item>67</item>
+            <item>32</item>
+            <item>32</item>
+            <item>99</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>20</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>43</item>
-            <item>41</item>
-            <item>79</item>
+            <item>44</item>
+            <item>38</item>
+            <item>98</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>21</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>50</item>
-            <item>50</item>
-            <item>89</item>
+            <item>43</item>
+            <item>49</item>
+            <item>95</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>22</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>38</item>
-            <item>30</item>
-            <item>78</item>
+            <item>44</item>
+            <item>41</item>
+            <item>64</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>23</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>46</item>
-            <item>30</item>
-            <item>74</item>
+            <item>47</item>
+            <item>36</item>
+            <item>71</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>24</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>42</item>
+            <item>30</item>
             <item>45</item>
-            <item>94</item>
+            <item>76</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>25</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>37</item>
-            <item>50</item>
-            <item>76</item>
+            <item>45</item>
+            <item>46</item>
+            <item>85</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>26</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>48</item>
             <item>45</item>
-            <item>73</item>
+            <item>47</item>
+            <item>70</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>27</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>32</item>
-            <item>33</item>
-            <item>72</item>
+            <item>37</item>
+            <item>46</item>
+            <item>93</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>28</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>50</item>
-            <item>48</item>
-            <item>83</item>
+            <item>45</item>
+            <item>44</item>
+            <item>69</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>29</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>38</item>
-            <item>39</item>
-            <item>73</item>
+            <item>35</item>
+            <item>32</item>
+            <item>77</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>30</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>37</item>
-            <item>42</item>
-            <item>75</item>
+            <item>47</item>
+            <item>45</item>
+            <item>62</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>31</idStudent>
         <subj>Качество ПО</subj>
         <marks>
-            <item>33</item>
-            <item>49</item>
-            <item>80</item>
+            <item>44</item>
+            <item>45</item>
+            <item>66</item>
         </marks>
     </ssMarks>
     <ssMarks>
-        <idStudent>32</idStudent>
-        <subj>Конструирование ПО</subj>
+        <idStudent>7</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
         <marks>
-            <item>39</item>
-            <item>32</item>
-            <item>100</item>
+            <item>40</item>
+            <item>47</item>
+            <item>99</item>
         </marks>
     </ssMarks>
     <ssMarks>
-        <idStudent>33</idStudent>
-        <subj>Конструирование ПО</subj>
+        <idStudent>8</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
         <marks>
-            <item>42</item>
             <item>38</item>
+            <item>45</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>33</item>
+            <item>45</item>
+            <item>87</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>43</item>
+            <item>43</item>
             <item>78</item>
         </marks>
     </ssMarks>
     <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>31</item>
+            <item>33</item>
+            <item>94</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>43</item>
+            <item>30</item>
+            <item>62</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>49</item>
+            <item>30</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>32</item>
+            <item>42</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>41</item>
+            <item>38</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>34</item>
+            <item>40</item>
+            <item>73</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>37</item>
+            <item>48</item>
+            <item>67</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>32</item>
+            <item>48</item>
+            <item>79</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>38</item>
+            <item>48</item>
+            <item>74</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>38</item>
+            <item>44</item>
+            <item>71</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>33</item>
+            <item>48</item>
+            <item>96</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>37</item>
+            <item>31</item>
+            <item>72</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>40</item>
+            <item>49</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>38</item>
+            <item>35</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>45</item>
+            <item>32</item>
+            <item>65</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>31</item>
+            <item>44</item>
+            <item>95</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>32</item>
+            <item>33</item>
+            <item>68</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>35</item>
+            <item>41</item>
+            <item>95</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>39</item>
+            <item>43</item>
+            <item>79</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>45</item>
+            <item>32</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Менеджмент проектов ПО</subj>
+        <marks>
+            <item>43</item>
+            <item>38</item>
+            <item>97</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>42</item>
+            <item>33</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>49</item>
+            <item>34</item>
+            <item>85</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>44</item>
+            <item>50</item>
+            <item>95</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>36</item>
+            <item>45</item>
+            <item>80</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>41</item>
+            <item>38</item>
+            <item>93</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>40</item>
+            <item>34</item>
+            <item>78</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>50</item>
+            <item>36</item>
+            <item>90</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>40</item>
+            <item>49</item>
+            <item>65</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>38</item>
+            <item>39</item>
+            <item>99</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>47</item>
+            <item>31</item>
+            <item>69</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>30</item>
+            <item>42</item>
+            <item>89</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>44</item>
+            <item>47</item>
+            <item>92</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>45</item>
+            <item>41</item>
+            <item>60</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>35</item>
+            <item>32</item>
+            <item>72</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>31</item>
+            <item>36</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>38</item>
+            <item>42</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>39</item>
+            <item>38</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>41</item>
+            <item>41</item>
+            <item>92</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>46</item>
+            <item>50</item>
+            <item>68</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>34</item>
+            <item>38</item>
+            <item>68</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>46</item>
+            <item>42</item>
+            <item>90</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>31</item>
+            <item>45</item>
+            <item>78</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>44</item>
+            <item>30</item>
+            <item>87</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>34</item>
+            <item>40</item>
+            <item>63</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Безопасность программ и данных</subj>
+        <marks>
+            <item>35</item>
+            <item>35</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>47</item>
+            <item>38</item>
+            <item>63</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>43</item>
+            <item>38</item>
+            <item>74</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>46</item>
+            <item>35</item>
+            <item>70</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>32</item>
+            <item>32</item>
+            <item>85</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>35</item>
+            <item>43</item>
+            <item>71</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>38</item>
+            <item>50</item>
+            <item>75</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>44</item>
+            <item>45</item>
+            <item>62</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>42</item>
+            <item>31</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>47</item>
+            <item>34</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>48</item>
+            <item>33</item>
+            <item>72</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>46</item>
+            <item>50</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>39</item>
+            <item>48</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>47</item>
+            <item>41</item>
+            <item>61</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>41</item>
+            <item>30</item>
+            <item>78</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>35</item>
+            <item>31</item>
+            <item>77</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>39</item>
+            <item>45</item>
+            <item>94</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>44</item>
+            <item>35</item>
+            <item>71</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>45</item>
+            <item>48</item>
+            <item>97</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>42</item>
+            <item>43</item>
+            <item>65</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>44</item>
+            <item>48</item>
+            <item>60</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>36</item>
+            <item>49</item>
+            <item>98</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>41</item>
+            <item>49</item>
+            <item>75</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>40</item>
+            <item>34</item>
+            <item>80</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>47</item>
+            <item>49</item>
+            <item>61</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Программное обеспечение АС</subj>
+        <marks>
+            <item>44</item>
+            <item>45</item>
+            <item>78</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>44</item>
+            <item>50</item>
+            <item>79</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>33</item>
+            <item>49</item>
+            <item>96</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>40</item>
+            <item>42</item>
+            <item>64</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>46</item>
+            <item>41</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>40</item>
+            <item>46</item>
+            <item>78</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>30</item>
+            <item>35</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>45</item>
+            <item>34</item>
+            <item>62</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>36</item>
+            <item>46</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>36</item>
+            <item>37</item>
+            <item>94</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>47</item>
+            <item>43</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>39</item>
+            <item>32</item>
+            <item>64</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>47</item>
+            <item>45</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>47</item>
+            <item>36</item>
+            <item>79</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>49</item>
+            <item>45</item>
+            <item>64</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>40</item>
+            <item>39</item>
+            <item>89</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>49</item>
+            <item>48</item>
+            <item>89</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>50</item>
+            <item>44</item>
+            <item>87</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>31</item>
+            <item>36</item>
+            <item>94</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>48</item>
+            <item>41</item>
+            <item>99</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>39</item>
+            <item>32</item>
+            <item>65</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>32</item>
+            <item>38</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>48</item>
+            <item>32</item>
+            <item>62</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>30</item>
+            <item>41</item>
+            <item>85</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>45</item>
+            <item>37</item>
+            <item>93</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Веб-сервисы</subj>
+        <marks>
+            <item>42</item>
+            <item>32</item>
+            <item>90</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>43</item>
+            <item>33</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>44</item>
+            <item>33</item>
+            <item>81</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>48</item>
+            <item>37</item>
+            <item>74</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>40</item>
+            <item>47</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>44</item>
+            <item>43</item>
+            <item>75</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>32</item>
+            <item>47</item>
+            <item>78</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>36</item>
+            <item>37</item>
+            <item>80</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>33</item>
+            <item>40</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>49</item>
+            <item>42</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>36</item>
+            <item>31</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>44</item>
+            <item>47</item>
+            <item>95</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>37</item>
+            <item>44</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>44</item>
+            <item>33</item>
+            <item>89</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>35</item>
+            <item>34</item>
+            <item>77</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>47</item>
+            <item>46</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>37</item>
+            <item>43</item>
+            <item>87</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>39</item>
+            <item>34</item>
+            <item>91</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>43</item>
+            <item>42</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>48</item>
+            <item>38</item>
+            <item>92</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>47</item>
+            <item>32</item>
+            <item>95</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>38</item>
+            <item>40</item>
+            <item>87</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>33</item>
+            <item>47</item>
+            <item>85</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>37</item>
+            <item>49</item>
+            <item>61</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>43</item>
+            <item>35</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Политология</subj>
+        <marks>
+            <item>32</item>
+            <item>35</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>36</item>
+            <item>50</item>
+            <item>62</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>46</item>
+            <item>45</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>39</item>
+            <item>35</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>32</item>
+            <item>37</item>
+            <item>72</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>47</item>
+            <item>30</item>
+            <item>91</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>49</item>
+            <item>32</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>42</item>
+            <item>31</item>
+            <item>97</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>41</item>
+            <item>31</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>32</item>
+            <item>37</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>42</item>
+            <item>43</item>
+            <item>74</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>37</item>
+            <item>37</item>
+            <item>64</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>47</item>
+            <item>33</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>34</item>
+            <item>36</item>
+            <item>67</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>32</item>
+            <item>38</item>
+            <item>74</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>42</item>
+            <item>41</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>30</item>
+            <item>37</item>
+            <item>72</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>47</item>
+            <item>35</item>
+            <item>67</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>47</item>
+            <item>31</item>
+            <item>60</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>42</item>
+            <item>33</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>33</item>
+            <item>37</item>
+            <item>81</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>47</item>
+            <item>37</item>
+            <item>71</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>46</item>
+            <item>44</item>
+            <item>99</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>45</item>
+            <item>45</item>
+            <item>69</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>48</item>
+            <item>33</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Безопасность жизнедеятельности</subj>
+        <marks>
+            <item>34</item>
+            <item>33</item>
+            <item>90</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>31</item>
+            <item>37</item>
+            <item>75</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>36</item>
+            <item>34</item>
+            <item>67</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>40</item>
+            <item>35</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>43</item>
+            <item>45</item>
+            <item>74</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>41</item>
+            <item>44</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>35</item>
+            <item>39</item>
+            <item>93</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>46</item>
+            <item>38</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>40</item>
+            <item>35</item>
+            <item>73</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>38</item>
+            <item>39</item>
+            <item>79</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>46</item>
+            <item>47</item>
+            <item>71</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>35</item>
+            <item>41</item>
+            <item>63</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>44</item>
+            <item>46</item>
+            <item>77</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>39</item>
+            <item>34</item>
+            <item>100</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>48</item>
+            <item>49</item>
+            <item>77</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>50</item>
+            <item>49</item>
+            <item>98</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>33</item>
+            <item>38</item>
+            <item>99</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>43</item>
+            <item>36</item>
+            <item>80</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>37</item>
+            <item>38</item>
+            <item>71</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>36</item>
+            <item>42</item>
+            <item>98</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>47</item>
+            <item>42</item>
+            <item>69</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>41</item>
+            <item>32</item>
+            <item>61</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>37</item>
+            <item>46</item>
+            <item>73</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>37</item>
+            <item>42</item>
+            <item>96</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>35</item>
+            <item>50</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Распределенные вычисления</subj>
+        <marks>
+            <item>42</item>
+            <item>41</item>
+            <item>99</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>44</item>
+            <item>46</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>46</item>
+            <item>44</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>50</item>
+            <item>49</item>
+            <item>96</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>45</item>
+            <item>44</item>
+            <item>68</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>49</item>
+            <item>38</item>
+            <item>80</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>45</item>
+            <item>49</item>
+            <item>98</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>35</item>
+            <item>39</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>50</item>
+            <item>43</item>
+            <item>98</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>43</item>
+            <item>31</item>
+            <item>91</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>44</item>
+            <item>46</item>
+            <item>74</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>43</item>
+            <item>36</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>48</item>
+            <item>37</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>43</item>
+            <item>50</item>
+            <item>73</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>41</item>
+            <item>33</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>33</item>
+            <item>45</item>
+            <item>70</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>48</item>
+            <item>50</item>
+            <item>76</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>36</item>
+            <item>30</item>
+            <item>95</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>34</item>
+            <item>36</item>
+            <item>95</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>38</item>
+            <item>49</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>34</item>
+            <item>34</item>
+            <item>92</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>41</item>
+            <item>45</item>
+            <item>68</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>50</item>
+            <item>47</item>
+            <item>63</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>44</item>
+            <item>46</item>
+            <item>81</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>31</item>
+            <item>37</item>
+            <item>99</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Архитектура ПО (курс. раб.)</subj>
+        <marks>
+            <item>30</item>
+            <item>49</item>
+            <item>64</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>7</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>44</item>
+            <item>37</item>
+            <item>65</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>8</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>41</item>
+            <item>44</item>
+            <item>85</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>9</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>50</item>
+            <item>34</item>
+            <item>65</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>10</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>34</item>
+            <item>33</item>
+            <item>88</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>11</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>36</item>
+            <item>33</item>
+            <item>64</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>12</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>40</item>
+            <item>44</item>
+            <item>66</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>13</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>34</item>
+            <item>50</item>
+            <item>62</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>14</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>30</item>
+            <item>45</item>
+            <item>62</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>15</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>40</item>
+            <item>36</item>
+            <item>81</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>16</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>47</item>
+            <item>44</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>17</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>30</item>
+            <item>35</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>18</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>32</item>
+            <item>32</item>
+            <item>96</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>19</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>43</item>
+            <item>35</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>20</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>45</item>
+            <item>49</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>21</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>39</item>
+            <item>35</item>
+            <item>83</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>22</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>43</item>
+            <item>43</item>
+            <item>77</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>23</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>38</item>
+            <item>49</item>
+            <item>79</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>24</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>48</item>
+            <item>36</item>
+            <item>79</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>25</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>49</item>
+            <item>38</item>
+            <item>80</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>26</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>42</item>
+            <item>39</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>27</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>46</item>
+            <item>33</item>
+            <item>98</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>28</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>37</item>
+            <item>36</item>
+            <item>72</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>29</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>35</item>
+            <item>33</item>
+            <item>82</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>30</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>50</item>
+            <item>43</item>
+            <item>72</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>31</idStudent>
+        <subj>Системное программирование (курс. раб.)</subj>
+        <marks>
+            <item>30</item>
+            <item>47</item>
+            <item>84</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>32</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>48</item>
+            <item>42</item>
+            <item>86</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
+        <idStudent>33</idStudent>
+        <subj>Конструирование ПО</subj>
+        <marks>
+            <item>36</item>
+            <item>37</item>
+            <item>75</item>
+        </marks>
+    </ssMarks>
+    <ssMarks>
         <idStudent>32</idStudent>
         <subj>Дискретная математика</subj>
         <marks>
-            <item>32</item>
-            <item>36</item>
-            <item>71</item>
+            <item>35</item>
+            <item>34</item>
+            <item>62</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>33</idStudent>
         <subj>Дискретная математика</subj>
         <marks>
-            <item>46</item>
-            <item>44</item>
-            <item>83</item>
+            <item>41</item>
+            <item>47</item>
+            <item>67</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>34</idStudent>
         <subj>Дискретная математика</subj>
         <marks>
+            <item>42</item>
             <item>40</item>
-            <item>43</item>
-            <item>63</item>
+            <item>85</item>
         </marks>
     </ssMarks>
     <ssMarks>
         <idStudent>35</idStudent>
         <subj>Дискретная математика</subj>
         <marks>
-            <item>37</item>
-            <item>41</item>
-            <item>87</item>
+            <item>34</item>
+            <item>30</item>
+            <item>65</item>
         </marks>
     </ssMarks>
 </marks>

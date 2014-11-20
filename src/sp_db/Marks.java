@@ -50,6 +50,7 @@ public class Marks {
 			String studName = students.get(m.idStudent);
 			int subjIndex = subjList.indexOf(m.subj);
 			if(subjIndex != -1 && studName != null) {
+				System.out.println("found " + m.subj + " " + studName);
 				studMarks.get(studName).set(subjIndex, (byte)m.marks[stage-1]);
 			}
 		}
