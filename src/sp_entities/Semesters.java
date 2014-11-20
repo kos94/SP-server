@@ -23,7 +23,7 @@ class SemesterComparator implements Comparator<Semester> {
 public class Semesters {
 	@XmlElement(name="sem")
 	private List<Semester> sems;
-	private static SemesterComparator comparator = new SemesterComparator();
+	private static SemesterComparator comp = new SemesterComparator();
 	
 	public Semesters() {
 		sems = new ArrayList<>();
@@ -36,7 +36,7 @@ public class Semesters {
 	public Semesters(Set<Semester> semesters) {
 		this();
 		sems.addAll(semesters);
-		Collections.sort(sems, comparator);
+		Collections.sort(sems, comp);
 	}
 	
 	public void addSemester(int index, int startYear) {

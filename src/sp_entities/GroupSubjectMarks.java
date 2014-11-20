@@ -1,9 +1,9 @@
 package sp_entities;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.xml.bind.annotation.*;
-
 
 @XmlRootElement(name="subjMarks")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -26,8 +26,12 @@ public class GroupSubjectMarks implements IMarks {
 		return studMarks.get(i);
 	}
 	
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE IN FUTURE
-	public void print() {
+	public void sortByFirstColumn() {
+		Collections.sort(studMarks, new StudentMarksComparator());
+	}
+	
+	//TODO delete
+	public void printMarks() {
 		for(StudentMarks ssm : studMarks) {
 			System.out.println(ssm.student);
 			for(Byte m : ssm.marks) {
@@ -36,4 +40,5 @@ public class GroupSubjectMarks implements IMarks {
 			System.out.println("");
 		}
 	}
+
 }

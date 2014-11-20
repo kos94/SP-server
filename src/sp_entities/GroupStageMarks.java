@@ -1,8 +1,17 @@
 package sp_entities;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import javax.xml.bind.annotation.*;
+
+class StudentMarksComparator implements Comparator<StudentMarks> {
+	@Override
+	public int compare(StudentMarks s0, StudentMarks s1) {
+		return s0.student.compareTo(s1.student);
+	}
+}
 
 @XmlRootElement(name="stageMarks")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -28,8 +37,12 @@ public class GroupStageMarks implements IMarks {
 	public void setSubjects(List<String> subjs) {
 		subjects = subjs;
 	}
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE IN FUTURE
-	public void print() {
+	
+	public void sortByFirstColumn() {
+		Collections.sort(studMarks, new StudentMarksComparator());
+	}
+	
+	public void printMarks() {
 		for(String subj : subjects) {
 			System.out.println(subj);
 		}

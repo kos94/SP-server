@@ -1,7 +1,17 @@
 package sp_entities;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 import javax.xml.bind.annotation.*;
+
+class SubjectMarksComparator implements Comparator<SubjectMarks> {
+	@Override
+	public int compare(SubjectMarks s0, SubjectMarks s1) {
+		return s0.subj.compareTo(s1.subj);
+	}
+}
 
 @XmlRootElement(name="studentMarks")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -28,7 +38,7 @@ public class StudentSemMarks implements IMarks {
 	}
 	
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE IN FUTURE
-	public void print() {
+	public void printMarks() {
 		for(SubjectMarks ssm : subjMarks) {
 			System.out.println(ssm.subj);
 			for(Integer m : ssm.marks) {
@@ -36,5 +46,9 @@ public class StudentSemMarks implements IMarks {
 			}
 			System.out.println();
 		}
+	}
+	
+	public void sortByFirstColumn() {
+		Collections.sort(subjMarks, new SubjectMarksComparator());
 	}
 }

@@ -33,7 +33,7 @@ public class XMLSerializer {
 		sm = null;
 		sm = (GroupSubjectMarks) loadObject("C:\\ws\\subjmarks.xml",
 				GroupSubjectMarks.class);
-		sm.print();
+		sm.printMarks();
 	}
 
 	public static void testGroupStageMarks() {
@@ -61,7 +61,7 @@ public class XMLSerializer {
 		stm = null;
 		stm = (GroupStageMarks) loadObject("C:\\ws\\stagemarks.xml",
 				GroupStageMarks.class);
-		stm.print();
+		stm.printMarks();
 
 	}
 
@@ -73,7 +73,7 @@ public class XMLSerializer {
 		ssm = null;
 		ssm = (StudentSemMarks) loadObject("C:\\ws\\studentmarks.xml",
 				StudentSemMarks.class);
-		ssm.print();
+		ssm.printMarks();
 	}
 
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE IN FUTURE

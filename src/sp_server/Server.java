@@ -12,14 +12,14 @@ import sp_entities.*;
 @WebService
 public class Server {
 	private DB db;
-	private SecureRandom secureRandom;
 	private Map<String, UserInfo> sessions;
+	private SecureRandom secureRandom;
 
 	public Server() {
 		XMLSerializer.saveObject(new Users(), "azaza.xml");
 		db = new DB();
-		secureRandom = new SecureRandom();
 		sessions = new HashMap<>();
+		secureRandom = new SecureRandom();
 	}
 
 	private AuthData getAuthData(String idSession, UserInfo info) {
@@ -96,7 +96,9 @@ public class Server {
 		if(user == null) return null;
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
-		return db.getTeacherGroups(user.getId(), sem, subject);
+		List<String> groupsList = db.getTeacherGroups(user.getId(), sem, subject);
+		Collections.sort(groupsList);
+		return groupsList;
 	}
 	
 	public String getCuratorSemesters(String idSession) {
@@ -136,7 +138,9 @@ public class Server {
 		String dep = db.getWorkerDepartment(user.getId());
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
-		return db.getDepGroups(dep, sem);
+		List<String> groupsList = db.getDepGroups(dep, sem);
+		Collections.sort(groupsList);
+		return groupsList;
 	}
 	
 	public String getStudentSemesters(String idSession) {
@@ -168,6 +172,7 @@ public class Server {
 		}
 		
 		GroupSubjectMarks marks = db.getSubjectMarks(group, subject);
+		marks.sortByFirstColumn();
 		return XMLSerializer.objectToXML(marks);
 	}
 	
@@ -190,6 +195,7 @@ public class Server {
 		}
 		
 		GroupStageMarks marks = db.getStageMarks(group, sem, stage);
+		marks.sortByFirstColumn();
 		return XMLSerializer.objectToXML(marks);
 	}
 
@@ -199,6 +205,7 @@ public class Server {
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
 		StudentSemMarks marks = db.getStudentMarks(user.getId(), sem);
+		marks.sortByFirstColumn();
 		return XMLSerializer.objectToXML(marks);
 	}
 }
