@@ -208,6 +208,7 @@ public class Server {
 				XMLSerializer.xmlToObject(semester, Semester.class);
 		StudentSemMarks marks = db.getStudentMarks(user.getId(), sem);
 		marks.sortByFirstColumn();
+		marks.countAggregation();
 		return XMLSerializer.objectToXML(marks);
 	}
 }

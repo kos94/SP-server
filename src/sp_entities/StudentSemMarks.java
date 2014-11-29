@@ -3,6 +3,7 @@ package sp_entities;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 import javax.xml.bind.annotation.*;
 
@@ -17,9 +18,13 @@ class SubjectMarksComparator implements Comparator<SubjectMarks> {
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StudentSemMarks implements IMarks {
 	private ArrayList<SubjectMarks> subjMarks;
+	private byte[] stageDebts;
+	private float[] stageAvg;
 	
 	public StudentSemMarks() {
 		subjMarks = new ArrayList<>();
+		stageDebts = new byte[3];
+		stageAvg = new float[3];
 	}
 	
 	public void addMark(String subj, int m1, int m2, int m3) {
@@ -37,11 +42,23 @@ public class StudentSemMarks implements IMarks {
 		return subjMarks.get(i);
 	}
 	
+	public byte getDebtCount(int stage) {
+		if (stage < 0 || stage >= stageDebts.length)
+			return -1;
+		return stageDebts[stage];
+	}
+
+	public float getAvgMark(int stage) {
+		if (stage < 0 || stage >= stageAvg.length)
+			return -1.0f;
+		return stageAvg[stage];
+	}
+	
 	//TODO
 	public void printMarks() {
-		for(SubjectMarks ssm : subjMarks) {
-			System.out.println(ssm.subj);
-			for(Integer m : ssm.marks) {
+		for(SubjectMarks sm : subjMarks) {
+			System.out.println(sm.subj);
+			for(Integer m : sm.marks) {
 				System.out.print(" " + m);
 			}
 			System.out.println();
@@ -54,7 +71,35 @@ public class StudentSemMarks implements IMarks {
 
 	@Override
 	public void countAggregation() {
-		// TODO Auto-generated method stub
-		
+		int[] c = new int[3];
+		for (int i = 0; i < 3; i++) {
+			stageAvg[i] = 0.0f;
+			stageDebts[i] = 0;
+		}
+		for (SubjectMarks ssm : subjMarks) {
+			for (int i = 0; i < 3; i++) {
+				int mark = ssm.marks.get(i);
+				if (mark == -1) { // -1 means that there is no mark yet
+					stageDebts[i] = -1;
+					stageAvg[i] = -1.0f;
+				} else if (mark == 0) {
+					stageDebts[i]++;
+				} else {
+					c[i]++;
+					stageAvg[i] += mark;
+				}
+			}
+		}
+
+		for (int i = 0; i < 3; i++) {
+			System.out.println("stage avg [ "  + i + "] ");
+			if (stageAvg[i] != -1) {// -1 means that there is no mark yet
+				System.out.println(" = -1 ");
+				stageAvg[i] /= c[i];
+				String twoSigns = String.format("%.2f", stageAvg[i]).replace(
+						",", ".");
+				stageAvg[i] = Float.parseFloat(twoSigns);
+			} else System.out.println(" != -1 ");
+		}
 	}
 }

@@ -6,31 +6,19 @@ import java.util.List;
 
 import javax.xml.bind.annotation.*;
 
-class StudentMarksComparator implements Comparator<StudentMarks> {
-	@Override
-	public int compare(StudentMarks s0, StudentMarks s1) {
-		return s0.student.compareTo(s1.student);
-	}
-}
-
 @XmlRootElement(name="stageMarks")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GroupStageMarks implements IMarks {
 	@XmlElementWrapper
 	@XmlElement(name="subj")
 	private List<String> subjects;
-	private List<StudentMarks> studMarks;
-	
-	private List<Float> studentAvg;
-	private List<Byte> studentDebts;
+	private List<StudentStageMarks> studMarks;
 	private List<Float> subjectAvg;
 	private List<Byte> subjectDebts;
 	
 	public GroupStageMarks() {
 		subjects = new ArrayList<>();
 		studMarks = new ArrayList<>();
-		studentAvg = new ArrayList<>();
-		studentDebts = new ArrayList<>();
 		subjectAvg = new ArrayList<>();
 		subjectDebts = new ArrayList<>();
 	}
@@ -40,7 +28,7 @@ public class GroupStageMarks implements IMarks {
 	}
 	
 	public void addMark(String student, List<Byte> marks) {
-		studMarks.add(new StudentMarks(student, marks));
+		studMarks.add(new StudentStageMarks(student, marks));
 	}
 	
 	public void setSubjects(List<String> subjs) {
@@ -48,7 +36,7 @@ public class GroupStageMarks implements IMarks {
 	}
 	
 	public void sortByFirstColumn() {
-		Collections.sort(studMarks, new StudentMarksComparator());
+		Collections.sort(studMarks, new StudentStageMarksComparator());
 	}
 	
 	@Override
@@ -59,15 +47,13 @@ public class GroupStageMarks implements IMarks {
 		byte[] subjDebts = new byte[nSubj];
 		int[] subjGoodMarks = new int[nSubj];
 		
-		if(!studentAvg.isEmpty()) {
-			studentAvg.clear();
-			studentDebts.clear();
+		if(!subjectAvg.isEmpty()) {
 			subjectAvg.clear();
 			subjectDebts.clear();
 		}
 		int i = 0, j;
 		
-		for(StudentMarks m: studMarks) {
+		for(StudentStageMarks m: studMarks) {
 			j = 0;
 			float stSum = 0;
 			int stGoodMarks = 0, stDebts = 0;
@@ -87,10 +73,10 @@ public class GroupStageMarks implements IMarks {
 				j++;
 			}
 			float studAvg = (stSum == -1)? -1 : (stSum / stGoodMarks);
-			System.out.println("st sum: " + stSum + ", n: " + stGoodMarks + ", avg: " + studAvg);
+//			System.out.println("st sum: " + stSum + ", n: " + stGoodMarks + ", avg: " + studAvg);
 			String twoSigns = String.format("%.2f", studAvg).replace(",", ".");
-			studentAvg.add(Float.parseFloat(twoSigns));
-			studentDebts.add((byte)stDebts);
+			m.avgMark = Float.parseFloat(twoSigns);
+			m.nDebts = (byte)stDebts;
 			i++;
 		}
 		
@@ -109,7 +95,7 @@ public class GroupStageMarks implements IMarks {
 		}
 		System.out.println("==========");
 		
-		for(StudentMarks ssm : studMarks) {
+		for(StudentStageMarks ssm : studMarks) {
 			System.out.println(ssm.student);
 			for(Byte m : ssm.marks) {
 				System.out.print(m + " ");
@@ -119,12 +105,41 @@ public class GroupStageMarks implements IMarks {
 	}
 	public int getStudentsNumber() { return studMarks.size(); }
 	public List<String> getSubjects() { return subjects; }
-	public StudentMarks getStudentMark(int i) { 
+	public StudentStageMarks getStudentMark(int i) { 
 		if(i < 0 || i >= studMarks.size()) return null;
 		return studMarks.get(i);
 	}
-	public List<Byte> getStudentDebts() { return studentDebts; }
-	public List<Float> getStudentAvg() { return studentAvg; }
+	public byte getStudentDebts(int iStudent) { 
+		return studMarks.get(iStudent).nDebts;
+	}
+	public float getStudentAvg(int iStudent) {
+		return studMarks.get(iStudent).avgMark;
+	}
 	public List<Byte> getSubjDebts() { return subjectDebts; }
 	public List<Float> getSubjAvg() { return subjectAvg; }
+	
+	@XmlAccessorType(XmlAccessType.FIELD)
+	public static class StudentStageMarks {
+		public String student;
+		@XmlElement(name="mark")
+		public List<Byte> marks;
+		public byte nDebts;
+		public float avgMark;
+		
+		public StudentStageMarks() {
+			marks = new ArrayList<>();
+		}
+		
+		public StudentStageMarks(String student, List<Byte> marks) {
+			this.student = student;
+			this.marks = marks;
+		}
+	}
+	
+	class StudentStageMarksComparator implements Comparator<StudentStageMarks> {
+		@Override
+		public int compare(StudentStageMarks s0, StudentStageMarks s1) {
+			return s0.student.compareTo(s1.student);
+		}
+	}
 }
