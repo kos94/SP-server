@@ -37,7 +37,7 @@ public class StudentSemMarks implements IMarks {
 		return subjMarks.get(i);
 	}
 	
-	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! DELETE IN FUTURE
+	//TODO
 	public void printMarks() {
 		for(SubjectMarks ssm : subjMarks) {
 			System.out.println(ssm.subj);
@@ -50,5 +50,11 @@ public class StudentSemMarks implements IMarks {
 	
 	public void sortByFirstColumn() {
 		Collections.sort(subjMarks, new SubjectMarksComparator());
+	}
+
+	@Override
+	public void countAggregation() {
+		// TODO Auto-generated method stub
+		
 	}
 }

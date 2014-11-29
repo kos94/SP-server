@@ -6,7 +6,7 @@
         <marks>
             <item>30</item>
             <item>33</item>
-            <item>95</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -14,8 +14,8 @@
         <subj>Дискретная математика</subj>
         <marks>
             <item>50</item>
-            <item>39</item>
-            <item>90</item>
+            <item>0</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -24,7 +24,7 @@
         <marks>
             <item>37</item>
             <item>44</item>
-            <item>93</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -33,7 +33,7 @@
         <marks>
             <item>30</item>
             <item>44</item>
-            <item>70</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -42,7 +42,7 @@
         <marks>
             <item>44</item>
             <item>47</item>
-            <item>76</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -51,7 +51,7 @@
         <marks>
             <item>38</item>
             <item>45</item>
-            <item>71</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -60,7 +60,7 @@
         <marks>
             <item>31</item>
             <item>34</item>
-            <item>71</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -69,7 +69,7 @@
         <marks>
             <item>49</item>
             <item>44</item>
-            <item>67</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -77,8 +77,8 @@
         <subj>Дискретная математика</subj>
         <marks>
             <item>43</item>
-            <item>40</item>
-            <item>75</item>
+            <item>0</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -87,7 +87,7 @@
         <marks>
             <item>40</item>
             <item>33</item>
-            <item>89</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -96,7 +96,7 @@
         <marks>
             <item>34</item>
             <item>31</item>
-            <item>81</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -105,7 +105,7 @@
         <marks>
             <item>31</item>
             <item>37</item>
-            <item>71</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -114,7 +114,7 @@
         <marks>
             <item>49</item>
             <item>36</item>
-            <item>84</item>
+            <item>-1</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -914,8 +914,8 @@
         <subj>Качество ПО</subj>
         <marks>
             <item>45</item>
-            <item>41</item>
-            <item>71</item>
+            <item>0</item>
+            <item>0</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -1148,8 +1148,8 @@
         <subj>Менеджмент проектов ПО</subj>
         <marks>
             <item>33</item>
-            <item>45</item>
-            <item>87</item>
+            <item>0</item>
+            <item>0</item>
         </marks>
     </ssMarks>
     <ssMarks>
@@ -2489,8 +2489,8 @@
         <subj>Распределенные вычисления</subj>
         <marks>
             <item>36</item>
-            <item>34</item>
-            <item>67</item>
+            <item>0</item>
+            <item>0</item>
         </marks>
     </ssMarks>
     <ssMarks>

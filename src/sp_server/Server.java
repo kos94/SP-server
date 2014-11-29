@@ -173,6 +173,7 @@ public class Server {
 		
 		GroupSubjectMarks marks = db.getSubjectMarks(group, subject);
 		marks.sortByFirstColumn();
+		marks.countAggregation();
 		return XMLSerializer.objectToXML(marks);
 	}
 	
@@ -196,6 +197,7 @@ public class Server {
 		
 		GroupStageMarks marks = db.getStageMarks(group, sem, stage);
 		marks.sortByFirstColumn();
+		marks.countAggregation();
 		return XMLSerializer.objectToXML(marks);
 	}
 

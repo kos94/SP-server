@@ -145,29 +145,6 @@ public class Schedule {
 		}
 		in.close();
 	}
-//	public void tempInit() {
-//		Semester sem1_2012 = new Semester(1, 2012);
-//		Semester sem2_2012 = new Semester(2, 2012);
-//		Semester sem1_2013 = new Semester(1, 2013);
-//		Semester sem1_2014 = new Semester(1, 2014);
-//		
-//		records.add(new SchedRecord(1, sem1_2012, "Дискретная математика", "АС-111"));
-//		records.add(new SchedRecord(1, sem1_2012, "Дискретная математика", "АС-112"));
-//		records.add(new SchedRecord(1, sem2_2012, "Дискретные структуры", "АС-111"));
-//		records.add(new SchedRecord(1, sem2_2012, "Дискретные структуры", "АС-112"));
-//		records.add(new SchedRecord(2, sem2_2012, "ООП", "АС-111"));
-//		
-//		records.add(new SchedRecord(2, sem2_2012, "ООП", "АС-112"));
-//		records.add(new SchedRecord(2, sem1_2013, "Конструирование ПО", "АС-111"));
-//		records.add(new SchedRecord(2, sem1_2013, "Конструирование ПО", "АС-112"));
-//		records.add(new SchedRecord(1, sem1_2014, "Качество ПО", "АС-111"));
-//		records.add(new SchedRecord(1, sem1_2014, "Качество ПО", "АС-112"));
-//		
-//		records.add(new SchedRecord(2, sem1_2014, "Конструирование ПО", "АС-121"));
-//		records.add(new SchedRecord(2, sem1_2014, "Конструирование ПО", "АС-122"));
-//		records.add(new SchedRecord(1, sem1_2014, "Дискретная математика", "АС-131"));
-//		records.add(new SchedRecord(1, sem1_2014, "Дискретная математика", "АС-132"));
-//	}
 	
 	//TODO delete
 	public void print() {
