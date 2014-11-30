@@ -268,7 +268,6 @@ public class Server {
 		List<String> flowsList = db.getDepFlows(dep, sem);
 		if(!flowsList.contains(flow)) return null;
 		
-		//TODO return marks
 		GroupStageMarks marks = db.getFlowStageMarks(flow, sem, stage);
 		marks.sortByFirstColumn();
 		marks.countAggregation();

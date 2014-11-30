@@ -91,13 +91,12 @@ public class StudentSemMarks implements IMarks {
 		}
 
 		for (int i = 0; i < 3; i++) {
-			if (stageAvg[i] != -1) {// -1 means that there is no mark yet
-				System.out.println(" = -1 ");
+			if (stageAvg[i] != -1 && c[i] > 0) {// -1 means that there is no mark yet
 				stageAvg[i] /= c[i];
 				String twoSigns = String.format("%.2f", stageAvg[i]).replace(
 						",", ".");
 				stageAvg[i] = Float.parseFloat(twoSigns);
-			} else System.out.println(" != -1 ");
+			}
 		}
 	}
 }

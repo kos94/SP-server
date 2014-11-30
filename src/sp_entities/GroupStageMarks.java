@@ -72,7 +72,7 @@ public class GroupStageMarks implements IMarks {
 				}
 				j++;
 			}
-			float studAvg = (stSum == -1)? -1 : (stSum / stGoodMarks);
+			float studAvg = (stSum == -1 || stGoodMarks == 0)? -1 : (stSum / stGoodMarks);
 //			System.out.println("st sum: " + stSum + ", n: " + stGoodMarks + ", avg: " + studAvg);
 			String twoSigns = String.format("%.2f", studAvg).replace(",", ".");
 			m.avgMark = Float.parseFloat(twoSigns);

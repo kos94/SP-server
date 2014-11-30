@@ -70,7 +70,7 @@ public class GroupSubjectMarks implements IMarks {
 		}
 
 		for (int i = 0; i < 3; i++) {
-			if (stageAvg[i] != -1) {// -1 means that there is no mark yet
+			if (stageAvg[i] != -1 && c[i] > 0) {// -1 means that there is no mark yet
 				stageAvg[i] /= c[i];
 				String twoSigns = String.format("%.2f", stageAvg[i]).replace(
 						",", ".");
