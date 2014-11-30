@@ -162,20 +162,27 @@ public class DB {
 		return marks.getGroupSubjectMarks(students, subject);
 	}
 	
-	public GroupStageMarks getStageMarks(String group, Semester sem, int stage) {
-		List<String> subjects = schedule.getGroupSubjects(group, sem);
-		System.out.println("subjects of " + group + " : ");
-		for(String s : subjects) {
-			System.out.println(s);
-		}
-		Set<Integer> idStudents = structure.getGroupStudents(group);
-		System.out.println("students of " + group + " : ");
-		for(Integer id : idStudents) {
-			System.out.print(" " + id + " ");
-		}
-		System.out.println();
+	public GroupSubjectMarks getFlowSubjectMarks(String flow, String subject) {
+		Set<Integer> idStudents = structure.getFlowStudents(flow);
 		Map<Integer, String> students = users.getUsersNames(idStudents);
 		
+		return marks.getGroupSubjectMarks(students, subject);
+	}
+	
+	public GroupStageMarks getStageMarks(String group, Semester sem, int stage) {
+		List<String> subjects = schedule.getGroupSubjects(group, sem);
+		Set<Integer> idStudents = structure.getGroupStudents(group);
+		Map<Integer, String> students = users.getUsersNames(idStudents);
+		
+		return marks.getGroupStageMarks(subjects, students, stage);
+	}
+	
+	public GroupStageMarks getFlowStageMarks(String flow, Semester sem,
+			int stage) {
+		List<String> subjects = getFlowSubjects(flow, sem);
+		Set<Integer> idStudents = structure.getFlowStudents(flow);
+		Map<Integer, String> students = users.getUsersNames(idStudents);
+
 		return marks.getGroupStageMarks(subjects, students, stage);
 	}
 	
@@ -196,14 +203,4 @@ public class DB {
 		// TODO Auto-generated method stub
 		return true;
 	}
-
-	public GroupSubjectMarks getFlowSubjectMarks(String flow, String subject) {
-		// TODO Auto-generated method stub
-		Set<Integer> idStudents = structure.getFlowStudents(flow);
-		Map<Integer, String> students = users.getUsersNames(idStudents);
-		
-		return marks.getGroupSubjectMarks(students, subject);
-	}
-
-	
 }

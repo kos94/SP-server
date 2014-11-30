@@ -228,7 +228,6 @@ public class Server {
 			return null;
 		}
 		
-		//TODO return marks
 		GroupSubjectMarks marks = db.getFlowSubjectMarks(flow, subject);
 		marks.sortByFirstColumn();
 		marks.countAggregation();
@@ -260,8 +259,20 @@ public class Server {
 	}
 
 	public String getFlowStageMarks(String idSession, String flow, String semester, int stage) {
-		//TODO STUB
-		return XMLSerializer.objectToXML(new GroupStageMarks());
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.DEPWORKER);
+		if(user == null) return null;
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		String dep = db.getWorkerDepartment(user.getId());
+		//check rights
+		List<String> flowsList = db.getDepFlows(dep, sem);
+		if(!flowsList.contains(flow)) return null;
+		
+		//TODO return marks
+		GroupStageMarks marks = db.getFlowStageMarks(flow, sem, stage);
+		marks.sortByFirstColumn();
+		marks.countAggregation();
+		return XMLSerializer.objectToXML(marks);
 	}
 	
 	public String getStudentMarks(String idSession, String semester) {
