@@ -54,7 +54,6 @@ public class StudentSemMarks implements IMarks {
 		return stageAvg[stage];
 	}
 	
-	//TODO
 	public void printMarks() {
 		for(SubjectMarks sm : subjMarks) {
 			System.out.println(sm.subj);
@@ -92,7 +91,6 @@ public class StudentSemMarks implements IMarks {
 		}
 
 		for (int i = 0; i < 3; i++) {
-			System.out.println("stage avg [ "  + i + "] ");
 			if (stageAvg[i] != -1) {// -1 means that there is no mark yet
 				System.out.println(" = -1 ");
 				stageAvg[i] /= c[i];

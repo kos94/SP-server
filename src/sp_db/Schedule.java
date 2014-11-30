@@ -45,8 +45,8 @@ public class Schedule {
 		return subjList;
 	}
 	
-	public List<String> getTeacherGroups(int idTeacher, Semester semester, String subject) {
-		List<String> groups = new ArrayList<>();
+	public Set<String> getTeacherGroups(int idTeacher, Semester semester, String subject) {
+		Set<String> groups = new HashSet<>();
 		for(SchedRecord r : records) {
 			if(r.idTeacher == idTeacher && r.semester.equals(semester)
 					&& r.subj.equals(subject)) {

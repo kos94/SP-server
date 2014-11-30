@@ -101,6 +101,16 @@ public class Server {
 		return groupsList;
 	}
 	
+	public List<String> getTeacherFlows(String idSession, String semester, String subject) {
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.TEACHER);
+		if(user == null) return null;
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		List<String> flowsList = db.getTeacherFlows(user.getId(), sem, subject);
+		Collections.sort(flowsList);
+		return flowsList;
+	}
+
 	public String getCuratorSemesters(String idSession) {
 		UserInfo user = getUserIfAuthorized(idSession, UserRole.CURATOR);
 		if(user == null) return null;
@@ -172,6 +182,29 @@ public class Server {
 		}
 		
 		GroupSubjectMarks marks = db.getSubjectMarks(group, subject);
+		marks.sortByFirstColumn();
+		marks.countAggregation();
+		return XMLSerializer.objectToXML(marks);
+	}
+	
+	public String getFlowSubjectMarks(String idSession, String flow, String subject) {
+		UserInfo user = sessions.get(idSession);
+		if(user == null) return null;
+		switch(user.getStatus()) {
+		case TEACHER:
+			if(!db.checkTeacherFlowSubjectRights(user.getId(), subject, flow))
+				return null;
+			break;
+		case DEPWORKER:
+			if(!db.checkDepWorkerFlowRights(user.getId(), flow))
+				return null;
+			break;
+		default:
+			return null;
+		}
+		
+		//TODO return marks
+		GroupSubjectMarks marks = db.getFlowSubjectMarks(flow, subject);
 		marks.sortByFirstColumn();
 		marks.countAggregation();
 		return XMLSerializer.objectToXML(marks);

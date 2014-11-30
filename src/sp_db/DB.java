@@ -94,7 +94,14 @@ public class DB {
 	}
 	
 	public List<String> getTeacherGroups(int idTeacher, Semester semester, String subj) {
-		return schedule.getTeacherGroups(idTeacher, semester, subj);
+		Set<String> groups = schedule.getTeacherGroups(idTeacher, semester, subj);
+		return new ArrayList<String>(groups);
+	}
+	
+	public List<String> getTeacherFlows(int id, Semester sem, String subject) {
+		Set<String> groups = schedule.getTeacherGroups(id, sem, subject);
+		Set<String> flows = structure.getFlowsOfGroups(groups);
+		return new ArrayList<String>(flows);
 	}
 	
 	public String getCuratorGroup(int idCurator, Semester semester) {
@@ -164,4 +171,22 @@ public class DB {
 		Set<String> subjects = schedule.getGroupSubjectsInSemester(group, sem);
 		return marks.getStudentMarks(idStudent, subjects);
 	}
+
+	public boolean checkTeacherFlowSubjectRights(int id, String subject,
+			String flow) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	public boolean checkDepWorkerFlowRights(int id, String flow) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	public GroupSubjectMarks getFlowSubjectMarks(String flow, String subject) {
+		// TODO Auto-generated method stub
+		return new GroupSubjectMarks();
+	}
+
+	
 }

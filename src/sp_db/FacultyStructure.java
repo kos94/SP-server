@@ -105,4 +105,13 @@ public class FacultyStructure {
 			d.print();
 		}
 	}
+
+	public Set<String> getFlowsOfGroups(Set<String> groups) {
+		// TODO Auto-generated method stub
+		Set<String> flows = new HashSet<>();
+		flows.add("STUB 1");
+		flows.add("STUB 2");
+		flows.add("STUB 3");
+		return flows;
+	}
 }
