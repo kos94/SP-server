@@ -38,6 +38,16 @@ public class FacultyStructure {
 		return null;
 	}
 
+	public Set<Integer> getFlowStudents(String flow) {
+		Set<Integer> idStudents;
+		for (Department d : deps) {
+			idStudents = d.findFlowStudents(flow);
+			if (idStudents != null)
+				return idStudents;
+		}
+		return null;
+	}
+	
 	protected Department getWorkerDepartment(int idWorker) {
 		for (Department d : deps) {
 			if (d.hasWorker(idWorker)) {
@@ -52,6 +62,14 @@ public class FacultyStructure {
 			if (d.getName().equals(department)) {
 				return d.getGroups();
 			}
+		}
+		return null;
+	}
+	
+	public Set<String> getFlowGroups(String flow) {
+		for (Department d : deps) {
+			Set<String> groups = d.findFlowGroups(flow);
+			if(d != null) return groups;
 		}
 		return null;
 	}
@@ -86,12 +104,12 @@ public class FacultyStructure {
 			while ((strLine = br.readLine()) != null) {
 				if(strLine.equals("")) break;
 				String[] gr = strLine.trim().split(" ");
-				String group = gr[0];
+				String flow = gr[0], group = gr[1];
 				HashSet<Integer> idStudents = new HashSet<>();
-				for(int i=1; i<gr.length; i++) {
+				for(int i=2; i<gr.length; i++) {
 					idStudents.add(Integer.parseInt(gr[i]));
 				}
-				dep.addGroup(group, idStudents);
+				dep.addGroup(flow, group, idStudents);
 			}
 			
 			deps.add(dep);
@@ -107,11 +125,10 @@ public class FacultyStructure {
 	}
 
 	public Set<String> getFlowsOfGroups(Set<String> groups) {
-		// TODO Auto-generated method stub
 		Set<String> flows = new HashSet<>();
-		flows.add("STUB 1");
-		flows.add("STUB 2");
-		flows.add("STUB 3");
+		for (Department d : deps) {
+			flows.addAll( d.getFlowsOfGroups(groups) );
+		}
 		return flows;
 	}
 }

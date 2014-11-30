@@ -8,6 +8,8 @@ import java.util.Set;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
+
+
 class GroupsMapEntry {
 	public String key;
 	public Set<Integer> idStud;
@@ -18,7 +20,7 @@ class GroupsMapType  {
 	public List<GroupsMapEntry> entries = new ArrayList<>();
 }
 
-public class DepartmentMapAdapter extends XmlAdapter< GroupsMapType,Map<String, Set<Integer>> > {
+public class FlowMapAdapter extends XmlAdapter< GroupsMapType,Map<String, Set<Integer>> > {
 	@Override
 	public GroupsMapType marshal(Map<String, Set<Integer>> arg0)
 			throws Exception {

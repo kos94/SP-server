@@ -56,6 +56,16 @@ public class Schedule {
 		return groups;
 	}
 	
+	public Set<String> getTeacherGroups(int idTeacher, String subject) {
+		Set<String> groups = new HashSet<>();
+		for(SchedRecord r : records) {
+			if(r.idTeacher == idTeacher && r.subj.equals(subject)) {
+				groups.add(r.group);
+			}
+		}
+		return groups;
+	}
+	
 	public List<String> getGroupSubjects(String group, Semester sem) {
 		List<String> subjects = new ArrayList<>();
 		for(SchedRecord r : records) {

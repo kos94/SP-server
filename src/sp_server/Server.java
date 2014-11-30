@@ -134,6 +134,20 @@ public class Server {
 		return db.getGroupSubjects(group, sem);
 	}
 	
+	public List<String> getFlowSubjects(String idSession, String semester, String flow) {
+		System.out.println("flow subjects for " + flow + " , " + semester);
+		UserInfo user = sessions.get(idSession);
+		if(user == null) return null;
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		List<String> subjects = db.getFlowSubjects(flow, sem);
+		System.out.println("flow subjects for " + flow + " , " + sem);
+		for(String s: subjects) {
+			System.out.println(s);
+		}
+		return subjects;
+	}
+	
 	public String getDepSemesters(String idSession) {
 		UserInfo user = getUserIfAuthorized(idSession, UserRole.DEPWORKER);
 		if(user == null) return null;
@@ -151,6 +165,17 @@ public class Server {
 		List<String> groupsList = db.getDepGroups(dep, sem);
 		Collections.sort(groupsList);
 		return groupsList;
+	}
+	
+	public List<String> getDepFlows(String idSession, String semester) {
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.DEPWORKER);
+		if(user == null) return null;
+		String dep = db.getWorkerDepartment(user.getId());
+		Semester sem = (Semester)
+				XMLSerializer.xmlToObject(semester, Semester.class);
+		List<String> flowsList = db.getDepFlows(dep, sem);
+		Collections.sort(flowsList);
+		return flowsList;
 	}
 	
 	public String getStudentSemesters(String idSession) {
@@ -234,6 +259,11 @@ public class Server {
 		return XMLSerializer.objectToXML(marks);
 	}
 
+	public String getFlowStageMarks(String idSession, String flow, String semester, int stage) {
+		//TODO STUB
+		return XMLSerializer.objectToXML(new GroupStageMarks());
+	}
+	
 	public String getStudentMarks(String idSession, String semester) {
 		UserInfo user = getUserIfAuthorized(idSession, UserRole.STUDENT);
 		if(user == null) return null;

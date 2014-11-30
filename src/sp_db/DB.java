@@ -15,20 +15,20 @@ public class DB {
 	
 	//TODO delete (need only to generate DB)
 	private void saveToXML() {
-		XMLSerializer.saveObject(users, DB_PATH + "users.xml");
+//		XMLSerializer.saveObject(users, DB_PATH + "users.xml");
 		XMLSerializer.saveObject(structure,DB_PATH + "structure.xml");
-		XMLSerializer.saveObject(schedule, DB_PATH + "schedule.xml");
-		XMLSerializer.saveObject(curators, DB_PATH + "curators.xml");
-		XMLSerializer.saveObject(marks, DB_PATH + "marks.xml");
+//		XMLSerializer.saveObject(schedule, DB_PATH + "schedule.xml");
+//		XMLSerializer.saveObject(curators, DB_PATH + "curators.xml");
+//		XMLSerializer.saveObject(marks, DB_PATH + "marks.xml");
 	}
 
 	//TODO delete 
 	private void generateDB() throws IOException {
-		users = new Users(); users.tempInit();
+//		users = new Users(); users.tempInit();
 		structure = new FacultyStructure(); structure.tempInit();
-		schedule = new Schedule(); schedule.tempInit();
-		curators = new Curators(); curators.tempInit();
-		marks = new Marks(); marks.tempInit();
+//		schedule = new Schedule(); schedule.tempInit();
+//		curators = new Curators(); curators.tempInit();
+//		marks = new Marks(); marks.tempInit();
 		saveToXML();
 	}
 	private void loadFromXML() {
@@ -114,11 +114,24 @@ public class DB {
 		return new ArrayList<String>(semesterGroups);
 	}
 	
+	public List<String> getDepFlows(String dep, Semester sem) {
+		Set<String> depGroups = structure.getDepGroups(dep);
+		Set<String> semesterGroups = schedule.filterGroupsBySemester(depGroups, sem);
+		Set<String> flows = structure.getFlowsOfGroups(semesterGroups);
+		return new ArrayList<String>(flows);
+	}
+	
 	public List<String> getTeacherSubjects(int idTeacher, Semester semester) {
 		return schedule.getTeacherSubjects(idTeacher, semester);
 	}
 	
 	public List<String> getGroupSubjects(String group, Semester semester) {
+		return schedule.getGroupSubjects(group, semester);
+	}
+	
+	public List<String> getFlowSubjects(String flow, Semester semester) {
+		// flow subjects = any of its group subjects
+		String group = structure.getFlowGroups(flow).iterator().next();
 		return schedule.getGroupSubjects(group, semester);
 	}
 	
@@ -174,8 +187,9 @@ public class DB {
 
 	public boolean checkTeacherFlowSubjectRights(int id, String subject,
 			String flow) {
-		// TODO Auto-generated method stub
-		return true;
+		Set<String> flowGroups = structure.getFlowGroups(flow);
+		Set<String> teacherGroups = schedule.getTeacherGroups(id, subject);
+		return teacherGroups.containsAll(flowGroups);
 	}
 
 	public boolean checkDepWorkerFlowRights(int id, String flow) {
@@ -185,7 +199,10 @@ public class DB {
 
 	public GroupSubjectMarks getFlowSubjectMarks(String flow, String subject) {
 		// TODO Auto-generated method stub
-		return new GroupSubjectMarks();
+		Set<Integer> idStudents = structure.getFlowStudents(flow);
+		Map<Integer, String> students = users.getUsersNames(idStudents);
+		
+		return marks.getGroupSubjectMarks(students, subject);
 	}
 
 	

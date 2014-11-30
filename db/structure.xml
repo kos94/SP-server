@@ -6,52 +6,73 @@
             <idW>5</idW>
             <idW>6</idW>
         </idWorkers>
-        <groups>
+        <flows>
             <entry>
-                <key>АС-111</key>
-                <idStud>17</idStud>
-                <idStud>16</idStud>
-                <idStud>19</idStud>
-                <idStud>18</idStud>
-                <idStud>7</idStud>
-                <idStud>8</idStud>
-                <idStud>9</idStud>
-                <idStud>10</idStud>
-                <idStud>11</idStud>
-                <idStud>12</idStud>
-                <idStud>13</idStud>
-                <idStud>14</idStud>
-                <idStud>15</idStud>
+                <key>АС-13</key>
+                <value>
+                    <groups>
+                        <entry>
+                            <key>АС-132</key>
+                            <idStud>35</idStud>
+                        </entry>
+                        <entry>
+                            <key>АС-131</key>
+                            <idStud>34</idStud>
+                        </entry>
+                    </groups>
+                </value>
             </entry>
             <entry>
-                <key>АС-121</key>
-                <idStud>32</idStud>
-                <idStud>33</idStud>
+                <key>АС-12</key>
+                <value>
+                    <groups>
+                        <entry>
+                            <key>АС-121</key>
+                            <idStud>32</idStud>
+                            <idStud>33</idStud>
+                        </entry>
+                    </groups>
+                </value>
             </entry>
             <entry>
-                <key>АС-112</key>
-                <idStud>21</idStud>
-                <idStud>20</idStud>
-                <idStud>23</idStud>
-                <idStud>22</idStud>
-                <idStud>25</idStud>
-                <idStud>24</idStud>
-                <idStud>27</idStud>
-                <idStud>26</idStud>
-                <idStud>29</idStud>
-                <idStud>28</idStud>
-                <idStud>31</idStud>
-                <idStud>30</idStud>
+                <key>АС-11</key>
+                <value>
+                    <groups>
+                        <entry>
+                            <key>АС-111</key>
+                            <idStud>17</idStud>
+                            <idStud>16</idStud>
+                            <idStud>19</idStud>
+                            <idStud>18</idStud>
+                            <idStud>7</idStud>
+                            <idStud>8</idStud>
+                            <idStud>9</idStud>
+                            <idStud>10</idStud>
+                            <idStud>11</idStud>
+                            <idStud>12</idStud>
+                            <idStud>13</idStud>
+                            <idStud>14</idStud>
+                            <idStud>15</idStud>
+                        </entry>
+                        <entry>
+                            <key>АС-112</key>
+                            <idStud>21</idStud>
+                            <idStud>20</idStud>
+                            <idStud>23</idStud>
+                            <idStud>22</idStud>
+                            <idStud>25</idStud>
+                            <idStud>24</idStud>
+                            <idStud>27</idStud>
+                            <idStud>26</idStud>
+                            <idStud>29</idStud>
+                            <idStud>28</idStud>
+                            <idStud>31</idStud>
+                            <idStud>30</idStud>
+                        </entry>
+                    </groups>
+                </value>
             </entry>
-            <entry>
-                <key>АС-132</key>
-                <idStud>35</idStud>
-            </entry>
-            <entry>
-                <key>АС-131</key>
-                <idStud>34</idStud>
-            </entry>
-        </groups>
+        </flows>
     </department>
     <department>
         <name>АТ</name>
@@ -59,19 +80,26 @@
             <idW>36</idW>
             <idW>37</idW>
         </idWorkers>
-        <groups>
+        <flows>
             <entry>
-                <key>АТ-112</key>
-                <idStud>42</idStud>
-                <idStud>43</idStud>
-                <idStud>40</idStud>
-                <idStud>41</idStud>
+                <key>АТ-11</key>
+                <value>
+                    <groups>
+                        <entry>
+                            <key>АТ-112</key>
+                            <idStud>42</idStud>
+                            <idStud>43</idStud>
+                            <idStud>40</idStud>
+                            <idStud>41</idStud>
+                        </entry>
+                        <entry>
+                            <key>АТ-111</key>
+                            <idStud>38</idStud>
+                            <idStud>39</idStud>
+                        </entry>
+                    </groups>
+                </value>
             </entry>
-            <entry>
-                <key>АТ-111</key>
-                <idStud>38</idStud>
-                <idStud>39</idStud>
-            </entry>
-        </groups>
+        </flows>
     </department>
 </facultyStructure>

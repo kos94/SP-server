@@ -12,13 +12,11 @@ public class Department {
 	@XmlElementWrapper
 	@XmlElement(name="idW")
 	private List<Integer> idWorkers;
-	@XmlJavaTypeAdapter(DepartmentMapAdapter.class)
-	@XmlElement(name="groups")
-	private Map<String, Set<Integer>> grStudents;
+	private Map<String, Flow> flows;
 	
 	public Department() {
 		idWorkers = new ArrayList<>();
-		grStudents = new HashMap<>();
+		flows = new HashMap<>();
 	}
 	
 	public Department(String depName) {
@@ -30,26 +28,67 @@ public class Department {
 		idWorkers.add(idWorker);
 	}
 	//TODO DELETE
-	public void addGroup(String groupName, Set<Integer> idStudents) {
-		grStudents.put(groupName, idStudents);
+	public void addGroup(String flow, String group, Set<Integer> idStudents) {
+		Flow f = flows.get(flow);
+		if(f == null) {
+			f = new Flow();//put(group, idStudents);
+			f.addGroup(group, idStudents);
+			flows.put(flow,  f);
+		} else {
+			f.addGroup(group, idStudents);
+		}
 	}
 	
 	public Set<Integer> findGroupStudents(String groupName) {
-		return grStudents.get(groupName);
+		for (Map.Entry<String, Flow> flow : flows.entrySet()) {
+			Set<Integer> students = flow.getValue().findGroupStudents(groupName);
+			if(students != null) return students;
+		}
+		return null;
+	}
+	
+	public Set<Integer> findFlowStudents(String flow) {
+		Flow f = flows.get(flow);
+		if(f == null) return null;
+		return f.getFlowStudents();
 	}
 	
 	public Set<String> getGroups() {
-		return grStudents.keySet();
+		Set<String> groups = new HashSet<>();
+		for (Map.Entry<String, Flow> flow : flows.entrySet()) {
+			groups.addAll(flow.getValue().getFlowGroups());
+		}
+		return groups;
+	}
+	
+	public Set<String> findFlowGroups(String flow) {
+		Flow f = flows.get(flow);
+		if(f == null) return null;
+		return f.getFlowGroups();
 	}
 	
 	public String getStudentGroup(int idStudent) {
-		for (Map.Entry<String, Set<Integer>> group : grStudents.entrySet()) {
-			Set<Integer> idStudents = group.getValue();
-			if(idStudents.contains(idStudent)) {
-				return group.getKey();
-			}
+		for (Map.Entry<String, Flow> flow : flows.entrySet()) {
+			String group = flow.getValue().getStudentGroup(idStudent);
+			if(group != null) return group;
 		}
 		return null;
+	}
+
+	public Set<String> getFlowsOfGroups(Set<String> groups) {
+		Set<String> groupFlows = new HashSet<>();
+		for (Map.Entry<String, Flow> flow : flows.entrySet()) {
+			Set<String> flowGroups = flow.getValue().getFlowGroups();
+
+			for(Iterator<String> iter = groups.iterator(); iter.hasNext();) {
+				String group = iter.next();
+				if(flowGroups.contains(group)) {
+					groupFlows.add(flow.getKey());
+					iter.remove();
+				}
+			}
+		}
+		return groupFlows;
 	}
 	
 	public boolean hasWorker(int idWorker) {
@@ -66,13 +105,9 @@ public class Department {
 		for(Integer idW : idWorkers) {
 			System.out.print(idW + " ");
 		}
-		System.out.println("\nGroups: ");
-		for (Map.Entry<String, Set<Integer>> group : grStudents.entrySet()) {
-			System.out.println("group: " + group.getKey());
-		    for(Integer idStudent : group.getValue()) {
-		    	System.out.print(idStudent + " ");
-		    }
-		    System.out.println();
+		for (Map.Entry<String, Flow> flow : flows.entrySet()) {
+			System.out.println("Flow: " + flow.getKey());
+		    flow.getValue().print();
 		}
 	}
 }
