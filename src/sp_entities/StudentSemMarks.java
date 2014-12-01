@@ -44,24 +44,14 @@ public class StudentSemMarks implements IMarks {
 	
 	public byte getDebtCount(int stage) {
 		if (stage < 0 || stage >= stageDebts.length)
-			return -1;
+			return ABSENT;
 		return stageDebts[stage];
 	}
 
 	public float getAvgMark(int stage) {
 		if (stage < 0 || stage >= stageAvg.length)
-			return -1.0f;
+			return ABSENT;
 		return stageAvg[stage];
-	}
-	
-	public void printMarks() {
-		for(SubjectMarks sm : subjMarks) {
-			System.out.println(sm.subj);
-			for(Integer m : sm.marks) {
-				System.out.print(" " + m);
-			}
-			System.out.println();
-		}
 	}
 	
 	public void sortByFirstColumn() {
@@ -78,10 +68,10 @@ public class StudentSemMarks implements IMarks {
 		for (SubjectMarks ssm : subjMarks) {
 			for (int i = 0; i < 3; i++) {
 				int mark = ssm.marks.get(i);
-				if (mark == -1) { // -1 means that there is no mark yet
-					stageDebts[i] = -1;
-					stageAvg[i] = -1.0f;
-				} else if (mark == 0) {
+				if (mark == ABSENT) {
+					stageDebts[i] = ABSENT;
+					stageAvg[i] = ABSENT;
+				} else if (mark < MIN_MARK[i]) {
 					stageDebts[i]++;
 				} else {
 					c[i]++;
@@ -91,7 +81,7 @@ public class StudentSemMarks implements IMarks {
 		}
 
 		for (int i = 0; i < 3; i++) {
-			if (stageAvg[i] != -1 && c[i] > 0) {// -1 means that there is no mark yet
+			if (stageAvg[i] != ABSENT && c[i] > 0) {
 				stageAvg[i] /= c[i];
 				String twoSigns = String.format("%.2f", stageAvg[i]).replace(
 						",", ".");

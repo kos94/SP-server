@@ -19,11 +19,6 @@ public class Flow {
 		grStudents = new HashMap<>();
 	}
 	
-	//TODO DELETE
-	public void addGroup(String group, Set<Integer> idStudents) {
-		grStudents.put(group, idStudents);
-	}
-	
 	public Set<Integer> findGroupStudents(String group) {
 		return grStudents.get(group);
 	}
@@ -46,17 +41,5 @@ public class Flow {
 	
 	public Set<String> getFlowGroups() {
 		return grStudents.keySet();
-	}
-	
-	//TODO delete
-	public void print() {
-		System.out.println("\nGroups: ");
-		for (Map.Entry<String, Set<Integer>> group : grStudents.entrySet()) {
-			System.out.println("group: " + group.getKey());
-		    for(Integer idStudent : group.getValue()) {
-		    	System.out.print(idStudent + " ");
-		    }
-		    System.out.println();
-		}
 	}
 }

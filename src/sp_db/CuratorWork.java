@@ -15,9 +15,4 @@ public class CuratorWork {
 		sem = semester;
 		this.group = group;
 	}
-	
-	//TODO delete
-	public void print() {
-		System.out.println("sem: " + sem + ", group: " + group);
-	}
 }

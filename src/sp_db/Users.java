@@ -26,7 +26,6 @@ public class Users {
 	
 	public User login(int id, String pass) {
 		User user = users.get(id);
-		System.out.println("login" + id + " " + pass);
 		if(user == null || !user.isRightPass(pass)) return null;
 		return user;
 	}
@@ -47,38 +46,5 @@ public class Users {
 			userNames.put(id, getUserName(id));
 		}
 		return userNames;
-	}
-	
-	//TODO delete
-	public void tempInit() throws IOException{
-		FileInputStream in = new FileInputStream(DB.DB_PATH + "users.txt");
-	    BufferedReader br = new BufferedReader(new InputStreamReader(in, "utf8"));
-
-	    String strLine;
-	    UserRole role = null;
-
-	    while ((strLine = br.readLine()) != null) {
-	    	strLine = strLine.trim();
-	    	try {
-	    		role = UserRole.valueOf(strLine);
-	    	} catch(Exception e) {
-	    		String pass = UUID.randomUUID().toString().substring(0, 4);
-	    		String a[] = strLine.trim().split(",");
-	    		int id = Integer.parseInt(a[0]);
-	    		String name = a[1].trim();
-	    		addUser(id, new User(name, role, pass));
-	    	}
-	    }
-	    in.close();
-	}
-	
-	//TODO delete
-	public void print() {
-		System.out.println("===========\nUsers: ");
-		for (Map.Entry<Integer, User> user : users.entrySet())
-		{
-			System.out.print("idUser: " + user.getKey() + ", ");
-		    user.getValue().print();
-		}
 	}
 }

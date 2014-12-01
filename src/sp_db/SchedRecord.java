@@ -20,10 +20,4 @@ public class SchedRecord {
 		subj = subject;
 		this.group = group;
 	}
-	
-	//TODO delete 
-	public void print() {
-		System.out.println("teacher: " + idTeacher +", sem: " + semester);
-		System.out.println("  subj: " + subj + ", group: " + group);
-	}
 }

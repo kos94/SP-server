@@ -134,34 +134,4 @@ public class Schedule {
 		}
 		return false;
 	}
-	
-	// TODO delete
-	public void tempInit() throws IOException {
-		FileInputStream in = new FileInputStream(DB.DB_PATH + "schedule.txt");
-		BufferedReader br = new BufferedReader(
-				new InputStreamReader(in, "utf8"));
-
-		String strLine;
-
-		while ((strLine = br.readLine()) != null) {
-			if(strLine.equals("")) continue;
-			String[] a = strLine.split(",");
-			int id = Integer.parseInt(a[0]);
-			String[] sem = a[1].trim().split(" ");
-			int sInd = Integer.parseInt(sem[0]);
-			int sYear = Integer.parseInt(sem[1]);
-			String group = a[2].trim(), subj = a[3].trim();
-			records.add(new SchedRecord(id, new Semester(sInd, sYear), subj, group));
-		}
-		in.close();
-	}
-	
-	//TODO delete
-	public void print() {
-		System.out.println("===============\nSchedule: ");
-		for(SchedRecord r : records) {
-			r.print();
-		}
-	}
-
 }

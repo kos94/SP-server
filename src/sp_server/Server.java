@@ -5,6 +5,7 @@ import java.security.SecureRandom;
 import java.util.*;
 
 import javax.jws.WebService;
+import javax.xml.ws.Endpoint;
 
 import sp_db.*;
 import sp_entities.*;
@@ -256,6 +257,7 @@ public class Server {
 		}
 		
 		GroupStageMarks marks = db.getStageMarks(group, sem, stage);
+		marks.setStage(stage);
 		marks.sortByFirstColumn();
 		marks.countAggregation();
 		return XMLSerializer.objectToXML(marks);
@@ -272,6 +274,7 @@ public class Server {
 		if(!flowsList.contains(flow)) return null;
 		
 		GroupStageMarks marks = db.getFlowStageMarks(flow, sem, stage);
+		marks.setStage(stage);
 		marks.sortByFirstColumn();
 		marks.countAggregation();
 		return XMLSerializer.objectToXML(marks);
@@ -286,5 +289,13 @@ public class Server {
 		marks.sortByFirstColumn();
 		marks.countAggregation();
 		return XMLSerializer.objectToXML(marks);
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Server main");
+		String address = "http://localhost:8181/spkurs/server";
+		Server server = new Server();
+		Endpoint.publish(address, server);
+		System.out.println("WSDL is published on\n" + address + "?wsdl");
 	}
 }

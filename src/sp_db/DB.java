@@ -13,24 +13,6 @@ public class DB {
 	private Curators curators;
 	private Marks marks;
 	
-	//TODO delete (need only to generate DB)
-	private void saveToXML() {
-//		XMLSerializer.saveObject(users, DB_PATH + "users.xml");
-		XMLSerializer.saveObject(structure,DB_PATH + "structure.xml");
-//		XMLSerializer.saveObject(schedule, DB_PATH + "schedule.xml");
-//		XMLSerializer.saveObject(curators, DB_PATH + "curators.xml");
-//		XMLSerializer.saveObject(marks, DB_PATH + "marks.xml");
-	}
-
-	//TODO delete 
-	private void generateDB() throws IOException {
-//		users = new Users(); users.tempInit();
-		structure = new FacultyStructure(); structure.tempInit();
-//		schedule = new Schedule(); schedule.tempInit();
-//		curators = new Curators(); curators.tempInit();
-//		marks = new Marks(); marks.tempInit();
-		saveToXML();
-	}
 	private void loadFromXML() {
 		users = (Users) XMLSerializer
 				.loadObject( DB_PATH + "users.xml", Users.class);
@@ -42,21 +24,10 @@ public class DB {
 				.loadObject(DB_PATH + "curators.xml", Curators.class);
 		marks = (Marks) XMLSerializer
 				.loadObject(DB_PATH + "marks.xml", Marks.class);
-		
-		users.print();
-		structure.print();
-		schedule.print();
-		curators.print();
-		marks.print();
 	}
 	
 	public DB() {
 		loadFromXML();
-//		try {
-//			generateDB();
-//		} catch(IOException e) {
-//			e.printStackTrace();
-//		}	
 	}
 	
 	public User login(int id, String password) {
@@ -203,7 +174,7 @@ public class DB {
 	}
 
 	public boolean checkDepWorkerFlowRights(int id, String flow) {
-		// TODO Auto-generated method stub
-		return true;
+		Set<String> flows = structure.getWorkerDepartment(id).getFlows();
+		return flows.contains(flow);
 	}
 }

@@ -46,10 +46,4 @@ public class Semesters {
 	public List<Semester> getSemesters() {
 		return sems;
 	}
-	
-	public void print() {
-		for(Semester s : sems) {
-			System.out.println(s);
-		}
-	}
 }

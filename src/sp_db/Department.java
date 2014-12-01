@@ -23,21 +23,6 @@ public class Department {
 		this();
 		name = depName;
 	}
-	//TODO DELETE
-	public void addWorker(int idWorker) {
-		idWorkers.add(idWorker);
-	}
-	//TODO DELETE
-	public void addGroup(String flow, String group, Set<Integer> idStudents) {
-		Flow f = flows.get(flow);
-		if(f == null) {
-			f = new Flow();//put(group, idStudents);
-			f.addGroup(group, idStudents);
-			flows.put(flow,  f);
-		} else {
-			f.addGroup(group, idStudents);
-		}
-	}
 	
 	public Set<Integer> findGroupStudents(String groupName) {
 		for (Map.Entry<String, Flow> flow : flows.entrySet()) {
@@ -60,6 +45,8 @@ public class Department {
 		}
 		return groups;
 	}
+	
+	public Set<String> getFlows() { return flows.keySet(); }
 	
 	public Set<String> findFlowGroups(String flow) {
 		Flow f = flows.get(flow);
@@ -97,17 +84,5 @@ public class Department {
 	
 	public String getName() {
 		return name;
-	}
-	
-	//TODO delete
-	public void print() {
-		System.out.print("========================\ndep name: " + name + "\nWorkers: ");
-		for(Integer idW : idWorkers) {
-			System.out.print(idW + " ");
-		}
-		for (Map.Entry<String, Flow> flow : flows.entrySet()) {
-			System.out.println("Flow: " + flow.getKey());
-		    flow.getValue().print();
-		}
 	}
 }

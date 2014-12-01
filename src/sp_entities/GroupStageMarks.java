@@ -12,6 +12,7 @@ public class GroupStageMarks implements IMarks {
 	@XmlElementWrapper
 	@XmlElement(name="subj")
 	private List<String> subjects;
+	private int stageIndex;
 	private List<StudentStageMarks> studMarks;
 	private List<Float> subjectAvg;
 	private List<Byte> subjectDebts;
@@ -31,6 +32,10 @@ public class GroupStageMarks implements IMarks {
 		studMarks.add(new StudentStageMarks(student, marks));
 	}
 	
+	public void setStage(int stage) {
+		stageIndex = stage - 1;
+	}
+	
 	public void setSubjects(List<String> subjs) {
 		subjects = subjs;
 	}
@@ -42,7 +47,6 @@ public class GroupStageMarks implements IMarks {
 	@Override
 	public void countAggregation() {
 		int nSubj = subjects.size(), nStud = studMarks.size();
-		System.out.println("count agregation for " + nSubj + " subjs & " + nStud + " stud");
 		float[] subjSum = new float[nSubj];
 		byte[] subjDebts = new byte[nSubj];
 		int[] subjGoodMarks = new int[nSubj];
@@ -58,10 +62,10 @@ public class GroupStageMarks implements IMarks {
 			float stSum = 0;
 			int stGoodMarks = 0, stDebts = 0;
 			for(byte mark : m.marks) {
-				if(mark == -1) {
-					stSum = subjSum[j] = -1;
-					stDebts = subjDebts[i] = -1;
-				} else if (mark == 0) {
+				if(mark == ABSENT) {
+					stSum = subjSum[j] = ABSENT;
+					stDebts = subjDebts[i] = ABSENT;
+				} else if (mark < MIN_MARK[stageIndex]) {
 					stDebts++;
 					subjDebts[j]++;
 				} else {
@@ -72,8 +76,7 @@ public class GroupStageMarks implements IMarks {
 				}
 				j++;
 			}
-			float studAvg = (stSum == -1 || stGoodMarks == 0)? -1 : (stSum / stGoodMarks);
-//			System.out.println("st sum: " + stSum + ", n: " + stGoodMarks + ", avg: " + studAvg);
+			float studAvg = (stSum == ABSENT || stGoodMarks == 0)? ABSENT : (stSum / stGoodMarks);
 			String twoSigns = String.format("%.2f", studAvg).replace(",", ".");
 			m.avgMark = Float.parseFloat(twoSigns);
 			m.nDebts = (byte)stDebts;
@@ -81,7 +84,7 @@ public class GroupStageMarks implements IMarks {
 		}
 		
 		for(i=0; i<nSubj; i++) {
-			float subjAvg = (subjSum[i] == -1)? -1 
+			float subjAvg = (subjSum[i] == ABSENT)? ABSENT 
 					: (subjSum[i] / subjGoodMarks[i]);
 			String twoSigns = String.format("%.2f", subjAvg).replace(",", ".");
 			subjectAvg.add(Float.parseFloat(twoSigns));
@@ -89,33 +92,27 @@ public class GroupStageMarks implements IMarks {
 		}
 	}
 	
-	public void printMarks() {
-		for(String subj : subjects) {
-			System.out.println(subj);
-		}
-		System.out.println("==========");
-		
-		for(StudentStageMarks ssm : studMarks) {
-			System.out.println(ssm.student);
-			for(Byte m : ssm.marks) {
-				System.out.print(m + " ");
-			}
-			System.out.println();
-		}
-	}
+	public int getStage() { return stageIndex; }
+	
 	public int getStudentsNumber() { return studMarks.size(); }
+	
 	public List<String> getSubjects() { return subjects; }
+	
 	public StudentStageMarks getStudentMark(int i) { 
 		if(i < 0 || i >= studMarks.size()) return null;
 		return studMarks.get(i);
 	}
+	
 	public byte getStudentDebts(int iStudent) { 
 		return studMarks.get(iStudent).nDebts;
 	}
+	
 	public float getStudentAvg(int iStudent) {
 		return studMarks.get(iStudent).avgMark;
 	}
+	
 	public List<Byte> getSubjDebts() { return subjectDebts; }
+	
 	public List<Float> getSubjAvg() { return subjectAvg; }
 	
 	@XmlAccessorType(XmlAccessType.FIELD)

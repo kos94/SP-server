@@ -82,48 +82,6 @@ public class FacultyStructure {
 		return null;
 	}
 	
-	// TODO delete
-	public void tempInit() throws IOException {
-		FileInputStream in = new FileInputStream(DB.DB_PATH + "structure.txt");
-		BufferedReader br = new BufferedReader(
-				new InputStreamReader(in, "utf8"));
-
-		String strLine;
-		UserRole role = null;
-		int c = 0;
-
-		while ((strLine = br.readLine()) != null) {
-			if(strLine.equals("")) continue;
-			Department dep = new Department(strLine);
-			
-			String[] idWorkers = br.readLine().trim().split(" ");
-			for(int i=0; i<idWorkers.length; i++) {
-				dep.addWorker(Integer.parseInt(idWorkers[i]));
-			}
-			
-			while ((strLine = br.readLine()) != null) {
-				if(strLine.equals("")) break;
-				String[] gr = strLine.trim().split(" ");
-				String flow = gr[0], group = gr[1];
-				HashSet<Integer> idStudents = new HashSet<>();
-				for(int i=2; i<gr.length; i++) {
-					idStudents.add(Integer.parseInt(gr[i]));
-				}
-				dep.addGroup(flow, group, idStudents);
-			}
-			
-			deps.add(dep);
-		}
-		in.close();
-	}
-	
-	// TODO delete
-	public void print() {
-		for (Department d : deps) {
-			d.print();
-		}
-	}
-
 	public Set<String> getFlowsOfGroups(Set<String> groups) {
 		Set<String> flows = new HashSet<>();
 		for (Department d : deps) {

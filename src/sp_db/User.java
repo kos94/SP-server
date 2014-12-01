@@ -28,11 +28,6 @@ public class User {
 		status = user.status;
 	}
 	
-	public void print() {
-		System.out.println("user status: " + status);
-		System.out.println("  pass: " + pass + ", name: " + name);
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -50,7 +45,6 @@ public class User {
 	}
 	
 	public boolean isRightPass(String password) {
-		System.out.println("pass: " + pass + " password: " + password);
 		return (pass.equals(password));
 	}
 }

@@ -40,10 +40,4 @@ public class StudentSubjMark {
 		marks[1] = (byte)m2;
 		marks[2] = (byte)m3;
 	}
-	
-	//TODO delete 
-	public void print() {
-		System.out.println("student: " + idStudent + ", subj: " + subj);
-		System.out.println("  marks. 1: " + marks[0] + ", 2: " + marks[1] + ", 3: " + marks[2]);
-	}
 }
