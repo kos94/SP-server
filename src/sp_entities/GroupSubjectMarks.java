@@ -1,13 +1,7 @@
 package sp_entities;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
+import java.util.*;
 import javax.xml.bind.annotation.*;
-
-import sp_entities.GroupStageMarks.StudentStageMarks;
 
 @XmlRootElement(name = "subjMarks")
 @XmlAccessorType(XmlAccessType.FIELD)

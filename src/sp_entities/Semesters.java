@@ -1,11 +1,6 @@
 package sp_entities;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
-
+import java.util.*;
 import javax.xml.bind.annotation.*;
 
 class SemesterComparator implements Comparator<Semester> {

@@ -1,14 +1,10 @@
 package sp_db;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.*;
-
 import javax.xml.bind.annotation.*;
-
-import sp_entities.*;
+import sp_entities.GroupStageMarks;
+import sp_entities.GroupSubjectMarks;
+import sp_entities.StudentSemMarks;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -1,17 +1,10 @@
 package sp_db;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.*;
-
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import sp_entities.Semester;
-import sp_entities.Semesters;
-import sp_entities.UserRole;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -1,8 +1,6 @@
 package sp_db;
 
-import java.io.IOException;
 import java.util.*;
-
 import sp_entities.*;
 
 public class DB {

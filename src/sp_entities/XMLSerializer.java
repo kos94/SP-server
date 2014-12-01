@@ -3,12 +3,7 @@ package sp_entities;
 import java.io.File;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.util.ArrayList;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.*;
 
 public class XMLSerializer {
 	public static void saveObject(Object obj, String filePath) {
