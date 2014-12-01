@@ -196,7 +196,10 @@ public class DB {
 			String flow) {
 		Set<String> flowGroups = structure.getFlowGroups(flow);
 		Set<String> teacherGroups = schedule.getTeacherGroups(id, subject);
-		return teacherGroups.containsAll(flowGroups);
+		for(String g : teacherGroups) {
+			if(flowGroups.contains(g)) return true;
+		}
+		return false;
 	}
 
 	public boolean checkDepWorkerFlowRights(int id, String flow) {

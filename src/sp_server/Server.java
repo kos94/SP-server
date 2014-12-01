@@ -128,20 +128,20 @@ public class Server {
 	
 	public List<String> getGroupSubjects(String idSession, String semester, String group) {
 		UserInfo user = sessions.get(idSession);
-		if(user == null) return null;
+		if(user == null || (user.getStatus() != UserRole.DEPWORKER 
+				&& user.getStatus() != UserRole.CURATOR)) 
+			return null;
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
 		return db.getGroupSubjects(group, sem);
 	}
 	
 	public List<String> getFlowSubjects(String idSession, String semester, String flow) {
-		System.out.println("flow subjects for " + flow + " , " + semester);
-		UserInfo user = sessions.get(idSession);
+		UserInfo user = getUserIfAuthorized(idSession, UserRole.DEPWORKER);
 		if(user == null) return null;
 		Semester sem = (Semester)
 				XMLSerializer.xmlToObject(semester, Semester.class);
 		List<String> subjects = db.getFlowSubjects(flow, sem);
-		System.out.println("flow subjects for " + flow + " , " + sem);
 		for(String s: subjects) {
 			System.out.println(s);
 		}
@@ -215,9 +215,12 @@ public class Server {
 	public String getFlowSubjectMarks(String idSession, String flow, String subject) {
 		UserInfo user = sessions.get(idSession);
 		if(user == null) return null;
+		
 		switch(user.getStatus()) {
+		case CURATOR:
 		case TEACHER:
-			if(!db.checkTeacherFlowSubjectRights(user.getId(), subject, flow))
+			boolean b = db.checkTeacherFlowSubjectRights(user.getId(), subject, flow);
+			if(!b)
 				return null;
 			break;
 		case DEPWORKER:
